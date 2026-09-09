@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* Tokens do site. Base neutra e sóbria, pronta pra receber a identidade da
+   Supera. Trocar a cor da marca aqui embaixo muda o site inteiro. */
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(215 28% 12%);
+  --card: hsl(210 20% 98%);
+  --muted: hsl(215 16% 47%);
+  --border: hsl(214 20% 89%);
+
+  /* Cor da marca [PLACEHOLDER] */
+  --brand: hsl(210 82% 32%);
+  --brand-soft: hsl(210 82% 96%);
+  --brand-foreground: hsl(0 0% 100%);
+
+  --radius: 0.75rem;
+  --container: 72rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: hsl(215 32% 8%);
+    --foreground: hsl(210 20% 96%);
+    --card: hsl(215 28% 12%);
+    --muted: hsl(215 15% 65%);
+    --border: hsl(215 20% 22%);
+    --brand: hsl(205 90% 62%);
+    --brand-soft: hsl(215 30% 16%);
+    --brand-foreground: hsl(215 32% 8%);
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-foreground: var(--brand-foreground);
+  --font-sans: var(--font-sans);
+  --radius-card: var(--radius);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
