@@ -53,8 +53,12 @@ e `interno/clientes/Supera/site-v1/`.
 - `~/projetos/ideva-site/` · site da IDEVA, mesma stack e mesmas versões.
 - `~/CLAUDE.md` · a porta da home do Mac.
 - `github.com/IDEVA-AI/Supera-Contabilidade-Site` [externo: GitHub] · o remoto.
-  O domínio `superacontabilidade.com.br` já aponta pra Vercel, e o push pode
-  publicar. Não empurrar sem ok do Julio.
+  O domínio `superacontabilidade.com.br` aponta pra um projeto na conta Vercel
+  **da Supera**, que as contas da IDEVA não enxergam. Em 2026-09-14 o push na
+  `main` (db4f118) chegou ao GitHub e **não** gerou deploy: o repo nunca teve
+  status nem deployment da Vercel, então o projeto não está recebendo os pushes
+  (provável deploy feito por upload, sem Git conectado). Publicar depende de
+  alguém com acesso à Vercel da Supera. Não empurrar sem ok do Julio.
 
 ## 4. Skills
 
