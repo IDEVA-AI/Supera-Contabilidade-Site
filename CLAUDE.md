@@ -4,9 +4,8 @@
 
 Site institucional da Supera Contabilidade (Brasília-DF), cliente da IDEVA.
 Next.js 16 App Router, React 19, Tailwind 4, TypeScript, tudo estático. Primeira
-versão da home e do blog de pé desde 2026-09-14. Boa parte do texto ainda é
-rascunho da IDEVA a validar com o Danilo, e o WhatsApp é falso: **não publicar**
-até trocar. Estado do cliente em
+versão da home e do blog no ar desde 2026-09-14, com o WhatsApp real. Boa parte do
+texto ainda é rascunho da IDEVA a validar com o Danilo. Estado do cliente em
 `~/projetos/cerebro-operacional/interno/clientes/Supera/_estado.md`.
 
 Direção visual (aprovada pelo Julio em 2026-09-14): linha do Hoskens Accountancy,
@@ -52,13 +51,15 @@ e `interno/clientes/Supera/site-v1/`.
   copiar quando o ritmo semanal de artigos começar.
 - `~/projetos/ideva-site/` · site da IDEVA, mesma stack e mesmas versões.
 - `~/CLAUDE.md` · a porta da home do Mac.
-- `github.com/IDEVA-AI/Supera-Contabilidade-Site` [externo: GitHub] · o remoto.
-  O domínio `superacontabilidade.com.br` aponta pra um projeto na conta Vercel
-  **da Supera**, que as contas da IDEVA não enxergam. Em 2026-09-14 o push na
-  `main` (db4f118) chegou ao GitHub e **não** gerou deploy: o repo nunca teve
-  status nem deployment da Vercel, então o projeto não está recebendo os pushes
-  (provável deploy feito por upload, sem Git conectado). Publicar depende de
-  alguém com acesso à Vercel da Supera. Não empurrar sem ok do Julio.
+- `github.com/IDEVA-AI/Supera-Contabilidade-Site` [externo: GitHub] · remoto
+  `origin`, onde a IDEVA trabalha. **Não publica nada.**
+- `github.com/superacontabilidadedp/superacont` [externo: GitHub] · remoto `supera`,
+  na conta GitHub da Supera. É **este** que a Vercel do Danilo escuta: push na `main`
+  dele publica o `superacontabilidade.com.br` em uns 30 segundos. A IDEVA-AI é
+  colaboradora com escrita desde 2026-09-14. A branch `backup-initial-commit-2026-09-09`
+  guarda o commit único que existia lá antes (arquivos iguais ao 9622b2f).
+  Publicar = `git push origin main && git push supera main`, sempre os dois, pra não
+  divergir. Não empurrar pro `supera` sem ok do Julio.
 
 ## 4. Skills
 
