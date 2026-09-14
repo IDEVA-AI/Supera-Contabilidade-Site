@@ -1,14 +1,17 @@
 // Fonte única de verdade da marca. Trocar AQUI propaga pro layout, metadata,
 // schema, seções da home e rodapé. Nenhum dado de contato solto em componente.
 //
-// [PLACEHOLDER] = valor de exemplo, precisa ser confirmado com o cliente.
+// [PLACEHOLDER] = dado ainda não confirmado pelo cliente.
+// [VALIDAR] = texto escrito pela IDEVA, precisa da leitura do Danilo antes de publicar.
 
 export const site = {
   name: "Supera Contabilidade",
-  tagline: "Contabilidade que anda junto com o seu negócio",
-  url: "https://superacontabilidade.com.br", // [PLACEHOLDER]
+  tagline: "Contabilidade de pai e filho em Brasília",
+  url: "https://superacontabilidade.com.br",
   description:
-    "Escritório de contabilidade para empresas que querem número confiável na hora de decidir: abertura, escrituração, folha, imposto e apoio na gestão.", // [PLACEHOLDER]
+    "Escritório de contabilidade em Brasília, aberto em 2014 e tocado por pai e filho. Abertura de empresa, contabilidade mensal, folha e impostos, com conversa direta no WhatsApp.", // [VALIDAR]
+  foundedYear: 2014, // Receita: abertura em 2014-04-17
+  cnpj: "20.645.761/0001-08",
 
   contact: {
     // O cliente quer a marca vinculada ao DF, nunca ao Riacho Fundo (2026-09-14).
@@ -21,74 +24,137 @@ export const site = {
     email: "supera.superacontabilidade@gmail.com", // da Receita [PLACEHOLDER]
     phone: "+556133990425", // E.164, fixo da Receita [PLACEHOLDER]
     phoneLabel: "(61) 3399-0425", // [PLACEHOLDER]
-    whatsapp: "5511900000000", // [PLACEHOLDER]
+    whatsapp: "5511900000000", // [PLACEHOLDER] número falso, trava a publicação
     whatsappMessage: "Olá! Vim pelo site e quero falar sobre contabilidade.",
     hours: "Segunda a sexta, 9h às 18h", // [PLACEHOLDER]
   },
 
   // Perfis oficiais (viram sameAs no JSON-LD). Só entra o que existe de verdade.
+  // Atenção: @superacontabilidade no Instagram é de outro escritório (Valparaíso-GO).
   profiles: [] as string[],
-  instagram: "", // [PLACEHOLDER]
 
-  // Serviços da home. Cada item vira um card; a ordem aqui é a ordem na página.
+  // Topo da home. A pessoa escolhe o que aconteceu e cai no WhatsApp com a
+  // mensagem já escrita. A urgente fica separada das outras. [VALIDAR]
+  situations: {
+    urgent: {
+      label: "Chegou uma multa ou notificação",
+      detail: "Manda uma foto do documento. A gente olha o que é e o que precisa ser feito.",
+      message: "Olá! Recebi uma multa ou notificação e preciso de ajuda.",
+    },
+    common: [
+      {
+        label: "Vou abrir uma empresa",
+        detail: "Do tipo de empresa ao CNPJ na mão, sabendo quanto vai pagar de imposto.",
+        message: "Olá! Quero abrir uma empresa.",
+      },
+      {
+        label: "Preciso trocar de contador",
+        detail: "A gente pega os documentos com o contador atual e confere o que chegou.",
+        message: "Olá! Quero trocar de contador.",
+      },
+      {
+        label: "Chegou a época do imposto",
+        detail: "Declaração, guia atrasada ou dúvida sobre quanto vai pagar.",
+        message: "Olá! Preciso de ajuda com imposto.",
+      },
+    ],
+  },
+
+  // Serviços. A lista é a rotina comum de um escritório contábil e ainda não
+  // foi conferida com o que a Supera faz de fato. [PLACEHOLDER]
   services: [
     {
-      slug: "abertura-de-empresa",
-      title: "Abertura e regularização",
+      title: "Abertura de empresa",
       description:
-        "CNPJ, enquadramento, alvará e inscrição estadual, com o regime tributário escolhido pela conta, não pelo hábito.",
+        "Tipo de empresa, regime de imposto, CNPJ e inscrições. Você começa sabendo quanto vai pagar.",
     },
     {
-      slug: "contabilidade-mensal",
       title: "Contabilidade mensal",
       description:
-        "Escrituração em dia, balancete que fecha e demonstrativo que dá pra ler sem ser contador.",
+        "Escrituração, balancete e as obrigações do mês em dia, com alguém pra explicar o que os números dizem.",
     },
     {
-      slug: "folha-de-pagamento",
       title: "Departamento pessoal",
-      description:
-        "Admissão, folha, férias, rescisão e eSocial no prazo, sem susto de multa no fim do mês.",
+      description: "Admissão, folha, férias, rescisão e eSocial dentro do prazo.",
     },
     {
-      slug: "impostos",
-      title: "Apuração de impostos",
+      title: "Impostos e declarações",
       description:
-        "Guias calculadas e entregues antes do vencimento, com revisão do regime sempre que a operação muda.",
+        "Guias calculadas antes do vencimento e revisão do regime quando o negócio muda de tamanho.",
     },
     {
-      slug: "consultoria",
-      title: "Apoio na decisão",
+      title: "Troca de contador",
       description:
-        "Pró-labore, distribuição de lucro, planejamento tributário e o número na mesa antes de investir.",
+        "A contabilidade continua de onde parou. Antes de assumir, a gente confere o que veio do escritório anterior.",
     },
     {
-      slug: "recuperacao",
-      title: "Revisão e recuperação",
+      title: "Regularização",
       description:
-        "Diagnóstico do que foi pago a mais e organização do passivo antes que ele vire dívida ativa.",
+        "Pendência na Receita, multa ou empresa parada. Primeiro a gente descobre o tamanho do problema.",
     },
   ],
 
-  // Provas e diferenciais da seção "por que a Supera". Trocar por prova real.
-  highlights: [
-    { label: "Anos de estrada", value: "12" }, // aberta em 2014-04-17 (Receita)
-    { label: "Empresas atendidas", value: "—" }, // [PLACEHOLDER]
-    { label: "Resposta em até", value: "24h" }, // [PLACEHOLDER]
+  // "Como começa". É uma sequência de verdade, por isso vai numerada. [VALIDAR]
+  steps: [
+    {
+      title: "Você chama no WhatsApp",
+      text: "Conta o que aconteceu do seu jeito. Pode mandar foto de documento.",
+    },
+    {
+      title: "A gente conversa",
+      text: "O Danilo entende o tamanho da empresa, o regime e o que está pegando.",
+    },
+    {
+      title: "Você recebe a proposta",
+      text: "Com o que vai ser feito e quanto custa. Aí você decide.",
+    },
   ],
 
-  // Seção sobre. Um parágrafo por item.
+  // Quem somos. Sócios conforme a Receita. Foto entra quando existir.
+  founders: [
+    { name: "Paulo Sérgio Romão", role: "Sócio-administrador" },
+    { name: "Danilo de Santo Romão", role: "Sócio, cuida do atendimento" },
+  ],
+  aboutPhoto: "", // caminho em /public/img quando a sessão de fotos acontecer
   about: [
-    "A Supera Contabilidade nasceu para resolver o problema de quem só recebe do contador uma guia por e-mail e nunca uma explicação.",
-    "Aqui o trabalho é o mesmo de sempre (escrituração, folha, imposto), mas entregue de um jeito que serve pra decidir: número no prazo, linguagem de dono e alguém do outro lado quando a dúvida aparece.",
-  ], // [PLACEHOLDER]
+    "A Supera abriu em 2014 e continua com o tamanho que permite conhecer cada cliente pelo nome.",
+    "Hoje o escritório está nas mãos do Paulo e do filho dele, o Danilo. A carteira foi construída por indicação: quem gosta do trabalho apresenta o próximo cliente.",
+  ], // [VALIDAR]
+
+  // Avaliações reais do Google. Enquanto estiver vazio, a seção não aparece.
+  googleProfileUrl: "", // [PLACEHOLDER]
+  reviews: [] as { name: string; text: string; when: string }[],
+
+  // Perguntas frequentes. Respostas sem número nem prazo que dependam de
+  // confirmação. [VALIDAR]
+  faq: [
+    {
+      q: "Quanto custa a contabilidade?",
+      a: "Depende do tipo de empresa, do regime de imposto e de quantos funcionários ela tem. Na primeira conversa a gente entende o seu caso e manda a proposta com o valor.",
+    },
+    {
+      q: "Já tenho contador. Dá pra trocar no meio do ano?",
+      a: "Dá. A troca pode acontecer em qualquer mês. A gente combina a data, pede os documentos ao contador atual e confere o que chegou antes de assumir.",
+    },
+    {
+      q: "Recebi uma notificação da Receita. É grave?",
+      a: "Nem sempre. Muita notificação é declaração pendente e se resolve rápido. Manda uma foto do documento no WhatsApp e a gente te diz o que é.",
+    },
+    {
+      q: "Quanto tempo leva pra abrir uma empresa no DF?",
+      a: "Depende da atividade e das licenças que ela exige. Na conversa inicial a gente já te passa o prazo do seu caso.",
+    },
+    {
+      q: "Preciso ir até o escritório?",
+      a: "Não precisa. A conversa e o envio de documentos podem ser feitos pelo WhatsApp e por e-mail. Se preferir conversar pessoalmente, é só combinar.",
+    },
+  ],
 
   cta: {
     primary: "Falar no WhatsApp",
-    secondary: "Ver os serviços",
-    headline: "Quer entender quanto a sua empresa está pagando a mais?",
+    headline: "Conta pra gente o que aconteceu.",
     support:
-      "Manda uma mensagem contando o tamanho da operação e o regime atual. A gente devolve um diagnóstico do que dá pra ajustar.",
+      "Uma mensagem no WhatsApp já basta pra começar. A resposta vem no horário de atendimento.",
   },
 } as const;
 
