@@ -7,7 +7,7 @@
 export const site = {
   name: "Supera Contabilidade",
   tagline: "Contabilidade de pai e filho em Brasília",
-  url: "https://superacontabilidade.com.br",
+  url: "https://www.superacontabilidade.com.br", // o domínio sem www redireciona (308) pra este
   description:
     "Escritório de contabilidade em Brasília, aberto em 2014 e tocado por pai e filho. Abertura de empresa, contabilidade mensal, folha e impostos, com conversa direta no WhatsApp.", // [VALIDAR]
   foundedYear: 2014, // Receita: abertura em 2014-04-17
@@ -21,12 +21,14 @@ export const site = {
     region: "Distrito Federal",
     street: "",
     postalCode: "",
-    email: "supera.superacontabilidade@gmail.com", // da Receita [PLACEHOLDER]
-    phone: "+556133990425", // E.164, fixo da Receita [PLACEHOLDER]
-    phoneLabel: "(61) 3399-0425", // [PLACEHOLDER]
+    // Fixo e e-mail da Receita, (61) 3399-0425 e supera.superacontabilidade@gmail.com,
+    // ficam fora do ar até o Danilo confirmar que atendem. O canal confirmado é o WhatsApp.
+    email: "",
+    phone: "", // E.164, ex: +556133990425
+    phoneLabel: "",
     whatsapp: "5561981999430", // da bio do Instagram @supera.contabilidade (2026-09-14)
     whatsappMessage: "Olá! Vim pelo site e quero falar sobre contabilidade.",
-    hours: "Segunda a sexta, 9h às 18h", // [PLACEHOLDER]
+    hours: "", // ex: "Segunda a sexta, 9h às 18h". Vazio some do site. Horário a confirmar com o Danilo.
   },
 
   // Perfis oficiais (viram sameAs no JSON-LD). Só entra o que existe de verdade.
@@ -61,8 +63,9 @@ export const site = {
     ],
   },
 
-  // Serviços. A lista é a rotina comum de um escritório contábil e ainda não
-  // foi conferida com o que a Supera faz de fato. [PLACEHOLDER]
+  // Serviços. Conferidos em 2026-09-14 com o site antigo da própria Supera
+  // (superacontabilidadedf.com.br): certidões, apuração de impostos, demonstrativos
+  // pra banco, folha, planejamento tributário, abertura e regularização. [VALIDAR]
   services: [
     {
       title: "Abertura de empresa",
@@ -72,7 +75,7 @@ export const site = {
     {
       title: "Contabilidade mensal",
       description:
-        "Escrituração, balancete e as obrigações do mês em dia, com alguém pra explicar o que os números dizem.",
+        "Escrituração, balancete e os demonstrativos que banco e financeira pedem, com alguém pra explicar o que os números dizem.",
     },
     {
       title: "Departamento pessoal",
@@ -81,7 +84,7 @@ export const site = {
     {
       title: "Impostos e declarações",
       description:
-        "Guias calculadas antes do vencimento e revisão do regime quando o negócio muda de tamanho.",
+        "Guias calculadas antes do vencimento e planejamento tributário pra não pagar imposto a mais quando o negócio muda de tamanho.",
     },
     {
       title: "Troca de contador",
@@ -91,7 +94,7 @@ export const site = {
     {
       title: "Regularização",
       description:
-        "Pendência na Receita, multa ou empresa parada. Primeiro a gente descobre o tamanho do problema.",
+        "Certidão negada, pendência na Receita, multa ou empresa parada. Primeiro a gente descobre o tamanho do problema.",
     },
   ],
 
@@ -147,7 +150,7 @@ export const site = {
     },
     {
       q: "Preciso ir até o escritório?",
-      a: "Não precisa. A conversa e o envio de documentos podem ser feitos pelo WhatsApp e por e-mail. Se preferir conversar pessoalmente, é só combinar.",
+      a: "Não precisa. A conversa e o envio de documentos podem ser feitos pelo WhatsApp. Se preferir conversar pessoalmente, é só combinar.",
     },
   ],
 
@@ -155,7 +158,7 @@ export const site = {
     primary: "Falar no WhatsApp",
     headline: "Conta pra gente o que aconteceu.",
     support:
-      "Uma mensagem no WhatsApp já basta pra começar. A resposta vem no horário de atendimento.",
+      "Uma mensagem no WhatsApp já basta pra começar.",
   },
 } as const;
 

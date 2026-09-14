@@ -8,7 +8,9 @@ export function MobileContactBar() {
       <div className="flex items-center justify-between gap-4 px-5 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
         <p className="text-sm leading-tight">
           <span className="block font-semibold">{site.name}</span>
-          <span className="text-aco">{site.contact.hours}</span>
+          <span className="text-aco">
+            {site.contact.hours || `${site.contact.city}, ${site.contact.state}`}
+          </span>
         </p>
         <a
           href={whatsappUrl()}

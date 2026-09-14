@@ -342,7 +342,7 @@ export function CallToAction() {
             {site.cta.primary}
             <Arrow className="size-5" />
           </a>
-          <p className="mt-4 text-sm">{site.contact.hours}</p>
+          {site.contact.hours && <p className="mt-4 text-sm">{site.contact.hours}</p>}
         </div>
       </Container>
     </section>

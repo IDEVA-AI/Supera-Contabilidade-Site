@@ -75,8 +75,7 @@ export default async function PostPage({ params }: Props) {
               Esse é o seu caso?
             </p>
             <p className="mt-3 max-w-lg text-white/85 text-pretty">
-              Conta o que está acontecendo no WhatsApp. A resposta vem no horário de
-              atendimento.
+              Conta o que está acontecendo no WhatsApp.
             </p>
             <a
               href={whatsappUrl(`Olá! Li o artigo "${post.title}" e quero conversar.`)}
