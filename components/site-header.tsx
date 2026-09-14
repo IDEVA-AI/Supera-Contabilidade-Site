@@ -3,7 +3,7 @@ import { site, whatsappUrl } from "@/site.config";
 import { Container } from "@/components/container";
 
 // Links com "/#" pra funcionarem também de dentro do blog.
-const nav = [
+export const nav = [
   { href: "/#servicos", label: "Serviços" },
   { href: "/#como-comeca", label: "Como começa" },
   { href: "/#quem-somos", label: "Quem somos" },

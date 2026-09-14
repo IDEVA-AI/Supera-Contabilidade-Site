@@ -24,14 +24,22 @@ e `interno/clientes/Supera/site-v1/`.
 - `app/layout.tsx` · metadata, fontes (Gabarito nos títulos, Hanken Grotesk no
   texto), JSON-LD, header, footer e a barra fixa do celular.
 - `app/page.tsx` · a home, na ordem: topo com seletor de situação, serviços, como
-  começa, quem somos, avaliações, dúvidas, blog, fechamento.
+  começa, quem somos, avaliações, dúvidas, blog, fechamento. Regra de UX da página
+  inteira: onde tem seta, a conversa começa no WhatsApp com mensagem pronta (topo,
+  cada serviço e os atalhos do fechamento, que reusam o `short` das situações).
+- `app/icon.svg` · favicon, um módulo do azulejo (não é o logo, que ainda não veio).
+- `app/opengraph-image.png` (+ `.alt.txt`) · prévia do link no WhatsApp e nas redes.
+  PNG estático gerado com Chrome headless a partir de HTML com as fontes do site; pra
+  mudar, refazer o PNG, não criar rota dinâmica.
 - `app/globals.css` · tokens com as cores medidas da marca (marinho, azul, ardósia,
   aço, prata, névoa, claro, branco) e o estilo do corpo de artigo (`.artigo`). Só
   tema claro.
 - `components/sections.tsx` · todas as seções da home. `Reviews` e `BlogPreview`
-  somem sozinhas quando não há dado.
+  somem sozinhas quando não há dado. `Faq` também emite o JSON-LD `FAQPage`.
 - `components/azulejo.tsx` · o padrão de azulejo, assinatura visual do site.
-- `components/site-header.tsx`, `components/site-footer.tsx`,
+- `components/site-header.tsx` · exporta `nav`, que o rodapé reusa (no celular o
+  menu do topo some e o rodapé é o caminho pro blog).
+- `components/site-footer.tsx`,
   `components/mobile-contact-bar.tsx`, `components/container.tsx`
 - `lib/blog.ts` · lê `content/blog/*.md` (gray-matter). Artigo com
   `status: rascunho` aparece no `dev` e nunca no build de produção.

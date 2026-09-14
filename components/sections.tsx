@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site, whatsappUrl } from "@/site.config";
+import { instagramUrl, site, whatsappUrl } from "@/site.config";
 import { Container } from "@/components/container";
 import { Azulejo } from "@/components/azulejo";
 import { formatDate, getPosts } from "@/lib/blog";
@@ -25,8 +25,23 @@ function Arrow({ className }: { className?: string }) {
 
 const external = { target: "_blank", rel: "noopener noreferrer" } as const;
 
+// Botão principal, igual em todo lugar em que a página pede a primeira mensagem.
+function WhatsAppButton({ label, message }: { label: string; message?: string }) {
+  return (
+    <a
+      href={whatsappUrl(message)}
+      {...external}
+      className="group inline-flex items-center gap-3 rounded-full bg-marinho px-7 py-4 font-medium text-white transition-colors hover:bg-ardosia"
+    >
+      {label}
+      <Arrow className="size-5" />
+    </a>
+  );
+}
+
 // Topo: a pergunta é a tese da página. Cada situação abre o WhatsApp com a
-// mensagem pronta; a urgente vem separada em prata.
+// mensagem pronta; a urgente vem separada. A linha de cima fica dentro do h1
+// porque é ela que diz ao Google o que o escritório é e onde está.
 export function Hero() {
   const { urgent, common } = site.situations;
 
@@ -34,22 +49,20 @@ export function Hero() {
     <section className="pt-10 pb-20 md:pt-16 md:pb-28">
       <Container className="grid gap-12 lg:grid-cols-[1.45fr_1fr] lg:gap-16">
         <div>
-          <p className="text-sm font-medium text-aco">
-            Contabilidade em {site.contact.city}, {site.contact.state}. Desde{" "}
-            {site.foundedYear}.
-          </p>
-          <h1 className="mt-4 font-display text-6xl font-bold leading-[0.95] tracking-tight text-balance md:text-8xl">
-            O que te trouxe aqui?
+          <h1>
+            <span className="block text-sm font-semibold text-marinho md:text-base">
+              Contabilidade em {site.contact.city}, desde {site.foundedYear}
+            </span>
+            <span className="mt-4 block font-display text-6xl font-bold leading-[0.95] tracking-tight text-balance md:text-8xl">
+              O que te trouxe aqui?
+            </span>
           </h1>
-          <p className="mt-6 max-w-lg text-lg text-aco text-pretty">
-            Escolha o que aconteceu. A conversa começa no WhatsApp com a mensagem
-            já escrita.
-          </p>
+          <p className="mt-6 max-w-lg text-lg text-aco text-pretty">{site.heroIntro}</p>
 
           <a
             href={whatsappUrl(urgent.message)}
             {...external}
-            className="group mt-10 flex items-center justify-between gap-6 rounded-2xl bg-marinho px-6 py-5 text-white md:px-8 md:py-6"
+            className="group mt-10 flex items-center justify-between gap-6 rounded-2xl bg-marinho px-6 py-5 text-white transition-colors hover:bg-ardosia md:px-8 md:py-6"
           >
             <span>
               <span className="block text-xs font-semibold uppercase tracking-wider text-prata">
@@ -58,7 +71,7 @@ export function Hero() {
               <span className="mt-1 block font-display text-2xl font-semibold leading-tight md:text-3xl">
                 {urgent.label}
               </span>
-              <span className="mt-1 block text-sm text-white/80">{urgent.detail}</span>
+              <span className="mt-1 block text-sm text-white/80 text-pretty">{urgent.detail}</span>
             </span>
             <Arrow />
           </a>
@@ -75,9 +88,7 @@ export function Hero() {
                     <span className="block font-display text-2xl font-semibold leading-tight md:text-3xl">
                       {item.label}
                     </span>
-                    <span className="mt-1 block text-sm text-aco">
-                      {item.detail}
-                    </span>
+                    <span className="mt-1 block text-sm text-aco text-pretty">{item.detail}</span>
                   </span>
                   <Arrow />
                 </a>
@@ -94,15 +105,18 @@ export function Hero() {
           </a>
         </div>
 
-        <aside className="flex min-h-[460px] flex-col overflow-hidden rounded-3xl rounded-tr-[96px] bg-marinho text-white lg:rounded-tr-[160px]">
-          <Azulejo id="azulejo-topo" className="min-h-48 flex-1 text-prata" />
+        <aside className="flex flex-col overflow-hidden rounded-3xl rounded-tr-[72px] bg-marinho text-white lg:min-h-[460px] lg:rounded-tr-[160px]">
+          <Azulejo id="azulejo-topo" className="h-24 text-prata lg:h-auto lg:min-h-48 lg:flex-1" />
           <div className="p-8 md:p-10">
             <p className="text-sm font-medium text-white/75">Quem te atende</p>
             <p className="mt-2 font-display text-4xl font-bold leading-tight md:text-5xl">
               Paulo e Danilo
             </p>
-            <p className="mt-3 max-w-xs text-lg leading-snug text-white/90">
-              Você fala direto com quem cuida da sua empresa. Em Brasília desde {site.foundedYear}.
+            <p className="mt-3 max-w-xs text-lg leading-snug text-white/90 text-pretty">
+              Você fala direto com quem cuida da sua empresa, sem central de atendimento.
+            </p>
+            <p className="mt-6 border-t border-white/20 pt-4 text-sm text-white/75">
+              CNPJ {site.cnpj}, aberto em {site.foundedYear}
             </p>
           </div>
         </aside>
@@ -111,6 +125,8 @@ export function Hero() {
   );
 }
 
+// Cada serviço abre o WhatsApp perguntando dele. A seta é o mesmo sinal do topo:
+// onde tem seta, a conversa começa.
 export function Services() {
   return (
     <section id="servicos" className="scroll-mt-20 bg-claro py-20 md:py-28">
@@ -120,21 +136,27 @@ export function Services() {
             O que a gente faz
           </h2>
           <p className="mt-5 max-w-sm text-aco text-pretty">
-            A rotina contábil de uma empresa pequena ou média. Se o seu caso não
-            está aqui, pergunta mesmo assim.
+            A rotina de uma empresa pequena ou média, do CNPJ à folha. Se o seu caso
+            não está na lista, pergunta mesmo assim.
           </p>
         </div>
 
         <ul className="divide-y divide-ardosia/15 border-y border-ardosia/15">
           {site.services.map((service) => (
-            <li
-              key={service.title}
-              className="grid gap-2 py-6 md:grid-cols-[1fr_1.3fr] md:gap-8"
-            >
-              <h3 className="font-display text-2xl font-semibold leading-tight">
-                {service.title}
-              </h3>
-              <p className="text-aco text-pretty">{service.description}</p>
+            <li key={service.title}>
+              <a
+                href={whatsappUrl(`Olá! Quero saber sobre ${service.title.toLowerCase()}.`)}
+                {...external}
+                className="group grid grid-cols-[1fr_auto] gap-x-6 gap-y-2 py-6 md:grid-cols-[1.15fr_1.25fr_auto] md:gap-x-6"
+              >
+                <h3 className="font-display text-2xl font-semibold leading-tight transition-colors group-hover:text-marinho">
+                  {service.title}
+                </h3>
+                <Arrow className="mt-0.5 size-5 text-aco group-hover:text-marinho md:order-last" />
+                <p className="col-span-2 text-aco text-pretty md:col-span-1">
+                  {service.description}
+                </p>
+              </a>
             </li>
           ))}
         </ul>
@@ -150,7 +172,7 @@ export function Steps() {
         <h2 className="font-display text-5xl font-bold tracking-tight md:text-6xl">
           Como começa
         </h2>
-        <ol className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
+        <ol className="mt-12 grid gap-8 md:grid-cols-3">
           {site.steps.map((step, i) => (
             <li key={step.title} className="border-t-4 border-marinho pt-6">
               <span className="font-display text-sm font-semibold text-marinho">
@@ -163,6 +185,9 @@ export function Steps() {
             </li>
           ))}
         </ol>
+        <div className="mt-12">
+          <WhatsAppButton label="Mandar a primeira mensagem" />
+        </div>
       </Container>
     </section>
   );
@@ -172,7 +197,7 @@ export function About() {
   return (
     <section id="quem-somos" className="scroll-mt-20 pb-20 md:pb-28">
       <Container>
-        <div className="grid overflow-hidden rounded-3xl rounded-bl-[96px] bg-marinho text-white lg:grid-cols-2 lg:rounded-bl-[160px]">
+        <div className="grid overflow-hidden rounded-3xl rounded-bl-[72px] bg-marinho text-white lg:grid-cols-2 lg:rounded-bl-[160px]">
           <div className="p-8 md:p-14">
             <p className="text-sm font-medium text-white/75">Quem somos</p>
             <h2 className="mt-3 font-display text-4xl font-bold leading-tight text-balance md:text-5xl">
@@ -193,9 +218,18 @@ export function About() {
                 </li>
               ))}
             </ul>
+            {instagramUrl && (
+              <a
+                href={instagramUrl}
+                {...external}
+                className="mt-8 inline-block text-sm text-white/80 underline decoration-white/30 underline-offset-4 transition-colors hover:text-white hover:decoration-white"
+              >
+                No Instagram: @{instagramUrl.split("/").filter(Boolean).pop()}
+              </a>
+            )}
           </div>
 
-          <div className="relative min-h-72 bg-azul">
+          <div className="relative h-40 bg-azul lg:h-auto lg:min-h-72">
             {site.aboutPhoto ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
@@ -248,13 +282,41 @@ export function Reviews() {
   );
 }
 
+// As perguntas também saem como FAQPage no JSON-LD, que o Google pode mostrar na busca.
 export function Faq() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: site.faq.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
   return (
     <section id="duvidas" className="scroll-mt-20 bg-claro py-20 md:py-28">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Container className="grid gap-10 lg:grid-cols-[1fr_1.5fr]">
-        <h2 className="font-display text-5xl font-bold tracking-tight text-balance md:text-6xl">
-          Dúvidas comuns
-        </h2>
+        <div>
+          <h2 className="font-display text-5xl font-bold tracking-tight text-balance md:text-6xl">
+            Dúvidas comuns
+          </h2>
+          <p className="mt-5 max-w-xs text-aco text-pretty">
+            Não achou a sua?{" "}
+            <a
+              href={whatsappUrl("Olá! Tenho uma dúvida.")}
+              {...external}
+              className="font-medium text-ardosia underline decoration-prata decoration-2 underline-offset-4 transition-colors hover:decoration-marinho"
+            >
+              Pergunta no WhatsApp
+            </a>
+            .
+          </p>
+        </div>
         <div className="divide-y divide-ardosia/15 border-y border-ardosia/15">
           {site.faq.map((item) => (
             <details key={item.q} className="group py-5">
@@ -325,24 +387,41 @@ export function BlogPreview() {
   );
 }
 
+// Fechamento: quem desceu até aqui ganha de novo os atalhos do topo, sem precisar subir.
 export function CallToAction() {
+  const { urgent, common } = site.situations;
+
   return (
     <section id="contato" className="scroll-mt-20 pb-24 md:pb-32">
       <Container>
-        <div className="rounded-3xl rounded-tl-[72px] bg-nevoa px-8 py-14 md:rounded-tl-[160px] md:px-16 md:py-20">
-          <h2 className="max-w-3xl font-display text-5xl font-bold leading-[1] tracking-tight text-balance md:text-7xl">
-            {site.cta.headline}
-          </h2>
-          <p className="mt-5 max-w-xl text-lg text-pretty">{site.cta.support}</p>
-          <a
-            href={whatsappUrl()}
-            {...external}
-            className="group mt-10 inline-flex items-center gap-3 rounded-full bg-marinho px-7 py-4 font-medium text-white"
-          >
-            {site.cta.primary}
-            <Arrow className="size-5" />
-          </a>
-          {site.contact.hours && <p className="mt-4 text-sm">{site.contact.hours}</p>}
+        <div className="grid gap-12 rounded-3xl rounded-tl-[72px] bg-nevoa px-8 py-14 md:rounded-tl-[160px] md:px-16 md:py-20 lg:grid-cols-[1.4fr_1fr] lg:items-end">
+          <div>
+            <h2 className="max-w-3xl font-display text-5xl font-bold leading-[1] tracking-tight text-balance md:text-7xl">
+              {site.cta.headline}
+            </h2>
+            <p className="mt-5 max-w-xl text-lg text-pretty">{site.cta.support}</p>
+            <div className="mt-10">
+              <WhatsAppButton label={site.cta.primary} />
+            </div>
+            {site.contact.hours && <p className="mt-4 text-sm">{site.contact.hours}</p>}
+          </div>
+
+          <div>
+            <p className="text-sm font-semibold text-marinho">Ou vai direto no assunto</p>
+            <ul className="mt-4 flex flex-wrap gap-3">
+              {[urgent, ...common].map((item) => (
+                <li key={item.short}>
+                  <a
+                    href={whatsappUrl(item.message)}
+                    {...external}
+                    className="inline-flex rounded-full border border-ardosia/20 bg-branco px-4 py-2.5 text-sm font-medium transition-colors hover:border-marinho hover:text-marinho"
+                  >
+                    {item.short}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </Container>
     </section>

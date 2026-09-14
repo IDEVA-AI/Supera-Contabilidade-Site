@@ -37,25 +37,34 @@ export const site = {
   profiles: ["https://www.instagram.com/supera.contabilidade/"] as string[],
 
   // Topo da home. A pessoa escolhe o que aconteceu e cai no WhatsApp com a
-  // mensagem já escrita. A urgente fica separada das outras. [VALIDAR]
+  // mensagem já escrita. A urgente fica separada das outras. `short` é o nome
+  // curto que aparece nos atalhos do fechamento da página. [VALIDAR]
+  heroIntro:
+    "Você não precisa entender de contabilidade pra falar com a gente. Escolha o que aconteceu e o WhatsApp abre com a mensagem pronta.",
   situations: {
     urgent: {
+      short: "Multa ou notificação",
       label: "Chegou uma multa ou notificação",
       detail: "Manda uma foto do documento. A gente olha o que é e o que precisa ser feito.",
       message: "Olá! Recebi uma multa ou notificação e preciso de ajuda.",
     },
     common: [
       {
+        short: "Abrir empresa",
         label: "Vou abrir uma empresa",
-        detail: "Do tipo de empresa ao CNPJ na mão, sabendo quanto vai pagar de imposto.",
+        detail:
+          "Antes do CNPJ, a gente escolhe com você o tipo de empresa e o regime de imposto, pra não começar pagando a mais.",
         message: "Olá! Quero abrir uma empresa.",
       },
       {
-        label: "Preciso trocar de contador",
-        detail: "A gente pega os documentos com o contador atual e confere o que chegou.",
+        short: "Trocar de contador",
+        label: "Quero trocar de contador",
+        detail:
+          "Seu contador sumiu ou não resolve? A gente pede os documentos a ele e confere o que chegou.",
         message: "Olá! Quero trocar de contador.",
       },
       {
+        short: "Imposto",
         label: "Chegou a época do imposto",
         detail: "Declaração, guia atrasada ou dúvida sobre quanto vai pagar.",
         message: "Olá! Preciso de ajuda com imposto.",
@@ -63,7 +72,7 @@ export const site = {
     ],
   },
 
-  // Serviços. Conferidos em 2026-09-14 com o site antigo da própria Supera
+  // Serviços, na ordem das situações do topo. Conferidos em 2026-09-14 com o site antigo da própria Supera
   // (superacontabilidadedf.com.br): certidões, apuração de impostos, demonstrativos
   // pra banco, folha, planejamento tributário, abertura e regularização. [VALIDAR]
   services: [
@@ -71,20 +80,6 @@ export const site = {
       title: "Abertura de empresa",
       description:
         "Tipo de empresa, regime de imposto, CNPJ e inscrições. Você começa sabendo quanto vai pagar.",
-    },
-    {
-      title: "Contabilidade mensal",
-      description:
-        "Escrituração, balancete e os demonstrativos que banco e financeira pedem, com alguém pra explicar o que os números dizem.",
-    },
-    {
-      title: "Departamento pessoal",
-      description: "Admissão, folha, férias, rescisão e eSocial dentro do prazo.",
-    },
-    {
-      title: "Impostos e declarações",
-      description:
-        "Guias calculadas antes do vencimento e planejamento tributário pra não pagar imposto a mais quando o negócio muda de tamanho.",
     },
     {
       title: "Troca de contador",
@@ -96,21 +91,35 @@ export const site = {
       description:
         "Certidão negada, pendência na Receita, multa ou empresa parada. Primeiro a gente descobre o tamanho do problema.",
     },
+    {
+      title: "Impostos e declarações",
+      description:
+        "Guias calculadas antes do vencimento e planejamento tributário pra não pagar imposto a mais quando o negócio muda de tamanho.",
+    },
+    {
+      title: "Contabilidade mensal",
+      description:
+        "Escrituração, balancete e os demonstrativos que banco e financeira pedem, com alguém pra explicar o que os números dizem.",
+    },
+    {
+      title: "Departamento pessoal",
+      description: "Admissão, folha, férias, rescisão e eSocial dentro do prazo.",
+    },
   ],
 
   // "Como começa". É uma sequência de verdade, por isso vai numerada. [VALIDAR]
   steps: [
     {
-      title: "Você chama no WhatsApp",
-      text: "Conta o que aconteceu do seu jeito. Pode mandar foto de documento.",
+      title: "Você manda mensagem",
+      text: "Conta o que aconteceu do seu jeito. Pode mandar foto do documento.",
     },
     {
-      title: "A gente conversa",
-      text: "O Danilo entende o tamanho da empresa, o regime e o que está pegando.",
+      title: "O Danilo entende o caso",
+      text: "Tamanho da empresa, regime de imposto e o que está pegando. Pode explicar com as suas palavras.",
     },
     {
       title: "Você recebe a proposta",
-      text: "Com o que vai ser feito e quanto custa. Aí você decide.",
+      text: "Com o que vai ser feito e quanto custa. A decisão fica com você.",
     },
   ],
 
@@ -138,7 +147,7 @@ export const site = {
     },
     {
       q: "Já tenho contador. Dá pra trocar no meio do ano?",
-      a: "Dá. A troca pode acontecer em qualquer mês. A gente combina a data, pede os documentos ao contador atual e confere o que chegou antes de assumir.",
+      a: "Dá. A troca pode acontecer em qualquer mês. A gente combina a data, pede os documentos ao contador atual e confere o que chegou antes de assumir. Quem conversa com o contador atual é a gente.",
     },
     {
       q: "Recebi uma notificação da Receita. É grave?",
@@ -158,7 +167,7 @@ export const site = {
     primary: "Falar no WhatsApp",
     headline: "Conta pra gente o que aconteceu.",
     support:
-      "Uma mensagem no WhatsApp já basta pra começar.",
+      "Pode mandar do jeito que está, com a papelada bagunçada mesmo. A gente ajuda a separar o que é urgente.",
   },
 } as const;
 
@@ -166,5 +175,7 @@ export type Site = typeof site;
 
 export const whatsappUrl = (message: string = site.contact.whatsappMessage) =>
   `https://wa.me/${site.contact.whatsapp}?text=${encodeURIComponent(message)}`;
+
+export const instagramUrl = site.profiles.find((url) => url.includes("instagram.com"));
 
 export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? site.url;
