@@ -4,9 +4,9 @@ import { Azulejo } from "@/components/azulejo";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-tinta text-white">
-      <div className="h-16 bg-azulejo">
-        <Azulejo id="azulejo-rodape" size={64} className="text-white" />
+    <footer className="bg-ardosia text-white">
+      <div className="h-16 bg-marinho">
+        <Azulejo id="azulejo-rodape" size={64} className="text-prata" />
       </div>
 
       <Container className="grid gap-10 py-14 md:grid-cols-3">

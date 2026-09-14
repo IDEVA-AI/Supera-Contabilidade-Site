@@ -1,29 +1,31 @@
 @import "tailwindcss";
 
-/* Tokens da Supera. Azul de azulejo e amarelo de ipê, duas cores de Brasília,
-   usadas chapadas e sem degradê. Concreto e cal fazem a base. A paleta é
-   proposta da IDEVA até o cliente mandar logo e cor própria. [PLACEHOLDER] */
+/* Cores da Supera, medidas nos pixels do logo e dos posts do Instagram
+   @supera.contabilidade em 2026-09-14. Nenhuma foi inventada: marinho, azul e
+   ardósia vêm dos posts; aço e prata, do "S" do logo; névoa, claro e branco, dos
+   fundos. Contraste conferido: ardósia e aço passam AA sobre branco e claro,
+   marinho passa AA sobre prata e névoa. */
 :root {
-  --cal: #fbfbf8;
-  --tinta: #14181f;
-  --tinta-suave: #525a66;
-  --azulejo: #2347c6;
-  --azulejo-escuro: #182f8a;
-  --ipe: #f4c21f;
-  --concreto: #e8e9e4;
-  --fio: #d6d8d1;
+  --marinho: #113357;
+  --azul: #1d3f71;
+  --ardosia: #1f344a;
+  --aco: #617283;
+  --prata: #b5bac0;
+  --nevoa: #e1e4e6;
+  --claro: #f5f5f5;
+  --branco: #fefefe;
   color-scheme: light;
 }
 
 @theme inline {
-  --color-cal: var(--cal);
-  --color-tinta: var(--tinta);
-  --color-tinta-suave: var(--tinta-suave);
-  --color-azulejo: var(--azulejo);
-  --color-azulejo-escuro: var(--azulejo-escuro);
-  --color-ipe: var(--ipe);
-  --color-concreto: var(--concreto);
-  --color-fio: var(--fio);
+  --color-marinho: var(--marinho);
+  --color-azul: var(--azul);
+  --color-ardosia: var(--ardosia);
+  --color-aco: var(--aco);
+  --color-prata: var(--prata);
+  --color-nevoa: var(--nevoa);
+  --color-claro: var(--claro);
+  --color-branco: var(--branco);
   --font-display: var(--font-gabarito);
   --font-sans: var(--font-hanken);
 }
@@ -33,13 +35,13 @@ html {
 }
 
 body {
-  background: var(--cal);
-  color: var(--tinta);
+  background: var(--branco);
+  color: var(--ardosia);
   -webkit-font-smoothing: antialiased;
 }
 
 :focus-visible {
-  outline: 3px solid var(--azulejo);
+  outline: 3px solid var(--marinho);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -69,6 +71,7 @@ body {
   line-height: 1.2;
   font-weight: 700;
   margin-top: 2.25em;
+  color: var(--marinho);
 }
 .artigo h3 {
   font-family: var(--font-gabarito), sans-serif;
@@ -85,7 +88,7 @@ body {
   padding-left: 1.25em;
 }
 .artigo a {
-  color: var(--azulejo);
+  color: var(--marinho);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -93,7 +96,7 @@ body {
   font-weight: 600;
 }
 .artigo blockquote {
-  border-left: 4px solid var(--ipe);
+  border-left: 4px solid var(--prata);
   padding-left: 1em;
-  color: var(--tinta-suave);
+  color: var(--aco);
 }

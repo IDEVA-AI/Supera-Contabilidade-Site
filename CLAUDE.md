@@ -10,7 +10,9 @@ até trocar. Estado do cliente em
 `~/projetos/cerebro-operacional/interno/clientes/Supera/_estado.md`.
 
 Direção visual (aprovada pelo Julio em 2026-09-14): linha do Hoskens Accountancy,
-cor chapada e tipografia com personalidade, funcionando sem foto. Referências de
+cor chapada e tipografia com personalidade, funcionando sem foto. As cores são as
+da marca, medidas no logo e nos posts do Instagram `@supera.contabilidade` em
+2026-09-14 (marinho, prata e aço, sem cor quente). Não inventar cor fora dessa lista. Referências de
 nível mundial e prints das versões em `interno/clientes/Supera/referencias-site/`
 e `interno/clientes/Supera/site-v1/`.
 
@@ -24,8 +26,9 @@ e `interno/clientes/Supera/site-v1/`.
   texto), JSON-LD, header, footer e a barra fixa do celular.
 - `app/page.tsx` · a home, na ordem: topo com seletor de situação, serviços, como
   começa, quem somos, avaliações, dúvidas, blog, fechamento.
-- `app/globals.css` · tokens (azulejo, ipê, concreto, cal, tinta, fio) e o estilo
-  do corpo de artigo (`.artigo`). Só tema claro.
+- `app/globals.css` · tokens com as cores medidas da marca (marinho, azul, ardósia,
+  aço, prata, névoa, claro, branco) e o estilo do corpo de artigo (`.artigo`). Só
+  tema claro.
 - `components/sections.tsx` · todas as seções da home. `Reviews` e `BlogPreview`
   somem sozinhas quando não há dado.
 - `components/azulejo.tsx` · o padrão de azulejo, assinatura visual do site.

@@ -50,19 +50,19 @@ export default async function PostPage({ params }: Props) {
       />
       <Container>
         <div className="mx-auto max-w-3xl">
-          <Link href="/blog" className="text-sm text-tinta-suave hover:text-azulejo">
+          <Link href="/blog" className="text-sm text-aco hover:text-marinho">
             Blog
           </Link>
           {post.status === "rascunho" && (
-            <p className="mt-6 w-fit rounded-full bg-ipe px-3 py-1 text-xs font-semibold">
+            <p className="mt-6 w-fit rounded-full bg-prata px-3 py-1 text-xs font-semibold">
               Rascunho, não vai ao ar
             </p>
           )}
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight text-balance md:text-6xl">
             {post.title}
           </h1>
-          <p className="mt-5 text-lg text-tinta-suave text-pretty">{post.description}</p>
-          <p className="mt-6 text-sm text-tinta-suave">
+          <p className="mt-5 text-lg text-aco text-pretty">{post.description}</p>
+          <p className="mt-6 text-sm text-aco">
             {post.author}, <time dateTime={post.date}>{formatDate(post.date)}</time>
           </p>
 
@@ -70,7 +70,7 @@ export default async function PostPage({ params }: Props) {
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.body}</ReactMarkdown>
           </div>
 
-          <aside className="mt-16 rounded-3xl rounded-tr-[120px] bg-azulejo p-8 text-white md:p-12">
+          <aside className="mt-16 rounded-3xl rounded-tr-[120px] bg-marinho p-8 text-white md:p-12">
             <p className="font-display text-3xl font-bold leading-tight">
               Esse é o seu caso?
             </p>
@@ -82,7 +82,7 @@ export default async function PostPage({ params }: Props) {
               href={whatsappUrl(`Olá! Li o artigo "${post.title}" e quero conversar.`)}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex rounded-full bg-ipe px-6 py-3 font-medium text-tinta"
+              className="mt-8 inline-flex rounded-full bg-prata px-6 py-3 font-medium text-ardosia"
             >
               {site.cta.primary}
             </a>

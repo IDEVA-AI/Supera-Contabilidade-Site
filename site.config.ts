@@ -24,14 +24,15 @@ export const site = {
     email: "supera.superacontabilidade@gmail.com", // da Receita [PLACEHOLDER]
     phone: "+556133990425", // E.164, fixo da Receita [PLACEHOLDER]
     phoneLabel: "(61) 3399-0425", // [PLACEHOLDER]
-    whatsapp: "5511900000000", // [PLACEHOLDER] número falso, trava a publicação
+    whatsapp: "5561981999430", // da bio do Instagram @supera.contabilidade (2026-09-14)
     whatsappMessage: "Olá! Vim pelo site e quero falar sobre contabilidade.",
     hours: "Segunda a sexta, 9h às 18h", // [PLACEHOLDER]
   },
 
   // Perfis oficiais (viram sameAs no JSON-LD). Só entra o que existe de verdade.
-  // Atenção: @superacontabilidade no Instagram é de outro escritório (Valparaíso-GO).
-  profiles: [] as string[],
+  // Atenção: @superacontabilidade (sem ponto) é de outro escritório, de Valparaíso-GO.
+  // O do cliente é @supera.contabilidade.
+  profiles: ["https://www.instagram.com/supera.contabilidade/"] as string[],
 
   // Topo da home. A pessoa escolhe o que aconteceu e cai no WhatsApp com a
   // mensagem já escrita. A urgente fica separada das outras. [VALIDAR]
