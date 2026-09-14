@@ -11,14 +11,16 @@ export const site = {
     "Escritório de contabilidade para empresas que querem número confiável na hora de decidir: abertura, escrituração, folha, imposto e apoio na gestão.", // [PLACEHOLDER]
 
   contact: {
-    city: "São Paulo", // [PLACEHOLDER]
-    state: "SP", // [PLACEHOLDER]
-    region: "São Paulo e Região Metropolitana", // [PLACEHOLDER]
-    street: "", // [PLACEHOLDER]
-    postalCode: "", // [PLACEHOLDER]
-    email: "contato@superacontabilidade.com.br", // [PLACEHOLDER]
-    phone: "+5511900000000", // E.164 [PLACEHOLDER]
-    phoneLabel: "+55 (11) 90000-0000", // [PLACEHOLDER]
+    // O cliente quer a marca vinculada ao DF, nunca ao Riacho Fundo (2026-09-14).
+    // Por isso rua, bairro e CEP ficam vazios de propósito: o schema não emite.
+    city: "Brasília",
+    state: "DF",
+    region: "Distrito Federal",
+    street: "",
+    postalCode: "",
+    email: "supera.superacontabilidade@gmail.com", // da Receita [PLACEHOLDER]
+    phone: "+556133990425", // E.164, fixo da Receita [PLACEHOLDER]
+    phoneLabel: "(61) 3399-0425", // [PLACEHOLDER]
     whatsapp: "5511900000000", // [PLACEHOLDER]
     whatsappMessage: "Olá! Vim pelo site e quero falar sobre contabilidade.",
     hours: "Segunda a sexta, 9h às 18h", // [PLACEHOLDER]
@@ -70,7 +72,7 @@ export const site = {
 
   // Provas e diferenciais da seção "por que a Supera". Trocar por prova real.
   highlights: [
-    { label: "Anos de estrada", value: "—" }, // [PLACEHOLDER]
+    { label: "Anos de estrada", value: "12" }, // aberta em 2014-04-17 (Receita)
     { label: "Empresas atendidas", value: "—" }, // [PLACEHOLDER]
     { label: "Resposta em até", value: "24h" }, // [PLACEHOLDER]
   ],
