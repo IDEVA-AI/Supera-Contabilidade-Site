@@ -102,7 +102,7 @@ export function Hero() {
               Paulo e Danilo
             </p>
             <p className="mt-3 max-w-xs text-lg leading-snug text-white/90">
-              Pai e filho à frente de um escritório aberto em {site.foundedYear}.
+              Você fala direto com quem cuida da sua empresa. Em Brasília desde {site.foundedYear}.
             </p>
           </div>
         </aside>
@@ -176,7 +176,7 @@ export function About() {
           <div className="p-8 md:p-14">
             <p className="text-sm font-medium text-white/75">Quem somos</p>
             <h2 className="mt-3 font-display text-4xl font-bold leading-tight text-balance md:text-5xl">
-              Um escritório de família em Brasília
+              Cuidando de empresas em Brasília desde {site.foundedYear}
             </h2>
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-white/90">
               {site.about.map((paragraph) => (

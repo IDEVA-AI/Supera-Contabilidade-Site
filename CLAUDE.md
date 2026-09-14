@@ -76,6 +76,10 @@ saiu errado nas artes por estar escrito em dois lugares).
 **Não publique com `[PLACEHOLDER]` no ar.** Esses campos alimentam o JSON-LD, e
 endereço meia-boca no Google é pior que endereço nenhum.
 
+**Não fale de pai e filho nem de escritório de família.** Regra do Julio
+(2026-09-14): é tema que não interessa a quem procura contador. O texto fala do que
+a pessoa quer resolver, de Brasília e de quem atende.
+
 **Não vincule a marca ao Riacho Fundo.** Pedido do cliente (2026-09-14): o site
 fala Brasília ou Distrito Federal. Rua, bairro e CEP ficam vazios no config de
 propósito.

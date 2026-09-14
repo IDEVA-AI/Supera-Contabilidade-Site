@@ -6,10 +6,10 @@
 
 export const site = {
   name: "Supera Contabilidade",
-  tagline: "Contabilidade de pai e filho em Brasília",
+  tagline: "Contabilidade para empresas em Brasília",
   url: "https://www.superacontabilidade.com.br", // o domínio sem www redireciona (308) pra este
   description:
-    "Escritório de contabilidade em Brasília, aberto em 2014 e tocado por pai e filho. Abertura de empresa, contabilidade mensal, folha e impostos, com conversa direta no WhatsApp.", // [VALIDAR]
+    "Escritório de contabilidade em Brasília desde 2014. Abertura de empresa, contabilidade mensal, folha, impostos e regularização, com atendimento direto pelo WhatsApp.", // [VALIDAR]
   foundedYear: 2014, // Receita: abertura em 2014-04-17
   cnpj: "20.645.761/0001-08",
 
@@ -122,7 +122,7 @@ export const site = {
   aboutPhoto: "", // caminho em /public/img quando a sessão de fotos acontecer
   about: [
     "A Supera abriu em 2014 e continua com o tamanho que permite conhecer cada cliente pelo nome.",
-    "Hoje o escritório está nas mãos do Paulo e do filho dele, o Danilo. A carteira foi construída por indicação: quem gosta do trabalho apresenta o próximo cliente.",
+    "Quem atende é o Danilo, direto no WhatsApp. A carteira foi construída por indicação: quem gosta do trabalho apresenta o próximo cliente.",
   ], // [VALIDAR]
 
   // Avaliações reais do Google. Enquanto estiver vazio, a seção não aparece.
