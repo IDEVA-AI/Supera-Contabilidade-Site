@@ -66,6 +66,7 @@ body {
   margin-top: 1.25em;
 }
 .artigo h2 {
+  scroll-margin-top: 6rem;
   font-family: var(--font-gabarito), sans-serif;
   font-size: 1.875rem;
   line-height: 1.2;
@@ -94,6 +95,36 @@ body {
 }
 .artigo strong {
   font-weight: 600;
+}
+.artigo li + li {
+  margin-top: 0.4em;
+}
+.artigo table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+.artigo th,
+.artigo td {
+  border-bottom: 1px solid var(--nevoa);
+  padding: 0.6em 0.75em 0.6em 0;
+  text-align: left;
+  vertical-align: top;
+}
+.artigo th {
+  font-weight: 600;
+  color: var(--marinho);
+}
+/* No celular a tabela rola de lado em vez de espremer as colunas. */
+@media (max-width: 640px) {
+  .artigo table {
+    display: block;
+    overflow-x: auto;
+  }
+  .artigo th,
+  .artigo td {
+    min-width: 9rem;
+  }
 }
 .artigo blockquote {
   border-left: 4px solid var(--prata);

@@ -365,6 +365,8 @@ export function BlogPreview() {
               >
                 <span className="flex items-center gap-3 text-sm text-aco">
                   <time dateTime={post.date}>{formatDate(post.date)}</time>
+                  <span aria-hidden="true">·</span>
+                  <span>{post.readingMinutes} min de leitura</span>
                   {post.status === "rascunho" && (
                     <span className="rounded-full bg-prata px-2 py-0.5 text-xs font-semibold text-ardosia">
                       Rascunho
@@ -375,8 +377,9 @@ export function BlogPreview() {
                   {post.title}
                 </h3>
                 <p className="mt-3 text-aco text-pretty">{post.description}</p>
-                <span className="mt-auto flex items-center gap-2 pt-6 text-sm font-medium">
-                  Ler artigo <Arrow className="size-4" />
+                {/* Sem seta de propósito: no site, seta é o sinal de que abre o WhatsApp. */}
+                <span className="mt-auto pt-6 text-sm font-medium underline decoration-nevoa decoration-2 underline-offset-4 transition-colors group-hover:decoration-marinho">
+                  Ler o artigo
                 </span>
               </Link>
             </li>

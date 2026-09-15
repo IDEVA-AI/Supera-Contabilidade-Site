@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Container } from "@/components/container";
-import { formatDate, getPost, getPosts } from "@/lib/blog";
+import { formatDate, getHeadings, getPost, getPosts, getRelated, slugify } from "@/lib/blog";
 import { site, siteUrl, whatsappUrl } from "@/site.config";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -40,7 +40,10 @@ export default async function PostPage({ params }: Props) {
     author: { "@type": "Person", name: post.author },
     publisher: { "@type": "Organization", name: site.name },
     mainEntityOfPage: `${siteUrl}/blog/${slug}`,
+    inLanguage: "pt-BR",
   };
+  const headings = getHeadings(post.body);
+  const related = getRelated(slug);
 
   return (
     <article className="py-16 md:py-24">
@@ -50,8 +53,8 @@ export default async function PostPage({ params }: Props) {
       />
       <Container>
         <div className="mx-auto max-w-3xl">
-          <Link href="/blog" className="text-sm text-aco hover:text-marinho">
-            Blog
+          <Link href="/blog" className="text-sm text-aco underline-offset-4 hover:text-marinho hover:underline">
+            Todos os artigos
           </Link>
           {post.status === "rascunho" && (
             <p className="mt-6 w-fit rounded-full bg-prata px-3 py-1 text-xs font-semibold">
@@ -63,11 +66,39 @@ export default async function PostPage({ params }: Props) {
           </h1>
           <p className="mt-5 text-lg text-aco text-pretty">{post.description}</p>
           <p className="mt-6 text-sm text-aco">
-            {post.author}, <time dateTime={post.date}>{formatDate(post.date)}</time>
+            {post.author}, <time dateTime={post.date}>{formatDate(post.date)}</time>.{" "}
+            {post.readingMinutes} min de leitura.
           </p>
 
+          {headings.length > 2 && (
+            <nav aria-label="Neste artigo" className="mt-10 rounded-2xl bg-claro p-6 md:p-8">
+              <p className="text-sm font-semibold text-marinho">Neste artigo</p>
+              <ol className="mt-3 space-y-2">
+                {headings.map((heading) => (
+                  <li key={heading.id}>
+                    <a
+                      href={`#${heading.id}`}
+                      className="text-ardosia underline decoration-nevoa decoration-2 underline-offset-4 transition-colors hover:decoration-marinho"
+                    >
+                      {heading.text}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          )}
+
           <div className="artigo mt-12">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.body}</ReactMarkdown>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                h2: ({ children }) => (
+                  <h2 id={slugify(String(children))}>{children}</h2>
+                ),
+              }}
+            >
+              {post.body}
+            </ReactMarkdown>
           </div>
 
           <aside className="mt-16 rounded-3xl rounded-tr-[120px] bg-marinho p-8 text-white md:p-12">
@@ -86,6 +117,26 @@ export default async function PostPage({ params }: Props) {
               {site.cta.primary}
             </a>
           </aside>
+
+          {related.length > 0 && (
+            <section className="mt-16">
+              <h2 className="font-display text-2xl font-semibold">Continue lendo</h2>
+              <ul className="mt-6 divide-y divide-nevoa border-y border-nevoa">
+                {related.map((item) => (
+                  <li key={item.slug}>
+                    <Link href={`/blog/${item.slug}`} className="group block py-5">
+                      <span className="font-display text-xl font-semibold leading-snug text-balance transition-colors group-hover:text-marinho">
+                        {item.title}
+                      </span>
+                      <span className="mt-1 block text-sm text-aco">
+                        {item.readingMinutes} min de leitura
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
         </div>
       </Container>
     </article>

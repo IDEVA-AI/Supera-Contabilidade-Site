@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/container";
 import { formatDate, getPosts } from "@/lib/blog";
+import { whatsappUrl } from "@/site.config";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -29,9 +30,10 @@ export default function BlogIndex() {
                 href={`/blog/${post.slug}`}
                 className="group grid gap-2 py-8 md:grid-cols-[12rem_1fr] md:gap-8"
               >
-                <time dateTime={post.date} className="text-sm text-aco md:pt-2">
-                  {formatDate(post.date)}
-                </time>
+                <p className="text-sm text-aco md:pt-2">
+                  <time dateTime={post.date}>{formatDate(post.date)}</time>
+                  <span className="block">{post.readingMinutes} min de leitura</span>
+                </p>
                 <div>
                   <h2 className="font-display text-2xl font-semibold leading-tight text-balance transition-colors group-hover:text-marinho md:text-3xl">
                     {post.title}
@@ -47,6 +49,19 @@ export default function BlogIndex() {
       ) : (
         <p className="mt-14 text-aco">Os primeiros artigos estão sendo escritos.</p>
       )}
+
+      <p className="mt-12 text-aco text-pretty">
+        Tem uma dúvida que ainda não virou artigo?{" "}
+        <a
+          href={whatsappUrl("Olá! Tenho uma dúvida que não achei no blog.")}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium text-ardosia underline decoration-prata decoration-2 underline-offset-4 transition-colors hover:decoration-marinho"
+        >
+          Pergunta no WhatsApp
+        </a>
+        .
+      </p>
     </Container>
   );
 }
