@@ -7,6 +7,7 @@ import { Container } from "@/components/container";
 import { WhatsAppButton, external } from "@/components/sections";
 import { MobileContactBar } from "@/components/mobile-contact-bar";
 import { Placeholder } from "@/components/placeholder";
+import { TopicIcon, WhatsAppIcon } from "@/components/icons";
 
 // Landing page de anúncio pra quem vai abrir empresa. Um objetivo só: abrir o
 // WhatsApp com a mensagem da página. Sem menu. Conteúdo em content/lp-abrir-empresa.ts.
@@ -59,8 +60,9 @@ export default function AbrirEmpresaPage() {
           <a
             href={waUrl}
             {...external}
-            className="hidden rounded-full bg-marinho px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-ardosia sm:inline-flex"
+            className="hidden items-center gap-2 rounded-full bg-marinho px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-ardosia sm:inline-flex"
           >
+            <WhatsAppIcon className="size-4" />
             Falar no WhatsApp
           </a>
         </Container>
@@ -126,6 +128,9 @@ export default function AbrirEmpresaPage() {
             <ul className="mt-12 grid gap-6 md:grid-cols-2">
               {lp.mistakes.map((item) => (
                 <li key={item.title} className="rounded-2xl bg-branco p-6 md:p-8">
+                  <span className="mb-5 grid size-12 place-items-center rounded-full bg-claro text-marinho">
+                    <TopicIcon name={item.icon} />
+                  </span>
                   <h3 className="font-display text-2xl font-semibold leading-tight">{item.title}</h3>
                   <p className="mt-3 text-aco text-pretty">{item.text}</p>
                 </li>
@@ -140,7 +145,10 @@ export default function AbrirEmpresaPage() {
             <ol className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-5 lg:gap-6">
               {lp.steps.map((step, i) => (
                 <li key={step.title} className="border-t-4 border-marinho pt-6">
-                  <span className="font-display text-sm font-semibold text-marinho">Passo {i + 1}</span>
+                  <span className="flex items-center justify-between gap-4">
+                    <span className="font-display text-sm font-semibold text-marinho">Passo {i + 1}</span>
+                    <TopicIcon name={step.icon} className="size-7 text-marinho" />
+                  </span>
                   <h3 className="mt-2 font-display text-xl font-semibold leading-tight">{step.title}</h3>
                   <p className="mt-2 text-aco text-pretty">{step.text}</p>
                 </li>

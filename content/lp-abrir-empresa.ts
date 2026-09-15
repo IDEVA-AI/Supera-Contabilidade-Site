@@ -6,6 +6,8 @@
 // Números de taxa e prazo conferidos em fonte oficial em 2026-09-15
 // (JUCIS-DF, Redesim DF, Receita). Textos da IDEVA seguem [VALIDAR].
 
+import type { TopicKey } from "@/components/icons";
+
 export const lp = {
   draft: true,
   path: "/abrir-empresa",
@@ -40,18 +42,22 @@ export const lp = {
   // Onde a abertura costuma dar errado. [VALIDAR]
   mistakes: [
     {
+      icon: "empresa" as TopicKey,
       title: "Tipo de empresa",
       text: "O empresário individual responde com os bens pessoais pelas dívidas da empresa. Com sócio ou risco no negócio, a LTDA costuma proteger melhor.",
     },
     {
+      icon: "regime" as TopicKey,
       title: "Regime de imposto",
       text: "Desde dezembro de 2025, o Simples Nacional é pedido junto com o CNPJ. Quem deixa passar só consegue entrar em janeiro do ano seguinte.",
     },
     {
+      icon: "atividade" as TopicKey,
       title: "Atividade no CNPJ",
       text: "O código de atividade define imposto e licença. Em alguns serviços, o enquadramento leva a alíquota inicial do Simples de 6% pra 15,5%.",
     },
     {
+      icon: "endereco" as TopicKey,
       title: "Endereço",
       text: "Em Brasília, nem todo endereço aceita toda atividade. A consulta de viabilidade confere isso, e vale fazer antes de assinar o aluguel.",
     },
@@ -60,22 +66,27 @@ export const lp = {
   // Sequência real da abertura no DF.
   steps: [
     {
+      icon: "conversa" as TopicKey,
       title: "Conversa no WhatsApp",
       text: "Você conta o que a empresa vai fazer, se tem sócio e quanto espera faturar. O Danilo monta a proposta com tipo de empresa e regime.",
     },
     {
+      icon: "endereco" as TopicKey,
       title: "Viabilidade",
       text: "A Administração Regional confere o nome e se a atividade é permitida no endereço.",
     },
     {
+      icon: "proposta" as TopicKey,
       title: "Registro e CNPJ",
       text: "Contrato registrado na JUCIS-DF e CNPJ emitido com o regime escolhido. Você assina pela conta gov.br.",
     },
     {
+      icon: "cadastro" as TopicKey,
       title: "Inscrição no DF e licença",
       text: "Cadastro fiscal do DF e licença de funcionamento. Atividade de baixo risco não passa por vistoria.",
     },
     {
+      icon: "contas" as TopicKey,
       title: "Primeiro mês",
       text: "A contabilidade começa junto com a empresa, com as guias calculadas antes do vencimento.",
     },

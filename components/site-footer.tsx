@@ -3,6 +3,7 @@ import { instagramUrl, site, whatsappUrl } from "@/site.config";
 import { Container } from "@/components/container";
 import { Azulejo } from "@/components/azulejo";
 import { nav } from "@/components/site-header";
+import { InstagramIcon, WhatsAppIcon } from "@/components/icons";
 
 // No celular o menu do topo some, então o rodapé é o caminho pro blog e pras seções.
 export function SiteFooter() {
@@ -21,13 +22,15 @@ export function SiteFooter() {
         <div className="space-y-2 text-white/80">
           <p className="mb-3 text-sm font-medium text-white/55">Contato</p>
           <p>
-            <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+            <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-white">
+              <WhatsAppIcon className="size-4" />
               WhatsApp
             </a>
           </p>
           {instagramUrl && (
             <p>
-              <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+              <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-white">
+                <InstagramIcon className="size-4" />
                 Instagram
               </a>
             </p>

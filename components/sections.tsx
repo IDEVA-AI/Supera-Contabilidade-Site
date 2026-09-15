@@ -4,6 +4,7 @@ import { instagramUrl, site, whatsappUrl } from "@/site.config";
 import { Container } from "@/components/container";
 import { formatDate, getPosts } from "@/lib/blog";
 import { cn } from "@/lib/utils";
+import { InstagramIcon, TopicIcon, WhatsAppIcon } from "@/components/icons";
 
 export function Arrow({ className }: { className?: string }) {
   return (
@@ -33,6 +34,7 @@ export function WhatsAppButton({ label, message }: { label: string; message?: st
       {...external}
       className="group inline-flex items-center gap-3 rounded-full bg-marinho px-7 py-4 font-medium text-white transition-colors hover:bg-ardosia"
     >
+      <WhatsAppIcon />
       {label}
       <Arrow className="size-5" />
     </a>
@@ -64,7 +66,11 @@ export function Hero() {
             {...external}
             className="group mt-10 flex items-center justify-between gap-6 rounded-2xl bg-marinho px-6 py-5 text-white transition-colors hover:bg-ardosia md:px-8 md:py-6"
           >
-            <span>
+            <span className="flex items-center gap-5">
+              <span className="hidden size-12 shrink-0 place-items-center rounded-full bg-white/10 text-prata sm:grid">
+                <TopicIcon name={urgent.icon} />
+              </span>
+              <span>
               <span className="block text-xs font-semibold uppercase tracking-wider text-prata">
                 Urgente
               </span>
@@ -72,6 +78,7 @@ export function Hero() {
                 {urgent.label}
               </span>
               <span className="mt-1 block text-sm text-white/80 text-pretty">{urgent.detail}</span>
+              </span>
             </span>
             <Arrow />
           </a>
@@ -84,11 +91,16 @@ export function Hero() {
                   {...external}
                   className="group flex items-center justify-between gap-6 px-1 py-5 transition-colors hover:text-marinho"
                 >
-                  <span>
+                  <span className="flex items-center gap-5">
+                    <span className="hidden size-12 shrink-0 place-items-center rounded-full bg-claro text-marinho sm:grid">
+                      <TopicIcon name={item.icon} />
+                    </span>
+                    <span>
                     <span className="block font-display text-2xl font-semibold leading-tight md:text-3xl">
                       {item.label}
                     </span>
                     <span className="mt-1 block text-sm text-aco text-pretty">{item.detail}</span>
+                    </span>
                   </span>
                   <Arrow />
                 </a>
@@ -166,9 +178,10 @@ export function Services() {
               <a
                 href={whatsappUrl(`Olá! Quero saber sobre ${service.title.toLowerCase()}.`)}
                 {...external}
-                className="group grid grid-cols-[1fr_auto] gap-x-6 gap-y-2 py-6 md:grid-cols-[1.15fr_1.25fr_auto] md:gap-x-6"
+                className="group grid grid-cols-[1fr_auto] gap-x-6 gap-y-2 py-6 md:grid-cols-[1.3fr_1.2fr_auto] md:gap-x-6"
               >
-                <h3 className="font-display text-2xl font-semibold leading-tight transition-colors group-hover:text-marinho">
+                <h3 className="flex items-center gap-2.5 self-start font-display text-2xl font-semibold leading-tight transition-colors group-hover:text-marinho">
+                  <TopicIcon name={service.icon} className="size-5 text-aco transition-colors group-hover:text-marinho" />
                   {service.title}
                 </h3>
                 <Arrow className="mt-0.5 size-5 text-aco group-hover:text-marinho md:order-last" />
@@ -194,8 +207,11 @@ export function Steps() {
         <ol className="mt-12 grid gap-8 md:grid-cols-3">
           {site.steps.map((step, i) => (
             <li key={step.title} className="border-t-4 border-marinho pt-6">
-              <span className="font-display text-sm font-semibold text-marinho">
-                Passo {i + 1}
+              <span className="flex items-center justify-between gap-4">
+                <span className="font-display text-sm font-semibold text-marinho">
+                  Passo {i + 1}
+                </span>
+                <TopicIcon name={step.icon} className="size-7 text-marinho" />
               </span>
               <h3 className="mt-2 font-display text-2xl font-semibold leading-tight">
                 {step.title}
@@ -241,8 +257,9 @@ export function About() {
               <a
                 href={instagramUrl}
                 {...external}
-                className="mt-8 inline-block text-sm text-white/80 underline decoration-white/30 underline-offset-4 transition-colors hover:text-white hover:decoration-white"
+                className="mt-8 inline-flex items-center gap-2 text-sm text-white/80 underline decoration-white/30 underline-offset-4 transition-colors hover:text-white hover:decoration-white"
               >
+                <InstagramIcon className="size-4" />
                 No Instagram: @{instagramUrl.split("/").filter(Boolean).pop()}
               </a>
             )}
@@ -446,8 +463,9 @@ export function CallToAction() {
                   <a
                     href={whatsappUrl(item.message)}
                     {...external}
-                    className="inline-flex rounded-full border border-ardosia/20 bg-branco px-4 py-2.5 text-sm font-medium transition-colors hover:border-marinho hover:text-marinho"
+                    className="inline-flex items-center gap-2 rounded-full border border-ardosia/20 bg-branco px-4 py-2.5 text-sm font-medium transition-colors hover:border-marinho hover:text-marinho"
                   >
+                    <TopicIcon name={item.icon} className="size-4 text-marinho" />
                     {item.short}
                   </a>
                 </li>

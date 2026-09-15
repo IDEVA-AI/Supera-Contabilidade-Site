@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { site, whatsappUrl } from "@/site.config";
 import { Container } from "@/components/container";
+import { WhatsAppIcon } from "@/components/icons";
 
 // Links com "/#" pra funcionarem também de dentro do blog.
 export const nav = [
@@ -36,8 +37,9 @@ export function SiteHeader() {
           href={whatsappUrl()}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden rounded-full bg-marinho px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-ardosia md:inline-flex"
+          className="hidden items-center gap-2 rounded-full bg-marinho px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-ardosia md:inline-flex"
         >
+          <WhatsAppIcon className="size-4" />
           {site.cta.primary}
         </a>
       </Container>

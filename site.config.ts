@@ -43,6 +43,7 @@ export const site = {
     "Você não precisa entender de contabilidade pra falar com a gente. Escolha o que aconteceu e o WhatsApp abre com a mensagem pronta.",
   situations: {
     urgent: {
+      icon: "multa",
       short: "Multa ou notificação",
       label: "Chegou uma multa ou notificação",
       detail: "Manda uma foto do documento. A gente olha o que é e o que precisa ser feito.",
@@ -50,6 +51,7 @@ export const site = {
     },
     common: [
       {
+        icon: "empresa",
         short: "Abrir empresa",
         label: "Vou abrir uma empresa",
         detail:
@@ -57,6 +59,7 @@ export const site = {
         message: "Olá! Quero abrir uma empresa.",
       },
       {
+        icon: "troca",
         short: "Trocar de contador",
         label: "Quero trocar de contador",
         detail:
@@ -64,6 +67,7 @@ export const site = {
         message: "Olá! Quero trocar de contador.",
       },
       {
+        icon: "imposto",
         short: "Imposto",
         label: "Chegou a época do imposto",
         detail: "Declaração, guia atrasada ou dúvida sobre quanto vai pagar.",
@@ -77,31 +81,37 @@ export const site = {
   // pra banco, folha, planejamento tributário, abertura e regularização. [VALIDAR]
   services: [
     {
+      icon: "empresa",
       title: "Abertura de empresa",
       description:
         "Tipo de empresa, regime de imposto, CNPJ e inscrições. Você começa sabendo quanto vai pagar.",
     },
     {
+      icon: "troca",
       title: "Troca de contador",
       description:
         "A contabilidade continua de onde parou. Antes de assumir, a gente confere o que veio do escritório anterior.",
     },
     {
+      icon: "regularizacao",
       title: "Regularização",
       description:
         "Certidão negada, pendência na Receita, multa ou empresa parada. Primeiro a gente descobre o tamanho do problema.",
     },
     {
+      icon: "imposto",
       title: "Impostos e declarações",
       description:
         "Guias calculadas antes do vencimento e planejamento tributário pra não pagar imposto a mais quando o negócio muda de tamanho.",
     },
     {
+      icon: "mensal",
       title: "Contabilidade mensal",
       description:
         "Escrituração, balancete e os demonstrativos que banco e financeira pedem, com alguém pra explicar o que os números dizem.",
     },
     {
+      icon: "pessoal",
       title: "Departamento pessoal",
       description: "Admissão, folha, férias, rescisão e eSocial dentro do prazo.",
     },
@@ -110,14 +120,17 @@ export const site = {
   // "Como começa". É uma sequência de verdade, por isso vai numerada. [VALIDAR]
   steps: [
     {
+      icon: "conversa",
       title: "Você manda mensagem",
       text: "Conta o que aconteceu do seu jeito. Pode mandar foto do documento.",
     },
     {
+      icon: "caso",
       title: "O Danilo entende o caso",
       text: "Tamanho da empresa, regime de imposto e o que está pegando. Pode explicar com as suas palavras.",
     },
     {
+      icon: "proposta",
       title: "Você recebe a proposta",
       text: "Com o que vai ser feito e quanto custa. A decisão fica com você.",
     },

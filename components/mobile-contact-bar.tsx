@@ -1,4 +1,5 @@
 import { site, whatsappUrl } from "@/site.config";
+import { WhatsAppIcon } from "@/components/icons";
 
 // Barra fixa só no celular: fio fino em cima e fundo claro, sem balão flutuando
 // por cima do texto. O body reserva o espaço dela com pb-20 no layout.
@@ -17,8 +18,9 @@ export function MobileContactBar({ message }: { message?: string }) {
           href={whatsappUrl(message)}
           target="_blank"
           rel="noopener noreferrer"
-          className="shrink-0 rounded-full bg-marinho px-5 py-3 text-sm font-medium text-white"
+          className="inline-flex shrink-0 items-center gap-2 rounded-full bg-marinho px-5 py-3 text-sm font-medium text-white"
         >
+          <WhatsAppIcon className="size-4" />
           WhatsApp
         </a>
       </div>

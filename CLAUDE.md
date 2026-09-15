@@ -34,6 +34,9 @@ e `interno/clientes/Supera/site-v1/`.
   os IDs existem nas variáveis de ambiente da Vercel (`.env.example`). Todo clique em
   link `wa.me` vira evento (`whatsapp_click`, conversão do Ads, `Contact` no Meta).
 - `components/placeholder.tsx` · o marcador tracejado de dado pendente.
+- `components/icons.tsx` · ícones por assunto (lucide-react) mais WhatsApp e Instagram em
+  SVG próprio, porque o lucide não traz marca. Config e conteúdo da landing page guardam só
+  a chave (`icon: "empresa"`). Nenhum ícone é seta: seta é o sinal de que abre o WhatsApp.
 - `app/(site)/page.tsx` · a home, na ordem: topo com seletor de situação, serviços, como
   começa, quem somos, avaliações, dúvidas, blog, fechamento. Regra de UX da página
   inteira: onde tem seta, a conversa começa no WhatsApp com mensagem pronta (topo,
