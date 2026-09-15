@@ -4,6 +4,9 @@ description: "O caminho do primeiro papel ao CNPJ ativo em Brasília em 2026, qu
 date: 2026-09-15
 author: "Supera Contabilidade"
 status: publicado
+cover: "/img/blog/como-abrir-empresa-no-df.jpg"
+coverAlt: "Pilotis de concreto de um bloco modernista de superquadra, em tons de azul"
+ogImage: "/img/blog/como-abrir-empresa-no-df-og.jpg"
 ---
 
 Quem vai abrir empresa quase sempre tem pressa. O primeiro cliente quer nota, o contrato do ponto está pra assinar, o sócio pergunta quando sai o CNPJ. E ao mesmo tempo existe o medo de escolher errado logo no começo e carregar esse erro por anos.

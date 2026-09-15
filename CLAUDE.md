@@ -64,7 +64,13 @@ e `interno/clientes/Supera/site-v1/`.
 - `app/sitemap.ts`, `app/robots.ts` · SEO técnico; o sitemap inclui só artigo publicado.
 - `lib/schema.ts` · JSON-LD `AccountingService`; só emite campo preenchido.
 - `lib/utils.ts` · `cn()` para juntar classes (não resolve conflito de classe).
-- `public/img/` · imagens da marca (vazio até vir material).
+- `public/img/` · `blog/{slug}.jpg` é a capa do artigo e `blog/{slug}-og.jpg` a prévia
+  1200x630 com o título; `lp/abrir-empresa.jpg` é a imagem do topo da landing page. Capa
+  entra no frontmatter do artigo (`cover`, `coverAlt`, `ogImage`) e é servida por
+  `next/image`. As imagens são de arquitetura modernista geradas pelo Codex em duotone
+  da marca (2026-09-15), sem pessoas, sem texto e sem obra reconhecível. Rosto, equipe e
+  escritório só com foto real da sessão do cliente. Texto nunca sai da IA: a prévia com
+  título é HTML renderizado no Chrome headless com as fontes do site.
 - `.env.example` · `NEXT_PUBLIC_SITE_URL`, o domínio final.
 
 ## 3. Vizinhos

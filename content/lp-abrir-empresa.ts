@@ -22,6 +22,7 @@ export const lp = {
   googleReviewsUrl: null as string | null,
 
   hero: {
+    image: { src: "/img/lp/abrir-empresa.jpg", alt: "Parede de cobogós de concreto em estilo modernista, em tons de azul" },
     eyebrow: "Abertura de empresa em Brasília",
     title: "Abra sua empresa já sabendo quanto vai pagar de imposto.",
     intro:

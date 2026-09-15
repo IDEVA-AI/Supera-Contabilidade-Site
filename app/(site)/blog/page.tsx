@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/container";
 import { formatDate, getPosts } from "@/lib/blog";
@@ -28,13 +29,24 @@ export default function BlogIndex() {
             <li key={post.slug}>
               <Link
                 href={`/blog/${post.slug}`}
-                className="group grid gap-2 py-8 md:grid-cols-[12rem_1fr] md:gap-8"
+                className="group grid gap-5 py-8 md:grid-cols-[18rem_1fr] md:items-center md:gap-10"
               >
-                <p className="text-sm text-aco md:pt-2">
-                  <time dateTime={post.date}>{formatDate(post.date)}</time>
-                  <span className="block">{post.readingMinutes} min de leitura</span>
-                </p>
+                {post.cover ? (
+                  <Image
+                    src={post.cover}
+                    alt=""
+                    width={1200}
+                    height={800}
+                    sizes="(min-width: 768px) 18rem, 100vw"
+                    className="aspect-[3/2] w-full rounded-2xl object-cover"
+                  />
+                ) : (
+                  <span aria-hidden="true" />
+                )}
                 <div>
+                  <p className="mb-3 text-sm text-aco">
+                    <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readingMinutes} min de leitura
+                  </p>
                   <h2 className="font-display text-2xl font-semibold leading-tight text-balance transition-colors group-hover:text-marinho md:text-3xl">
                     {post.title}
                   </h2>

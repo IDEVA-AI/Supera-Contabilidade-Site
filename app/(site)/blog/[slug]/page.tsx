@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
@@ -22,6 +23,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post.title,
     description: post.description,
     alternates: { canonical: `/blog/${slug}` },
+    openGraph: post.ogImage
+      ? { type: "article", title: post.title, description: post.description, images: [{ url: post.ogImage, width: 1200, height: 630, alt: post.title }] }
+      : undefined,
+    twitter: post.ogImage ? { card: "summary_large_image", images: [post.ogImage] } : undefined,
     robots: post.status === "rascunho" ? { index: false, follow: false } : undefined,
   };
 }
@@ -41,6 +46,7 @@ export default async function PostPage({ params }: Props) {
     publisher: { "@type": "Organization", name: site.name },
     mainEntityOfPage: `${siteUrl}/blog/${slug}`,
     inLanguage: "pt-BR",
+    image: post.cover ? `${siteUrl}${post.cover}` : undefined,
   };
   const headings = getHeadings(post.body);
   const related = getRelated(slug);
@@ -69,6 +75,18 @@ export default async function PostPage({ params }: Props) {
             {post.author}, <time dateTime={post.date}>{formatDate(post.date)}</time>.{" "}
             {post.readingMinutes} min de leitura.
           </p>
+
+          {post.cover && (
+            <Image
+              src={post.cover}
+              alt={post.coverAlt ?? ""}
+              width={1600}
+              height={1067}
+              priority
+              sizes="(min-width: 768px) 48rem, 100vw"
+              className="mt-10 aspect-[3/2] w-full rounded-3xl rounded-tr-[96px] object-cover"
+            />
+          )}
 
           {headings.length > 2 && (
             <nav aria-label="Neste artigo" className="mt-10 rounded-2xl bg-claro p-6 md:p-8">

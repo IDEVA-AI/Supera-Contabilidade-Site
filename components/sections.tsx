@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { instagramUrl, site, whatsappUrl } from "@/site.config";
 import { Container } from "@/components/container";
@@ -361,9 +362,19 @@ export function BlogPreview() {
             <li key={post.slug}>
               <Link
                 href={`/blog/${post.slug}`}
-                className="group flex h-full flex-col rounded-2xl border border-nevoa bg-white p-6 transition-colors hover:border-marinho"
+                className="group flex h-full flex-col rounded-2xl border border-nevoa bg-white p-3 pb-6 transition-colors hover:border-marinho"
               >
-                <span className="flex items-center gap-3 text-sm text-aco">
+                {post.cover && (
+                  <Image
+                    src={post.cover}
+                    alt=""
+                    width={1200}
+                    height={800}
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="aspect-[3/2] w-full rounded-xl object-cover"
+                  />
+                )}
+                <span className="mt-5 flex items-center gap-3 px-3 text-sm text-aco">
                   <time dateTime={post.date}>{formatDate(post.date)}</time>
                   <span aria-hidden="true">·</span>
                   <span>{post.readingMinutes} min de leitura</span>
@@ -373,12 +384,12 @@ export function BlogPreview() {
                     </span>
                   )}
                 </span>
-                <h3 className="mt-4 font-display text-2xl font-semibold leading-tight text-balance group-hover:text-marinho">
+                <h3 className="mt-3 px-3 font-display text-2xl font-semibold leading-tight text-balance group-hover:text-marinho">
                   {post.title}
                 </h3>
-                <p className="mt-3 text-aco text-pretty">{post.description}</p>
+                <p className="mt-3 px-3 text-aco text-pretty">{post.description}</p>
                 {/* Sem seta de propósito: no site, seta é o sinal de que abre o WhatsApp. */}
-                <span className="mt-auto pt-6 text-sm font-medium underline decoration-nevoa decoration-2 underline-offset-4 transition-colors group-hover:decoration-marinho">
+                <span className="mx-3 mt-auto w-fit pt-6 text-sm font-medium underline decoration-nevoa decoration-2 underline-offset-4 transition-colors group-hover:decoration-marinho">
                   Ler o artigo
                 </span>
               </Link>

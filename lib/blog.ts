@@ -16,6 +16,9 @@ export interface Post {
   status: "rascunho" | "publicado";
   body: string;
   readingMinutes: number;
+  cover?: string; // caminho em /public, ex: /img/blog/slug.jpg
+  coverAlt?: string;
+  ogImage?: string; // 1200x630 com o título, pra prévia do link
 }
 
 // Rascunho aparece no `pnpm dev` pra revisar e nunca entra no build de produção.
@@ -44,6 +47,9 @@ function loadAll(): Post[] {
         status: data.status === "publicado" ? "publicado" : "rascunho",
         body: content.trim(),
         readingMinutes: Math.max(1, Math.round(content.split(/\s+/).length / 200)),
+        cover: data.cover ? String(data.cover) : undefined,
+        coverAlt: data.coverAlt ? String(data.coverAlt) : undefined,
+        ogImage: data.ogImage ? String(data.ogImage) : undefined,
       } satisfies Post;
     });
 }

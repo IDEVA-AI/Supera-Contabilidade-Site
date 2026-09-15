@@ -4,6 +4,9 @@ description: "O limite de R$ 81 mil em 2026, o que acontece quando você passa d
 date: 2026-09-15
 author: "Supera Contabilidade"
 status: publicado
+cover: "/img/blog/quando-sair-do-mei.jpg"
+coverAlt: "Escada de concreto em espiral vista de baixo, em tons de azul"
+ogImage: "/img/blog/quando-sair-do-mei-og.jpg"
 ---
 
 O MEI é um sapato ótimo enquanto o pé cabe nele. Um dia o cliente novo pede uma nota que estoura o mês, o trabalho pede mais uma pessoa, aparece alguém querendo entrar de sócio. E vem junto o receio: sair do MEI parece trocar uma guia de R$ 80 por uma conta que ninguém sabe dizer quanto vai dar.

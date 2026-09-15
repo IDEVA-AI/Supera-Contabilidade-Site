@@ -4,6 +4,9 @@ description: "O que diz a regra do CFC, o que pedir ao contador atual, em que m�
 date: 2026-09-15
 author: "Supera Contabilidade"
 status: publicado
+cover: "/img/blog/como-trocar-de-contador.jpg"
+coverAlt: "Rampa curva de concreto em estilo modernista, em tons de azul"
+ogImage: "/img/blog/como-trocar-de-contador-og.jpg"
 ---
 
 Trocar de contador parece mudar de casa. O que tira o sono é a caixa que some no caminho, e não o endereço novo. Você sabe que o serviço atual não está bom: a guia chega em cima da hora, ninguém explica nada, a mensagem fica dias sem resposta. Só que todos os documentos da empresa estão com ele, e dá receio de mexer nisso e ficar pior.
