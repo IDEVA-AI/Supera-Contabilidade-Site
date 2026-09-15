@@ -65,7 +65,10 @@ e `interno/clientes/Supera/site-v1/`.
 - `lib/schema.ts` · JSON-LD `AccountingService`; só emite campo preenchido.
 - `lib/utils.ts` · `cn()` para juntar classes (não resolve conflito de classe).
 - `public/img/` · `blog/{slug}.jpg` é a capa do artigo e `blog/{slug}-og.jpg` a prévia
-  1200x630 com o título; `lp/abrir-empresa.jpg` é a imagem do topo da landing page. Capa
+  1200x630 com o título; `lp/abrir-empresa.jpg` é a imagem do topo da landing page;
+  `home/{topo,servicos,quem-somos}.jpg` são as da home, apontadas em `site.images` no
+  `site.config.ts` (a de serviços só aparece no desktop; a de quem somos sai quando
+  `aboutPhoto` receber a foto real). Capa
   entra no frontmatter do artigo (`cover`, `coverAlt`, `ogImage`) e é servida por
   `next/image`. As imagens são de arquitetura modernista geradas pelo Codex em duotone
   da marca (2026-09-15), sem pessoas, sem texto e sem obra reconhecível. Rosto, equipe e

@@ -129,6 +129,15 @@ export const site = {
     { name: "Danilo de Santo Romão", role: "Sócio, cuida do atendimento" },
   ],
   aboutPhoto: "", // caminho em /public/img quando a sessão de fotos acontecer
+
+  // Imagens de arquitetura da home (geradas no Codex em 2026-09-15, duotone da marca,
+  // sem pessoas). Não são o escritório: o alt descreve o que a imagem é de verdade.
+  // `about` sai de cena quando `aboutPhoto` for preenchida com a foto real.
+  images: {
+    hero: { src: "/img/home/topo.jpg", alt: "Fachada modernista com brises de concreto, em tons de azul" },
+    services: { src: "/img/home/servicos.jpg", alt: "Fachada de bloco modernista com janelas em grelha, em tons de azul" },
+    about: { src: "/img/home/quem-somos.jpg", alt: "Marquise de concreto sobre pilotis com sombras de fim de tarde, em tons de azul" },
+  },
   about: [
     "A Supera abriu em 2014 e continua com o tamanho que permite conhecer cada cliente pelo nome.",
     "Quem atende é o Danilo, direto no WhatsApp. A carteira foi construída por indicação: quem gosta do trabalho apresenta o próximo cliente.",
