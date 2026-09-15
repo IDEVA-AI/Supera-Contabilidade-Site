@@ -5,7 +5,7 @@ import { Azulejo } from "@/components/azulejo";
 import { formatDate, getPosts } from "@/lib/blog";
 import { cn } from "@/lib/utils";
 
-function Arrow({ className }: { className?: string }) {
+export function Arrow({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -23,10 +23,10 @@ function Arrow({ className }: { className?: string }) {
   );
 }
 
-const external = { target: "_blank", rel: "noopener noreferrer" } as const;
+export const external = { target: "_blank", rel: "noopener noreferrer" } as const;
 
 // Botão principal, igual em todo lugar em que a página pede a primeira mensagem.
-function WhatsAppButton({ label, message }: { label: string; message?: string }) {
+export function WhatsAppButton({ label, message }: { label: string; message?: string }) {
   return (
     <a
       href={whatsappUrl(message)}

@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Gabarito, Hanken_Grotesk } from "next/font/google";
 import { site, siteUrl } from "@/site.config";
 import { organizationSchema } from "@/lib/schema";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
-import { MobileContactBar } from "@/components/mobile-contact-bar";
+import { Analytics } from "@/components/analytics";
 import "./globals.css";
 
 // Gabarito nos títulos (sem serifa encorpada e simpática), Hanken Grotesk no texto.
@@ -50,18 +48,15 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" className={`${gabarito.variable} ${hanken.variable}`}>
-      {/* pb no mobile pra barra fixa de contato não cobrir o fim da página */}
-      <body className="font-sans pb-20 md:pb-0">
+      <body className="font-sans">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema()),
           }}
         />
-        <SiteHeader />
-        <main id="conteudo">{children}</main>
-        <SiteFooter />
-        <MobileContactBar />
+        {children}
+        <Analytics />
       </body>
     </html>
   );

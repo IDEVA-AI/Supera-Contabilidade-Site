@@ -21,9 +21,20 @@ e `interno/clientes/Supera/site-v1/`.
   passos, sócios, avaliações, perguntas frequentes e chamadas. `[PLACEHOLDER]` =
   dado não confirmado pelo cliente; `[VALIDAR]` = texto da IDEVA que o Danilo
   precisa ler.
-- `app/layout.tsx` · metadata, fontes (Gabarito nos títulos, Hanken Grotesk no
-  texto), JSON-LD, header, footer e a barra fixa do celular.
-- `app/page.tsx` · a home, na ordem: topo com seletor de situação, serviços, como
+- `app/layout.tsx` · raiz: metadata, fontes (Gabarito nos títulos, Hanken Grotesk no
+  texto), JSON-LD da organização e `Analytics`. Não tem header nem footer.
+- `app/(site)/layout.tsx` · casca do site institucional (header, footer, barra fixa do
+  celular). Home e blog moram dentro do grupo `(site)`; o parêntese não entra na URL.
+- `app/abrir-empresa/page.tsx` · landing page de anúncio pra quem vai abrir empresa,
+  fora do grupo `(site)` de propósito: sem menu, um objetivo só (WhatsApp com mensagem
+  própria). Conteúdo inteiro em `content/lp-abrir-empresa.ts`, onde `null` é dado que
+  falta do cliente e vira marcador "A confirmar" na tela. Com `draft: true` a página
+  sai com noindex e fora do sitemap.
+- `components/analytics.tsx` · GA4, Google Ads e pixel do Meta, carregados só quando
+  os IDs existem nas variáveis de ambiente da Vercel (`.env.example`). Todo clique em
+  link `wa.me` vira evento (`whatsapp_click`, conversão do Ads, `Contact` no Meta).
+- `components/placeholder.tsx` · o marcador tracejado de dado pendente.
+- `app/(site)/page.tsx` · a home, na ordem: topo com seletor de situação, serviços, como
   começa, quem somos, avaliações, dúvidas, blog, fechamento. Regra de UX da página
   inteira: onde tem seta, a conversa começa no WhatsApp com mensagem pronta (topo,
   cada serviço e os atalhos do fechamento, que reusam o `short` das situações).
@@ -43,9 +54,13 @@ e `interno/clientes/Supera/site-v1/`.
   `components/mobile-contact-bar.tsx`, `components/container.tsx`
 - `lib/blog.ts` · lê `content/blog/*.md` (gray-matter). Artigo com
   `status: rascunho` aparece no `dev` e nunca no build de produção.
-- `app/blog/page.tsx`, `app/blog/[slug]/page.tsx` · lista e artigo (react-markdown
-  + remark-gfm, JSON-LD `BlogPosting`, chamada de WhatsApp no fim).
-- `content/blog/` · os artigos. Hoje 3 rascunhos só com a estrutura.
+- `app/(site)/blog/page.tsx`, `app/(site)/blog/[slug]/page.tsx` · lista e artigo
+  (react-markdown + remark-gfm, JSON-LD `BlogPosting`, índice "Neste artigo" com âncora
+  nos `##`, tempo de leitura, chamada de WhatsApp e "Continue lendo").
+- `content/blog/` · os artigos. Três publicados em 2026-09-15 (abrir empresa no DF,
+  trocar de contador, sair do MEI), com números de 2026 conferidos em fonte oficial e
+  data de conferência no rodapé de cada um. Número que muda todo ano (limite do MEI,
+  DAS, taxa da Junta) precisa ser revisto em janeiro.
 - `app/sitemap.ts`, `app/robots.ts` · SEO técnico; o sitemap inclui só artigo publicado.
 - `lib/schema.ts` · JSON-LD `AccountingService`; só emite campo preenchido.
 - `lib/utils.ts` · `cn()` para juntar classes (não resolve conflito de classe).
