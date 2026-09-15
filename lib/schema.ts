@@ -21,6 +21,8 @@ export function organizationSchema() {
     address: Object.keys(address).length
       ? { "@type": "PostalAddress", addressCountry: "BR", ...address }
       : undefined,
-    sameAs: site.profiles.length ? site.profiles : undefined,
+    sameAs: [...site.profiles, site.googleProfileUrl].filter(Boolean).length
+      ? [...site.profiles, site.googleProfileUrl].filter(Boolean)
+      : undefined,
   };
 }

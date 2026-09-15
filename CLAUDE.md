@@ -31,8 +31,13 @@ e `interno/clientes/Supera/site-v1/`.
   falta do cliente e vira marcador "A confirmar" na tela. Com `draft: true` a página
   sai com noindex e fora do sitemap.
 - `components/analytics.tsx` · GA4, Google Ads e pixel do Meta, carregados só quando
-  os IDs existem nas variáveis de ambiente da Vercel (`.env.example`). Todo clique em
-  link `wa.me` vira evento (`whatsapp_click`, conversão do Ads, `Contact` no Meta).
+  os IDs existem em `site.tracking` no `site.config.ts` (a Vercel é da conta da Supera,
+  então ID mora no config e ligar é dar push; a variável de ambiente é só reserva). Todo
+  clique em link `wa.me` vira evento (`whatsapp_click`, conversão do Ads, `Contact` no
+  Meta). Quem chega com `gclid`/`utm_source=google` ou `fbclid`/`utm_source=instagram`
+  tem "(via Google)" ou "(via Instagram)" somado no fim da mensagem do WhatsApp, pro
+  Danilo saber a origem. Verificação de domínio (Search Console e Meta) em
+  `site.verification`, sai como meta tag, sem mexer em DNS.
 - `components/placeholder.tsx` · o marcador tracejado de dado pendente.
 - `components/icons.tsx` · ícones por assunto (lucide-react) mais WhatsApp e Instagram em
   SVG próprio, porque o lucide não traz marca. Config e conteúdo da landing page guardam só

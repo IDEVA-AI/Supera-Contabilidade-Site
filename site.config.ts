@@ -36,6 +36,20 @@ export const site = {
   // O do cliente é @supera.contabilidade.
   profiles: ["https://www.instagram.com/supera.contabilidade/"] as string[],
 
+  // Contas de anúncio e verificação de domínio. São IDs públicos, não senha: moram
+  // aqui e não em variável de ambiente porque a Vercel é da conta da Supera e a IDEVA
+  // não entra nela. Ligar a medição = preencher e dar push. Vazio = nada carrega.
+  tracking: {
+    ga4: "", // GA4, ex: "G-XXXXXXXXXX"
+    googleAds: "", // Google Ads, ex: "AW-123456789"
+    googleAdsWhatsappLabel: "", // rótulo da conversão "clique no WhatsApp"
+    metaPixel: "", // pixel do Meta, só números
+  },
+  verification: {
+    google: "", // Search Console, só o valor do content da meta tag
+    meta: "", // facebook-domain-verification, só o valor
+  },
+
   // Topo da home. A pessoa escolhe o que aconteceu e cai no WhatsApp com a
   // mensagem já escrita. A urgente fica separada das outras. `short` é o nome
   // curto que aparece nos atalhos do fechamento da página. [VALIDAR]

@@ -41,6 +41,10 @@ export const metadata: Metadata = {
     description: site.description,
   },
   alternates: { canonical: "/" },
+  verification: {
+    google: site.verification.google || undefined,
+    other: site.verification.meta ? { "facebook-domain-verification": site.verification.meta } : undefined,
+  },
 };
 
 export default function RootLayout({
