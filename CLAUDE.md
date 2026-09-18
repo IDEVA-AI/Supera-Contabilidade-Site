@@ -49,8 +49,8 @@ e `interno/clientes/Supera/site-v1/`.
 - `app/icon.png` e `app/apple-icon.png` · favicon e ícone do iPhone, o isotipo (o S) da
   marca. `components/logo.tsx` é o logo horizontal (`public/img/logo/`), usado no topo do
   site e da landing page; no rodapé escuro fica o nome em texto, porque o marinho some.
-  Os originais do logo estão em `interno/clientes/Supera/design/logotipo/`; o PNG
-  horizontal de lá vem com a borda direita cortada, a versão do site saiu da prancha.
+  Os originais do logo estão em `interno/clientes/Supera/design/logotipo/` (o horizontal
+  vem sem margem, a arte encosta na borda direita; está inteiro).
 - `app/opengraph-image.png` (+ `.alt.txt`) · prévia do link no WhatsApp e nas redes.
   PNG estático gerado com Chrome headless a partir de HTML com as fontes do site; pra
   mudar, refazer o PNG, não criar rota dinâmica.

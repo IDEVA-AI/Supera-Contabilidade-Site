@@ -9,7 +9,7 @@ export function Logo() {
       src="/img/logo/supera-horizontal.png"
       alt={site.name}
       width={840}
-      height={274}
+      height={275}
       priority
       className="h-11 w-auto md:h-12"
     />
