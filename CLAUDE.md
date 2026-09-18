@@ -46,7 +46,11 @@ e `interno/clientes/Supera/site-v1/`.
   começa, quem somos, avaliações, dúvidas, blog, fechamento. Regra de UX da página
   inteira: onde tem seta, a conversa começa no WhatsApp com mensagem pronta (topo,
   cada serviço e os atalhos do fechamento, que reusam o `short` das situações).
-- `app/icon.svg` · favicon, um módulo do azulejo (não é o logo, que ainda não veio).
+- `app/icon.png` e `app/apple-icon.png` · favicon e ícone do iPhone, o isotipo (o S) da
+  marca. `components/logo.tsx` é o logo horizontal (`public/img/logo/`), usado no topo do
+  site e da landing page; no rodapé escuro fica o nome em texto, porque o marinho some.
+  Os originais do logo estão em `interno/clientes/Supera/design/logotipo/`; o PNG
+  horizontal de lá vem com a borda direita cortada, a versão do site saiu da prancha.
 - `app/opengraph-image.png` (+ `.alt.txt`) · prévia do link no WhatsApp e nas redes.
   PNG estático gerado com Chrome headless a partir de HTML com as fontes do site; pra
   mudar, refazer o PNG, não criar rota dinâmica.

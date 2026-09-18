@@ -2,6 +2,7 @@ import Link from "next/link";
 import { site, whatsappUrl } from "@/site.config";
 import { Container } from "@/components/container";
 import { WhatsAppIcon } from "@/components/icons";
+import { Logo } from "@/components/logo";
 
 // Links com "/#" pra funcionarem também de dentro do blog.
 export const nav = [
@@ -16,9 +17,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-nevoa/70 bg-branco/90 backdrop-blur">
       <Container className="flex h-18 items-center justify-between gap-6">
-        <Link href="/" className="flex items-baseline gap-2">
-          <span className="font-display text-2xl font-bold tracking-tight">Supera</span>
-          <span className="text-sm text-aco">contabilidade</span>
+        <Link href="/" className="flex items-center">
+          <Logo />
         </Link>
 
         <nav aria-label="Principal" className="hidden items-center gap-8 text-sm lg:flex">

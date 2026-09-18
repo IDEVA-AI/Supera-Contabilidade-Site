@@ -8,6 +8,7 @@ import { WhatsAppButton, external } from "@/components/sections";
 import { MobileContactBar } from "@/components/mobile-contact-bar";
 import { Placeholder } from "@/components/placeholder";
 import { TopicIcon, WhatsAppIcon } from "@/components/icons";
+import { Logo } from "@/components/logo";
 
 // Landing page de anúncio pra quem vai abrir empresa. Um objetivo só: abrir o
 // WhatsApp com a mensagem da página. Sem menu. Conteúdo em content/lp-abrir-empresa.ts.
@@ -53,10 +54,7 @@ export default function AbrirEmpresaPage() {
 
       <header className="sticky top-0 z-40 border-b border-nevoa/70 bg-branco/90 backdrop-blur">
         <Container className="flex h-18 items-center justify-between gap-6">
-          <span className="flex items-baseline gap-2">
-            <span className="font-display text-2xl font-bold tracking-tight">Supera</span>
-            <span className="text-sm text-aco">contabilidade</span>
-          </span>
+          <Logo />
           <a
             href={waUrl}
             {...external}
