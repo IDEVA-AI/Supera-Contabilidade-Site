@@ -9,7 +9,7 @@ export const site = {
   tagline: "Contabilidade para empresas em Brasília",
   url: "https://www.superacontabilidade.com.br", // o domínio sem www redireciona (308) pra este
   description:
-    "Escritório de contabilidade em Brasília desde 2014. Abertura de empresa, contabilidade mensal, folha, impostos e regularização, com atendimento direto pelo WhatsApp.", // [VALIDAR]
+    "Escritório de contabilidade em Brasília desde 2014. Abertura de empresa, contabilidade mensal, folha, impostos e regularização, com um sócio responsável por cada empresa da carteira.", // [VALIDAR]
   foundedYear: 2014, // Receita: abertura em 2014-04-17
   cnpj: "20.645.761/0001-08",
 
@@ -51,6 +51,15 @@ export const site = {
   verification: {
     google: "", // Search Console, só o valor do content da meta tag
     meta: "", // facebook-domain-verification, só o valor
+  },
+
+  // Card ao lado da imagem no topo. Não fala de atendimento de propósito (decisão do
+  // Julio, 2026-09-22): quem cuida da empresa é sócio e responde tecnicamente pelo que
+  // assina, e é esse o posicionamento. Os sócios aparecem logo abaixo, em Quem somos. [VALIDAR]
+  heroCard: {
+    eyebrow: "Escritório contábil em Brasília",
+    title: "12 anos de CNPJ ativo",
+    text: "A sua empresa fica com um sócio do escritório, que acompanha a rotina e responde pelo que assina.",
   },
 
   // Topo da home. A pessoa escolhe o que aconteceu e cai no WhatsApp com a
@@ -143,7 +152,7 @@ export const site = {
     },
     {
       icon: "caso",
-      title: "O Danilo entende o caso",
+      title: "O Danilo analisa o caso",
       text: "Tamanho da empresa, regime de imposto e o que está pegando. Pode explicar com as suas palavras.",
     },
     {
@@ -156,7 +165,7 @@ export const site = {
   // Quem somos. Sócios conforme a Receita.
   founders: [
     { name: "Paulo Sérgio Romão", role: "Sócio-administrador" },
-    { name: "Danilo de Santo Romão", role: "Sócio, cuida do atendimento" },
+    { name: "Danilo de Santo Romão", role: "Sócio, responde pelas empresas da carteira" },
   ],
 
   // Imagens geradas no Codex em duotone da marca, que seguram o lugar até a foto real
@@ -190,7 +199,8 @@ export const site = {
   // sala precisa reconhecer o que viu aqui. [VALIDAR: nome na legenda]
   photos: {
     hero: {
-      src: "/img/home/danilo.jpg", // retrato que o Danilo mandou em 2026-09-22
+      src: "", // o topo voltou pra arquitetura em 2026-09-22 (decisão do Julio); o
+      // retrato do Danilo continua em /img/home/danilo.jpg, é só recolar o caminho
       alt: "Danilo de Santo Romão, sócio da Supera Contabilidade",
       caption: "Danilo, quem responde no WhatsApp",
     },
@@ -207,7 +217,7 @@ export const site = {
   },
   about: [
     "A Supera abriu em 2014 e continua com o tamanho que permite conhecer cada cliente pelo nome.",
-    "Quem atende é o Danilo, direto no WhatsApp. A carteira foi construída por indicação: quem gosta do trabalho apresenta o próximo cliente.",
+    "O Danilo acompanha as empresas da carteira e conversa direto com cada cliente. A carteira foi construída por indicação: quem gosta do trabalho apresenta o próximo.",
   ], // [VALIDAR]
 
   // Assinatura dos artigos. Quem assina hoje é o escritório, porque o Danilo ainda não
@@ -216,7 +226,7 @@ export const site = {
   author: {
     name: "Supera Contabilidade",
     role: "Escritório de contabilidade em Brasília, desde 2014",
-    text: "Quem escreve aqui é quem atende no WhatsApp. Se ficou dúvida no meio do texto, pergunta direto.",
+    text: "Quem escreve aqui é quem faz a contabilidade. Se ficou dúvida no meio do texto, pergunta direto.",
     photo: "", // retrato do Danilo, quadrado, quando a sessão de fotos acontecer
     photoAlt: "",
   },

@@ -126,12 +126,12 @@ export function Hero() {
             className="h-48 lg:h-auto lg:min-h-56 lg:flex-1"
           />
           <div className="p-8 md:p-10">
-            <p className="text-sm font-medium text-white/75">Quem te atende</p>
+            <p className="text-sm font-medium text-white/75">{site.heroCard.eyebrow}</p>
             <p className="mt-2 font-display text-4xl font-bold leading-tight md:text-5xl">
-              Paulo e Danilo
+              {site.heroCard.title}
             </p>
             <p className="mt-3 max-w-xs text-lg leading-snug text-white/90 text-pretty">
-              Você fala direto com quem cuida da sua empresa, sem central de atendimento.
+              {site.heroCard.text}
             </p>
             <p className="mt-6 border-t border-white/20 pt-4 text-sm text-white/75">
               CNPJ {site.cnpj}, aberto em {site.foundedYear}

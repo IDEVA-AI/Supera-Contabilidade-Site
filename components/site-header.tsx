@@ -6,9 +6,9 @@ import { Logo } from "@/components/logo";
 
 // Links com "/#" pra funcionarem também de dentro do blog.
 export const nav = [
+  { href: "/#quem-somos", label: "Quem somos" },
   { href: "/#servicos", label: "Serviços" },
   { href: "/#como-comeca", label: "Como começa" },
-  { href: "/#quem-somos", label: "Quem somos" },
   { href: "/#duvidas", label: "Dúvidas" },
   { href: "/blog", label: "Blog" },
 ];

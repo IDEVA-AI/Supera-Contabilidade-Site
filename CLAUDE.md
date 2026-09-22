@@ -18,8 +18,8 @@ e `interno/clientes/Supera/site-v1/`.
 
 ## 2. Mapa interno
 
-- `site.config.ts` · fonte única de nome, contato, situações do topo, serviços,
-  passos, sócios, avaliações, perguntas frequentes e chamadas. `[PLACEHOLDER]` =
+- `site.config.ts` · fonte única de nome, contato, situações do topo, card do topo
+  (`heroCard`), serviços, passos, sócios, avaliações, perguntas frequentes e chamadas. `[PLACEHOLDER]` =
   dado não confirmado pelo cliente; `[VALIDAR]` = texto da IDEVA que o Danilo
   precisa ler.
 - `app/layout.tsx` · raiz: metadata, fontes (Gabarito nos títulos, Hanken Grotesk no
@@ -56,8 +56,10 @@ e `interno/clientes/Supera/site-v1/`.
 - `components/icons.tsx` · ícones por assunto (lucide-react) mais WhatsApp e Instagram em
   SVG próprio, porque o lucide não traz marca. Config e conteúdo da landing page guardam só
   a chave (`icon: "empresa"`). Nenhum ícone é seta: seta é o sinal de que abre o WhatsApp.
-- `app/(site)/page.tsx` · a home, na ordem: topo com seletor de situação, serviços, como
-  começa, quem somos, avaliações, dúvidas, blog, fechamento. Regra de UX da página
+- `app/(site)/page.tsx` · a home, na ordem: topo com seletor de situação, quem somos,
+  serviços, como começa, avaliações, dúvidas, blog, fechamento. Quem somos subiu pra
+  segunda posição em 2026-09-22 (decisão do Julio): os sócios entram antes da lista de
+  serviços. O menu em `site-header.tsx` segue essa mesma ordem. Regra de UX da página
   inteira: onde tem seta, a conversa começa no WhatsApp com mensagem pronta (topo,
   cada serviço e os atalhos do fechamento, que reusam o `short` das situações).
 - `app/icon.png` e `app/apple-icon.png` · favicon e ícone do iPhone, o isotipo (o S) da
@@ -138,6 +140,11 @@ saiu errado nas artes por estar escrito em dois lugares).
 
 **Não publique com `[PLACEHOLDER]` no ar.** Esses campos alimentam o JSON-LD, e
 endereço meia-boca no Google é pior que endereço nenhum.
+
+**Não escreva o site em linguagem de atendimento.** Regra do Julio (2026-09-22): o
+Danilo não é quem "atende", é sócio que responde pelas empresas da carteira e pelo que
+assina. Nada de "quem te atende", "central de atendimento" ou "setor". O posicionamento
+é profissional, de responsabilidade técnica.
 
 **Não fale de pai e filho nem de escritório de família.** Regra do Julio
 (2026-09-14): é tema que não interessa a quem procura contador. O texto fala do que
