@@ -26,7 +26,8 @@ export const site = {
     email: "",
     phone: "", // E.164, ex: +556133990425
     phoneLabel: "",
-    whatsapp: "5561981999430", // da bio do Instagram do cliente (2026-09-14)
+    whatsapp: "5561999293939", // número que o Julio passou em 2026-09-22 (o anterior,
+    // 5561981999430, veio da bio do Instagram antigo)
     whatsappMessage: "Olá! Vim pelo site e quero falar sobre contabilidade.",
     hours: "", // ex: "Segunda a sexta, 9h às 18h". Vazio some do site. Horário a confirmar com o Danilo.
   },
