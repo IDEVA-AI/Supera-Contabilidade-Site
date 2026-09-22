@@ -156,9 +156,11 @@ export const site = {
     { name: "Danilo de Santo Romão", role: "Sócio, cuida do atendimento" },
   ],
 
-  // Imagens de arquitetura da home (geradas no Codex em 2026-09-15, duotone da marca,
-  // sem pessoas). Não são o escritório: o alt descreve o que a imagem é de verdade e a
-  // legenda diz o que ela é, sem fingir ser a sala nem a equipe.
+  // Imagens geradas no Codex em duotone da marca, que seguram o lugar até a foto real
+  // chegar. Arquitetura de Brasília (2026-09-15) e cena de trabalho do cliente da
+  // Supera (2026-09-22). Nenhuma é o escritório nem a equipe, e a legenda nunca diz
+  // que é: fala da situação ou do lugar. Regra inteira no cofre, em
+  // `design/direcao-de-imagem.md`.
   images: {
     hero: {
       src: "/img/home/topo.jpg",
@@ -167,8 +169,8 @@ export const site = {
     },
     services: {
       src: "/img/home/servicos.jpg",
-      alt: "Fachada de bloco modernista com janelas em grelha, em tons de azul",
-      caption: "Superquadra, Brasília",
+      alt: "Duas pessoas sentadas à mesa de um escritório lendo papéis de uma empresa, em tons de azul",
+      caption: "A papelada que sai da sua mesa",
     },
     about: {
       src: "/img/home/quem-somos.jpg",

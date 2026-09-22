@@ -5,7 +5,7 @@ date: 2026-09-15
 author: "Supera Contabilidade"
 status: publicado
 cover: "/img/blog/quando-sair-do-mei.jpg"
-coverAlt: "Escada de concreto em espiral vista de baixo, em tons de azul"
+coverAlt: "Costureira anotando num caderno ao lado da máquina, no ateliê dela, em tons de azul"
 ogImage: "/img/blog/quando-sair-do-mei-og.jpg"
 ---
 

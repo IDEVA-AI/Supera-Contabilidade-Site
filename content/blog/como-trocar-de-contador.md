@@ -5,7 +5,7 @@ date: 2026-09-15
 author: "Supera Contabilidade"
 status: publicado
 cover: "/img/blog/como-trocar-de-contador.jpg"
-coverAlt: "Rampa curva de concreto em estilo modernista, em tons de azul"
+coverAlt: "Mãos separando pastas e papéis de documentos sobre uma mesa de madeira, em tons de azul"
 ogImage: "/img/blog/como-trocar-de-contador-og.jpg"
 ---
 

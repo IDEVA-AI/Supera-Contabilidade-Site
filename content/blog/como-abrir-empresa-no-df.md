@@ -5,7 +5,7 @@ date: 2026-09-15
 author: "Supera Contabilidade"
 status: publicado
 cover: "/img/blog/como-abrir-empresa-no-df.jpg"
-coverAlt: "Pilotis de concreto de um bloco modernista de superquadra, em tons de azul"
+coverAlt: "Mulher levantando a porta de aço da loja dela no começo da manhã, com caixas ainda fechadas no chão, em tons de azul"
 ogImage: "/img/blog/como-abrir-empresa-no-df-og.jpg"
 ---
 
