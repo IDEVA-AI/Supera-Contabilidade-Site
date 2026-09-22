@@ -26,15 +26,18 @@ export const site = {
     email: "",
     phone: "", // E.164, ex: +556133990425
     phoneLabel: "",
-    whatsapp: "5561981999430", // da bio do Instagram @supera.contabilidade (2026-09-14)
+    whatsapp: "5561981999430", // da bio do Instagram do cliente (2026-09-14)
     whatsappMessage: "Olá! Vim pelo site e quero falar sobre contabilidade.",
     hours: "", // ex: "Segunda a sexta, 9h às 18h". Vazio some do site. Horário a confirmar com o Danilo.
   },
 
   // Perfis oficiais (viram sameAs no JSON-LD). Só entra o que existe de verdade.
-  // Atenção: @superacontabilidade (sem ponto) é de outro escritório, de Valparaíso-GO.
-  // O do cliente é @supera.contabilidade.
-  profiles: ["https://www.instagram.com/supera.contabilidade/"] as string[],
+  // O perfil do cliente passou a ser @superacontabilidade.com.br em 2026-09-22 (link
+  // passado pelo Julio). O antigo @supera.contabilidade saiu daqui; se ele continuar
+  // no ar, é decisão do Julio se volta pro sameAs.
+  // Atenção aos homônimos: @superacontabilidade (sem ponto e sem .com.br) é de outro
+  // escritório, de Valparaíso-GO, e não é o cliente.
+  profiles: ["https://www.instagram.com/superacontabilidade.com.br/"] as string[],
 
   // Contas de anúncio e verificação de domínio. São IDs públicos, não senha: moram
   // aqui e não em variável de ambiente porque a Vercel é da conta da Supera e a IDEVA

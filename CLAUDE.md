@@ -10,8 +10,9 @@ texto ainda é rascunho da IDEVA a validar com o Danilo. Estado do cliente em
 
 Direção visual (aprovada pelo Julio em 2026-09-14): linha do Hoskens Accountancy,
 cor chapada e tipografia com personalidade, funcionando sem foto. As cores são as
-da marca, medidas no logo e nos posts do Instagram `@supera.contabilidade` em
-2026-09-14 (marinho, prata e aço, sem cor quente). Não inventar cor fora dessa lista. Referências de
+da marca, medidas no logo e nos posts do Instagram do cliente em
+2026-09-14 (o perfil era `@supera.contabilidade`; desde 2026-09-22 é
+`@superacontabilidade.com.br`) (marinho, prata e aço, sem cor quente). Não inventar cor fora dessa lista. Referências de
 nível mundial e prints das versões em `interno/clientes/Supera/referencias-site/`
 e `interno/clientes/Supera/site-v1/`.
 
