@@ -91,10 +91,14 @@ e `interno/clientes/Supera/site-v1/`.
   `site.config.ts` (a de serviços só aparece no desktop; a de quem somos sai quando
   `aboutPhoto` receber a foto real). Capa
   entra no frontmatter do artigo (`cover`, `coverAlt`, `ogImage`) e é servida por
-  `next/image`. As imagens são de arquitetura modernista geradas pelo Codex em duotone
-  da marca (2026-09-15), sem pessoas, sem texto e sem obra reconhecível. Rosto, equipe e
-  escritório só com foto real da sessão do cliente. Texto nunca sai da IA: a prévia com
-  título é HTML renderizado no Chrome headless com as fontes do site.
+  `next/image`. O que pode aparecer em cada imagem está em
+  `interno/clientes/Supera/design/direcao-de-imagem.md` (decisão do Julio em
+  2026-09-22), em três camadas: **a Supera** (Danilo, Paulo, a sala) só em foto real,
+  nunca gerada; **o cliente da Supera** em cena de trabalho pode ser gerado no Codex,
+  em duotone da marca, com rosto fora do protagonismo, sem pose e sem terno; e
+  arquitetura ou textura, gerada como já era. A legenda de imagem gerada fala da
+  situação ou do lugar e nunca atribui nome nem posse à Supera. Texto nunca sai da IA:
+  a prévia com título é HTML renderizado no Chrome headless com as fontes do site.
 - `.env.example` · `NEXT_PUBLIC_SITE_URL`, o domínio final.
 
 ## 3. Vizinhos
@@ -146,6 +150,10 @@ layout e componente vem de site de nível mundial.
 
 **Não copie painel do Athos Bulcão no azulejo.** O padrão é desenho original
 inspirado no modernismo de Brasília; cópia de obra tem direito autoral.
+
+**Não gere rosto da Supera.** Foto de gente gerada só vale pro cliente em cena, nunca
+pra Danilo, Paulo, a equipe ou a sala: essas o cliente confere na visita. Regra inteira
+em `interno/clientes/Supera/design/direcao-de-imagem.md`.
 
 **Não invente avaliação nem depoimento.** A seção de avaliações só aparece com
 avaliação real do Google no config.
