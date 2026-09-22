@@ -190,7 +190,7 @@ export const site = {
   // sala precisa reconhecer o que viu aqui. [VALIDAR: nome na legenda]
   photos: {
     hero: {
-      src: "", // retrato do Danilo, vertical, fundo limpo
+      src: "/img/home/danilo.jpg", // retrato que o Danilo mandou em 2026-09-22
       alt: "Danilo de Santo Romão, sócio da Supera Contabilidade",
       caption: "Danilo, quem responde no WhatsApp",
     },
@@ -200,9 +200,9 @@ export const site = {
       caption: "O dia a dia do escritório",
     },
     about: {
-      src: "", // Paulo e Danilo juntos na sala, sem pose
-      alt: "Paulo e Danilo no escritório da Supera, em Brasília",
-      caption: "Paulo e Danilo, na sala em Brasília",
+      src: "/img/home/socios.jpg", // os dois retratos de estúdio lado a lado
+      alt: "Paulo Sérgio Romão e Danilo de Santo Romão, sócios da Supera Contabilidade",
+      caption: "Paulo e Danilo, sócios da Supera",
     },
   },
   about: [

@@ -33,7 +33,7 @@ export const lp = {
       caption: "Cobogó, Brasília",
     },
     photo: {
-      src: "", // retrato do Danilo, horizontal
+      src: "/img/lp/danilo.jpg", // retrato que o Danilo mandou em 2026-09-22
       alt: "Danilo de Santo Romão, sócio da Supera Contabilidade",
       caption: "Danilo, quem vai cuidar da sua abertura",
     },

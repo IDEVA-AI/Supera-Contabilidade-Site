@@ -46,8 +46,13 @@ e `interno/clientes/Supera/site-v1/`.
   Qual imagem entra é decidido por `visual(chave)` no `site.config.ts`: a foto real de
   `site.photos` ganha da arquitetura de `site.images` assim que o `src` for preenchido.
   Humanizar o site depois da sessão de fotos é copiar o arquivo pra `public/img/home`
-  e colar o caminho, sem tocar em componente. Alt e legenda das fotos reais já estão
-  escritos lá. O mesmo vale pra `site.author.photo`, o retrato na assinatura do artigo.
+  e colar o caminho, sem tocar em componente. O mesmo vale pra `site.author.photo`, o
+  retrato na assinatura do artigo, que segue vazio até o Danilo assumir a assinatura.
+  Os retratos do Danilo (topo e landing) e dos dois sócios (quem somos) entraram em
+  2026-09-22. Eles não são o arquivo que o cliente mandou: o recorte e o tratamento em
+  preto e branco saem de `interno/clientes/Supera/design/retratos/`, em CSS renderizado
+  no Chrome. Reenquadrar é mexer no `object-position` de lá e rodar
+  `render-retratos.sh`, nunca editar o JPG que está em `public/`.
 - `components/icons.tsx` · ícones por assunto (lucide-react) mais WhatsApp e Instagram em
   SVG próprio, porque o lucide não traz marca. Config e conteúdo da landing page guardam só
   a chave (`icon: "empresa"`). Nenhum ícone é seta: seta é o sinal de que abre o WhatsApp.
