@@ -119,6 +119,28 @@ export default async function PostPage({ params }: Props) {
             </ReactMarkdown>
           </div>
 
+          {/* Assinatura. Artigo de contabilidade sem gente por trás lê como texto de
+              robô, e é quem assina que responde pelo número publicado. */}
+          <aside className="mt-16 flex flex-col gap-5 rounded-2xl border border-nevoa p-6 sm:flex-row sm:items-center md:p-8">
+            {site.author.photo && (
+              <Image
+                src={site.author.photo}
+                alt={site.author.photoAlt}
+                width={160}
+                height={160}
+                className="size-20 shrink-0 rounded-full object-cover"
+              />
+            )}
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-aco">
+                Quem escreve
+              </p>
+              <p className="mt-1 font-display text-xl font-semibold">{site.author.name}</p>
+              <p className="mt-0.5 text-sm text-aco">{site.author.role}</p>
+              <p className="mt-3 text-pretty">{site.author.text}</p>
+            </div>
+          </aside>
+
           <aside className="mt-16 rounded-3xl rounded-tr-[120px] bg-marinho p-8 text-white md:p-12">
             <p className="font-display text-3xl font-bold leading-tight">
               Esse é o seu caso?

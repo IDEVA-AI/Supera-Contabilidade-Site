@@ -39,6 +39,14 @@ e `interno/clientes/Supera/site-v1/`.
   Danilo saber a origem. Verificação de domínio (Search Console e Meta) em
   `site.verification`, sai como meta tag, sem mexer em DNS.
 - `components/placeholder.tsx` · o marcador tracejado de dado pendente.
+- `components/foto.tsx` · imagem com legenda, usada nos três pontos da home. A
+  legenda amarra a imagem no que a seção fala ao lado; sem foto real ela é crédito de
+  lugar ("Brises de concreto, Brasília") e nunca insinua que a imagem é o escritório.
+  Qual imagem entra é decidido por `visual(chave)` no `site.config.ts`: a foto real de
+  `site.photos` ganha da arquitetura de `site.images` assim que o `src` for preenchido.
+  Humanizar o site depois da sessão de fotos é copiar o arquivo pra `public/img/home`
+  e colar o caminho, sem tocar em componente. Alt e legenda das fotos reais já estão
+  escritos lá. O mesmo vale pra `site.author.photo`, o retrato na assinatura do artigo.
 - `components/icons.tsx` · ícones por assunto (lucide-react) mais WhatsApp e Instagram em
   SVG próprio, porque o lucide não traz marca. Config e conteúdo da landing page guardam só
   a chave (`icon: "empresa"`). Nenhum ícone é seta: seta é o sinal de que abre o WhatsApp.
@@ -68,7 +76,8 @@ e `interno/clientes/Supera/site-v1/`.
   `status: rascunho` aparece no `dev` e nunca no build de produção.
 - `app/(site)/blog/page.tsx`, `app/(site)/blog/[slug]/page.tsx` · lista e artigo
   (react-markdown + remark-gfm, JSON-LD `BlogPosting`, índice "Neste artigo" com âncora
-  nos `##`, tempo de leitura, chamada de WhatsApp e "Continue lendo").
+  nos `##`, tempo de leitura, bloco "Quem escreve" (`site.author`), chamada de WhatsApp
+  e "Continue lendo").
 - `content/blog/` · os artigos. Três publicados em 2026-09-15 (abrir empresa no DF,
   trocar de contador, sair do MEI), com números de 2026 conferidos em fonte oficial e
   data de conferência no rodapé de cada um. Número que muda todo ano (limite do MEI,

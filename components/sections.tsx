@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { instagramUrl, site, whatsappUrl } from "@/site.config";
+import { instagramUrl, site, visual, whatsappUrl } from "@/site.config";
 import { Container } from "@/components/container";
+import { Foto } from "@/components/foto";
 import { formatDate, getPosts } from "@/lib/blog";
 import { cn } from "@/lib/utils";
 import { InstagramIcon, TopicIcon, WhatsAppIcon } from "@/components/icons";
@@ -118,16 +119,12 @@ export function Hero() {
         </div>
 
         <aside className="flex flex-col overflow-hidden rounded-3xl rounded-tr-[72px] bg-marinho text-white lg:min-h-[460px] lg:rounded-tr-[160px]">
-          <div className="relative h-40 lg:h-auto lg:min-h-48 lg:flex-1">
-            <Image
-              src={site.images.hero.src}
-              alt={site.images.hero.alt}
-              fill
-              priority
-              sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-cover"
-            />
-          </div>
+          <Foto
+            visual={visual("hero")}
+            priority
+            sizes="(min-width: 1024px) 40vw, 100vw"
+            className="h-48 lg:h-auto lg:min-h-56 lg:flex-1"
+          />
           <div className="p-8 md:p-10">
             <p className="text-sm font-medium text-white/75">Quem te atende</p>
             <p className="mt-2 font-display text-4xl font-bold leading-tight md:text-5xl">
@@ -161,15 +158,11 @@ export function Services() {
             não está na lista, pergunta mesmo assim.
           </p>
           {/* Só no desktop, onde a coluna da esquerda ficava vazia ao lado da lista. */}
-          <div className="relative mt-10 hidden aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl rounded-bl-[96px] lg:block">
-            <Image
-              src={site.images.services.src}
-              alt={site.images.services.alt}
-              fill
-              sizes="24rem"
-              className="object-cover"
-            />
-          </div>
+          <Foto
+            visual={visual("services")}
+            sizes="24rem"
+            className="mt-10 hidden aspect-[4/5] w-full max-w-sm rounded-3xl rounded-bl-[96px] lg:block"
+          />
         </div>
 
         <ul className="divide-y divide-ardosia/15 border-y border-ardosia/15">
@@ -265,19 +258,11 @@ export function About() {
             )}
           </div>
 
-          <div className="relative h-56 bg-azul lg:h-auto lg:min-h-72">
-            <Image
-              src={site.aboutPhoto || site.images.about.src}
-              alt={
-                site.aboutPhoto
-                  ? `${site.founders.map((p) => p.name).join(" e ")} no escritório`
-                  : site.images.about.alt
-              }
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </div>
+          <Foto
+            visual={visual("about")}
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="h-56 bg-azul lg:h-auto lg:min-h-72"
+          />
         </div>
       </Container>
     </section>

@@ -150,25 +150,71 @@ export const site = {
     },
   ],
 
-  // Quem somos. Sócios conforme a Receita. Foto entra quando existir.
+  // Quem somos. Sócios conforme a Receita.
   founders: [
     { name: "Paulo Sérgio Romão", role: "Sócio-administrador" },
     { name: "Danilo de Santo Romão", role: "Sócio, cuida do atendimento" },
   ],
-  aboutPhoto: "", // caminho em /public/img quando a sessão de fotos acontecer
 
   // Imagens de arquitetura da home (geradas no Codex em 2026-09-15, duotone da marca,
-  // sem pessoas). Não são o escritório: o alt descreve o que a imagem é de verdade.
-  // `about` sai de cena quando `aboutPhoto` for preenchida com a foto real.
+  // sem pessoas). Não são o escritório: o alt descreve o que a imagem é de verdade e a
+  // legenda diz o que ela é, sem fingir ser a sala nem a equipe.
   images: {
-    hero: { src: "/img/home/topo.jpg", alt: "Fachada modernista com brises de concreto, em tons de azul" },
-    services: { src: "/img/home/servicos.jpg", alt: "Fachada de bloco modernista com janelas em grelha, em tons de azul" },
-    about: { src: "/img/home/quem-somos.jpg", alt: "Marquise de concreto sobre pilotis com sombras de fim de tarde, em tons de azul" },
+    hero: {
+      src: "/img/home/topo.jpg",
+      alt: "Fachada modernista com brises de concreto, em tons de azul",
+      caption: "Brises de concreto, Brasília",
+    },
+    services: {
+      src: "/img/home/servicos.jpg",
+      alt: "Fachada de bloco modernista com janelas em grelha, em tons de azul",
+      caption: "Superquadra, Brasília",
+    },
+    about: {
+      src: "/img/home/quem-somos.jpg",
+      alt: "Marquise de concreto sobre pilotis com sombras de fim de tarde, em tons de azul",
+      caption: "Pilotis e marquise, Brasília",
+    },
+  },
+
+  // Fotos reais do cliente, uma por ponto da home. Mesma chave de `images`: assim que
+  // `src` for preenchido, a foto entra no lugar da imagem de arquitetura e leva junto
+  // o alt e a legenda daqui. Alt e legenda já estão escritos pra que humanizar o site
+  // depois da sessão de fotos seja só copiar o arquivo pra /public/img/home e colar o
+  // caminho. Foto de banco de imagem e rosto gerado por IA não entram: quem visita a
+  // sala precisa reconhecer o que viu aqui. [VALIDAR: nome na legenda]
+  photos: {
+    hero: {
+      src: "", // retrato do Danilo, vertical, fundo limpo
+      alt: "Danilo de Santo Romão, sócio da Supera Contabilidade",
+      caption: "Danilo, quem responde no WhatsApp",
+    },
+    services: {
+      src: "", // Danilo trabalhando de verdade: computador, papel na mesa, WhatsApp aberto
+      alt: "Danilo trabalhando na mesa do escritório da Supera",
+      caption: "O dia a dia do escritório",
+    },
+    about: {
+      src: "", // Paulo e Danilo juntos na sala, sem pose
+      alt: "Paulo e Danilo no escritório da Supera, em Brasília",
+      caption: "Paulo e Danilo, na sala em Brasília",
+    },
   },
   about: [
     "A Supera abriu em 2014 e continua com o tamanho que permite conhecer cada cliente pelo nome.",
     "Quem atende é o Danilo, direto no WhatsApp. A carteira foi construída por indicação: quem gosta do trabalho apresenta o próximo cliente.",
   ], // [VALIDAR]
+
+  // Assinatura dos artigos. Quem assina hoje é o escritório, porque o Danilo ainda não
+  // leu os três textos; quando ele ler e assumir, é trocar nome e papel aqui e colar a
+  // foto. Sem foto, o bloco sai só com o nome. [VALIDAR]
+  author: {
+    name: "Supera Contabilidade",
+    role: "Escritório de contabilidade em Brasília, desde 2014",
+    text: "Quem escreve aqui é quem atende no WhatsApp. Se ficou dúvida no meio do texto, pergunta direto.",
+    photo: "", // retrato do Danilo, quadrado, quando a sessão de fotos acontecer
+    photoAlt: "",
+  },
 
   // Avaliações reais do Google. Enquanto estiver vazio, a seção não aparece.
   googleProfileUrl: "", // [PLACEHOLDER]
@@ -213,5 +259,13 @@ export const whatsappUrl = (message: string = site.contact.whatsappMessage) =>
   `https://wa.me/${site.contact.whatsapp}?text=${encodeURIComponent(message)}`;
 
 export const instagramUrl = site.profiles.find((url) => url.includes("instagram.com"));
+
+export type Visual = { src: string; alt: string; caption: string };
+
+// Qual imagem entra em cada ponto da home: a foto real do cliente ganha da imagem de
+// arquitetura assim que existir. Um lugar só decide, então nenhuma seção esquece de
+// trocar quando a sessão de fotos chegar.
+export const visual = (key: keyof typeof site.images): Visual =>
+  site.photos[key].src ? site.photos[key] : site.images[key];
 
 export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? site.url;
