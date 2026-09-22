@@ -24,7 +24,19 @@ export const lp = {
   googleReviewsUrl: null as string | null,
 
   hero: {
-    image: { src: "/img/lp/abrir-empresa.jpg", alt: "Parede de cobogós de concreto em estilo modernista, em tons de azul" },
+    // A imagem de arquitetura segura o lugar até a foto do Danilo chegar. Preencher
+    // `photo.src` troca a imagem e a legenda de uma vez: é o passo que o Julio quer
+    // dado antes de ligar o tráfego, porque quem vem do anúncio não conhece ninguém.
+    image: {
+      src: "/img/lp/abrir-empresa.jpg",
+      alt: "Parede de cobogós de concreto em estilo modernista, em tons de azul",
+      caption: "Cobogó, Brasília",
+    },
+    photo: {
+      src: "", // retrato do Danilo, horizontal
+      alt: "Danilo de Santo Romão, sócio da Supera Contabilidade",
+      caption: "Danilo, quem vai cuidar da sua abertura",
+    },
     eyebrow: "Abertura de empresa em Brasília",
     title: "Abra sua empresa já sabendo quanto vai pagar de imposto.",
     intro:

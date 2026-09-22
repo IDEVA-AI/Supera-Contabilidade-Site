@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { lp } from "@/content/lp-abrir-empresa";
 import { site, whatsappUrl } from "@/site.config";
 import { Container } from "@/components/container";
+import { Foto } from "@/components/foto";
 import { WhatsAppButton, external } from "@/components/sections";
 import { MobileContactBar } from "@/components/mobile-contact-bar";
 import { Placeholder } from "@/components/placeholder";
@@ -88,14 +88,11 @@ export default function AbrirEmpresaPage() {
             </div>
 
             <aside className="overflow-hidden rounded-3xl rounded-tr-[72px] bg-marinho text-white lg:rounded-tr-[160px]">
-              <Image
-                src={lp.hero.image.src}
-                alt={lp.hero.image.alt}
-                width={1600}
-                height={1067}
+              <Foto
+                visual={lp.hero.photo.src ? lp.hero.photo : lp.hero.image}
                 priority
                 sizes="(min-width: 1024px) 40vw, 100vw"
-                className="aspect-[16/9] w-full object-cover lg:aspect-[3/2]"
+                className="aspect-[16/9] w-full lg:aspect-[3/2]"
               />
               <div className="p-8 md:p-10">
                 <p className="text-sm font-medium text-white/75">O que sai da abertura</p>
