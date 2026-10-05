@@ -5,7 +5,7 @@ date: 2026-10-05
 updated: 2026-10-05
 author: "Supera Contabilidade"
 status: publicado
-answer: "Fator R é a conta que o Simples Nacional usa em 2026 pra decidir o anexo de vários prestadores de serviço: a folha de salários dos últimos 12 meses, pró-labore incluído, dividida pela receita bruta do mesmo período. Com 28% ou mais, a atividade vai pro Anexo III, que começa em 6%. Abaixo disso, vai pro Anexo V, que começa em 15,5%."
+answer: "Fator R é a conta que, em 2026, define o anexo do Simples Nacional de muitos prestadores de serviço: folha de salários dos últimos 12 meses, pró-labore incluído, dividida pela receita bruta do mesmo período. Com 28% ou mais, a atividade vai pro Anexo III, que começa em 6%. Abaixo disso, vai pro Anexo V, que começa em 15,5%."
 faq:
   - q: "Quanto tenho que tirar de pró-labore pra cair no Anexo III?"
     a: "A folha dos últimos 12 meses, somando pró-labore, salários e encargos, precisa chegar a 28% da receita bruta do mesmo período. Quem faturou R$ 120 mil em 12 meses precisa de pelo menos R$ 33.600 de folha nesse intervalo, o que dá R$ 2.800 por mês. O valor certo depende do faturamento de cada empresa."
@@ -21,7 +21,7 @@ faq:
 
 A psicóloga atende das oito às oito, abriu empresa no ano passado e recebe uma guia do Simples que leva quase um sexto do que entra. No café do congresso, um colega comenta que paga 6%. Ela pergunta como, ele responde "fator R, é só ajustar o pró-labore", e muda de assunto.
 
-Ela sai dali com duas vontades que brigam entre si. Quer pagar menos, claro. E tem medo de mexer em algo que não entende e levar uma multa por isso. Este texto mostra a conta inteira, com números da lei, pra você entender o que o colega quis dizer e o que ele deixou de fora.
+Ela sai dali com duas vontades que brigam entre si. Quer pagar menos, claro. E tem medo de mexer em algo que não entende e levar uma multa por isso. Aqui está a conta inteira, com números da lei, inclusive a parte que o colega deixou de fora.
 
 ## O que o fator R mede, na prática?
 
@@ -76,13 +76,13 @@ A fórmula está no art. 18, § 1º-A, da LC 123: receita dos 12 meses vezes a a
 
 Não sai. O sócio que recebe pró-labore contribui pro INSS sobre esse valor, pela [Lei 8.212](https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm), e o pró-labore sofre imposto de renda na fonte pela tabela progressiva, como diz o art. 698 do [Regulamento do Imposto de Renda](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/decreto/d9580.htm). O que a empresa economiza na guia do Simples, a pessoa física paga em parte do outro lado.
 
-No exemplo da fisioterapeuta, a guia caiu R$ 950 por mês. Pra isso, o pró-labore subiu R$ 1.000. Esse dinheiro continua indo pro bolso dela, mas agora passa pelo INSS e pela tabela do imposto de renda antes de chegar. Se compensa, depende do faturamento, dos outros rendimentos dela e de quanto ela já tira hoje. Às vezes a conta fecha com folga, às vezes a diferença some.
+No exemplo da fisioterapeuta, a guia caiu R$ 950 por mês e o pró-labore subiu R$ 1.000. Esse dinheiro continua indo pro bolso dela, só que agora passa pelo INSS e pela tabela do imposto de renda antes de chegar. Se compensa, depende do faturamento, dos outros rendimentos dela e de quanto ela já tira hoje.
 
-Por isso, desconfie de quem promete "pague 6%" como regra geral. O fator R é uma escolha legítima, prevista na lei, e não tem nada de jeitinho. Só que ela precisa da conta das duas pontas, empresa e pessoa física, antes de mexer.
+Por isso, desconfie de quem promete "pague 6%" como regra geral. O fator R está na lei e usar ele é legítimo, desde que se faça a conta das duas pontas, empresa e pessoa física, antes de mexer.
 
 ## Quais atividades estão sujeitas ao fator R?
 
-Estão sujeitas as atividades que a LC 123 manda olhar pela folha. São dois grupos, e o fator R pode levar os dois pro Anexo III ou pro V.
+São dois grupos de serviço, e nos dois o fator R decide entre o Anexo III e o V.
 
 O primeiro grupo está listado no Anexo III, mas cai no V se o fator R ficar abaixo de 28%. O § 5º-M aponta fisioterapia, arquitetura e urbanismo, medicina, enfermagem, odontologia, psicologia, psicanálise, terapia ocupacional, acupuntura, podologia, fonoaudiologia e clínicas de nutrição. Entram também os serviços do § 5º-D: desenvolvimento de programas de computador, licenciamento de software, criação e manutenção de sites, academias, administração e locação de imóveis de terceiros, laboratórios e serviços de imagem.
 
@@ -94,23 +94,23 @@ Se você é desses profissionais e ainda está decidindo como abrir a empresa, v
 
 ## E em Brasília, muda alguma coisa?
 
-O fator R é regra federal e vale igual em todo o país. A particularidade do Distrito Federal é que ele faz o papel de estado e de município ao mesmo tempo.
+O fator R é regra federal e vale igual no país inteiro. O que muda no DF é pra onde vai o ISS.
 
-Pra quem presta serviço no Simples, o ISS vem dentro da própria guia, como manda o art. 13 da LC 123. Como Brasília não tem prefeitura, o ISS é imposto do próprio Distrito Federal, pelo art. 147 da [Constituição](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm), e é pra ele que vai essa parte da guia. Os registros da empresa por aqui estão no guia de [como abrir empresa no DF](/blog/como-abrir-empresa-no-df).
+Pra quem presta serviço no Simples, o ISS vem dentro da guia, como manda o art. 13 da LC 123. Brasília não tem prefeitura, e pelo art. 147 da [Constituição](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm) o ISS é imposto do próprio Distrito Federal. Os registros da empresa por aqui estão no guia de [como abrir empresa no DF](/blog/como-abrir-empresa-no-df).
 
 ## A reforma tributária muda o fator R em 2026?
 
-No texto da LC 123 consultado em 5 de outubro de 2026, o fator R e as alíquotas dos Anexos III e V são os descritos aqui. As alterações recentes da lei, das Leis Complementares 214/2025 e 227/2026, não mexeram nos parágrafos do fator R.
+Não no texto da lei. Na LC 123 consultada em 5 de outubro de 2026, as alterações das Leis Complementares 214/2025 e 227/2026 não mexeram nos parágrafos do fator R nem nas alíquotas dos Anexos III e V.
 
-O que já tem data é a mudança na guia do Simples. O portal do Simples Nacional já orienta a opção pelo regime regular do IBS e da CBS para 2027. Quando essa mudança chegar ao seu caso, este artigo será atualizado.
+A mudança que já tem data é na guia do Simples: o portal do Simples Nacional já orienta a opção pelo regime regular do IBS e da CBS para 2027.
 
 ## Quando vale olhar o seu fator R?
 
-Vale olhar quando a empresa abre, quando você contrata alguém, quando o faturamento cresce rápido e quando você decide quanto vai tirar de pró-labore no ano. Nos quatro casos, a razão entre folha e receita muda.
+Quando a empresa abre, quando você contrata alguém, quando o faturamento cresce rápido e quando decide o pró-labore do ano. Nos quatro casos, a razão entre folha e receita muda.
 
-Quem está saindo do MEI agora encontra o fator R logo na primeira guia, e o texto sobre [quando vale a pena sair do MEI](/blog/quando-sair-do-mei) mostra o resto do que muda nessa passagem. E se o seu contador atual nunca falou de fator R com você, talvez seja hora de entender [como trocar de contador sem perder nada no caminho](/blog/como-trocar-de-contador).
+Quem está saindo do MEI encontra o fator R logo na primeira guia, e o texto sobre [quando vale a pena sair do MEI](/blog/quando-sair-do-mei) mostra o resto da passagem. Se o seu contador nunca falou de fator R com você, vale ler [como trocar de contador sem perder nada no caminho](/blog/como-trocar-de-contador).
 
-A vontade de pagar menos e o medo de fazer besteira cabem na mesma pessoa, e os dois têm razão. O fator R está na lei pra ser usado, desde que a conta seja feita inteira. Se você quer ver como ela fica com os seus números, chama a gente no WhatsApp e conta o seu caso.
+A vontade de pagar menos e o medo de fazer besteira cabem na mesma pessoa, e os dois têm razão. O fator R está na lei pra ser usado, com a conta feita inteira. Se quer ver como ela fica com os seus números, chama a gente no WhatsApp e conta o seu caso.
 
 ## Fontes
 
@@ -120,4 +120,4 @@ A vontade de pagar menos e o medo de fazer besteira cabem na mesma pessoa, e os 
 - [Decreto 9.580/2018, Regulamento do Imposto de Renda](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/decreto/d9580.htm): art. 698 (imposto na fonte sobre o pró-labore do sócio de empresa do Simples).
 - [Portal do Simples Nacional, Perguntas e Respostas](https://www8.receita.fazenda.gov.br/SimplesNacional/CanaisAtendimento/Perguntas.aspx): orientação sobre a opção pelo regime regular do IBS e da CBS no Simples a partir de 2027.
 
-*Conferido em 5 de outubro de 2026, no texto compilado da Lei Complementar 123/2006 publicado no Planalto e no Portal do Simples Nacional.*
+*Conferido em 5 de outubro de 2026, nos textos compilados publicados no Planalto e no Portal do Simples Nacional.*
