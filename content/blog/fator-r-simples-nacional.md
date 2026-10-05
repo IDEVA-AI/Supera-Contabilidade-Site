@@ -12,7 +12,7 @@ faq:
   - q: "Distribuição de lucros conta no fator R?"
     a: "Não. A Lei Complementar 123 diz que aluguel e distribuição de lucros ficam fora da folha de salários usada no fator R. Entram as remunerações pagas a pessoas físicas pelo trabalho, as retiradas de pró-labore, a contribuição patronal previdenciária efetivamente recolhida e o FGTS, sempre declarados na folha."
   - q: "Psicólogo paga Anexo III ou Anexo V no Simples Nacional?"
-    a: "Depende do fator R. Psicologia está na lista de atividades do Anexo III, mas a Lei Complementar 123 manda tributar no Anexo V quando a folha de salários dos últimos 12 meses fica abaixo de 28% da receita bruta. Vale o mesmo para fisioterapia, medicina, odontologia, nutrição, fonoaudiologia e arquitetura."
+    a: "Depende do fator R. Psicologia está na lista de atividades do Anexo III, mas a Lei Complementar 123 manda tributar no Anexo V quando a folha de salários dos últimos 12 meses fica abaixo de 28% da receita bruta. Vale o mesmo para fisioterapia, medicina, odontologia, clínicas de nutrição, fonoaudiologia e arquitetura."
   - q: "O fator R é calculado todo mês?"
     a: "Sim. A conta usa os 12 meses anteriores ao mês que está sendo apurado, então ela anda junto com o calendário. Uma empresa pode ficar no Anexo III num mês e cair no Anexo V no seguinte se a folha diminuir ou o faturamento crescer mais rápido que ela."
   - q: "Advogado entra no fator R?"
@@ -25,11 +25,11 @@ Ela sai dali com duas vontades que brigam entre si. Quer pagar menos, claro. E t
 
 ## O que o fator R mede, na prática?
 
-O fator R mede quanto da receita da empresa vai pra folha de pagamento. É uma divisão: tudo o que a empresa pagou de folha nos últimos 12 meses, dividido por tudo o que ela faturou nos mesmos 12 meses.
+O fator R mede quanto da receita da empresa vai pra folha de pagamento. É uma divisão: a folha paga nos últimos 12 meses, dividida pelo faturamento dos mesmos 12 meses.
 
-A lei existe porque o Simples trata diferente quem emprega gente e quem fatura sozinho. A [Lei Complementar 123](https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp123.htm), no art. 18, § 5º-J, diz que certas atividades de serviço vão pro Anexo III quando essa razão é igual ou maior que 28%. O § 5º-M diz o contrário: abaixo de 28%, elas vão pro Anexo V.
+A [Lei Complementar 123](https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp123.htm), no art. 18, § 5º-J, manda certas atividades de serviço pro Anexo III quando essa razão é igual ou maior que 28%. O § 5º-M diz o contrário: abaixo de 28%, elas vão pro Anexo V.
 
-Pense na linha de impedimento no futebol. Meio passo à frente muda o lance inteiro. Com 27,9% a empresa está no Anexo V, com 28% está no III, e a diferença de imposto entre um e outro é grande.
+Pense na linha de impedimento no futebol. Meio passo à frente muda o lance inteiro. Com 27,9% a empresa está no Anexo V, com 28% está no III.
 
 ## O que entra na folha pra essa conta?
 
@@ -43,11 +43,11 @@ O período também é fixo. O § 5º-K manda usar os valores pagos e faturados n
 
 Você soma a folha dos últimos 12 meses, soma a receita bruta dos mesmos 12 meses e divide uma pela outra. Se der 0,28 ou mais, Anexo III. Se der menos, Anexo V.
 
-Vamos a um exemplo ilustrativo, com números redondos. Uma fisioterapeuta, sozinha na empresa, sem funcionário, fatura R$ 10.000 por mês. Em 12 meses, a receita bruta soma R$ 120.000. Como ela não tem empregado, a folha é só o pró-labore dela.
+Um exemplo ilustrativo, com números redondos. Uma fisioterapeuta, sozinha na empresa, fatura R$ 10.000 por mês, R$ 120.000 em 12 meses. Sem empregado, a folha é só o pró-labore dela.
 
-Primeiro, a régua: 28% de R$ 120.000 dá R$ 33.600 em 12 meses, ou R$ 2.800 por mês de folha. Esse é o ponto de corte.
+A régua: 28% de R$ 120.000 dá R$ 33.600 em 12 meses, ou R$ 2.800 por mês de folha.
 
-Agora, dois cenários. No primeiro, ela tira R$ 2.000 de pró-labore por mês. A folha soma R$ 24.000, que dividido por R$ 120.000 dá 20%. Ficou abaixo de 28%, então a atividade cai no Anexo V. No segundo, ela tira R$ 3.000. A folha soma R$ 36.000, o que dá 30%. Passou da régua, e a atividade vai pro Anexo III.
+Se ela tira R$ 2.000 por mês, a folha soma R$ 24.000 e o fator R dá 20%. Abaixo da régua, Anexo V. Se tira R$ 3.000, a folha soma R$ 36.000 e o fator R dá 30%. Passou, Anexo III.
 
 | Pró-labore por mês | Folha em 12 meses | Fator R | Anexo | Alíquota da 1ª faixa | Guia do Simples no mês |
 |---|---|---|---|---|---|
@@ -56,13 +56,13 @@ Agora, dois cenários. No primeiro, ela tira R$ 2.000 de pró-labore por mês. A
 
 *Exemplo ilustrativo: receita de R$ 10.000 por mês e R$ 120.000 em 12 meses, sem funcionários. A guia mostrada é só a do Simples, sem o custo do pró-labore na pessoa física.*
 
-Nesse exemplo, a conta fica limpa porque R$ 120.000 está na primeira faixa dos dois anexos, até R$ 180.000 em 12 meses, onde não existe parcela a deduzir.
+A conta fica limpa porque R$ 120.000 está na primeira faixa dos dois anexos, onde não existe parcela a deduzir.
 
 ## Por que a alíquota que eu pago não é a da tabela?
 
-Porque a tabela traz a alíquota nominal, e a guia usa a alíquota efetiva. A partir da segunda faixa entra a parcela a deduzir, e o número que você paga fica abaixo do que está escrito na tabela.
+Porque a tabela traz a alíquota nominal, e a guia usa a efetiva. A partir da segunda faixa entra a parcela a deduzir, e o que você paga fica abaixo do número da tabela.
 
-A fórmula está no art. 18, § 1º-A, da LC 123: receita dos últimos 12 meses vezes a alíquota nominal, menos a parcela a deduzir, tudo dividido pela receita dos 12 meses. Pegue uma empresa que faturou R$ 240.000 em 12 meses, na segunda faixa. No Anexo III, a alíquota nominal é 11,2% e a parcela a deduzir é R$ 9.360, e a efetiva sai em 7,3%. No Anexo V, a nominal é 18% com R$ 4.500 a deduzir, e a efetiva fica em pouco mais de 16,1%.
+A fórmula está no art. 18, § 1º-A, da LC 123: receita dos 12 meses vezes a alíquota nominal, menos a parcela a deduzir, dividido pela receita dos 12 meses. Com R$ 240.000 em 12 meses, a efetiva sai em 7,3% no Anexo III e em pouco mais de 16,1% no Anexo V.
 
 | Receita em 12 meses | Anexo III (nominal e dedução) | Anexo V (nominal e dedução) |
 |---|---|---|
@@ -86,7 +86,7 @@ Estão sujeitas as atividades que a LC 123 manda olhar pela folha. São dois gru
 
 O primeiro grupo está listado no Anexo III, mas cai no V se o fator R ficar abaixo de 28%. O § 5º-M aponta fisioterapia, arquitetura e urbanismo, medicina, enfermagem, odontologia, psicologia, psicanálise, terapia ocupacional, acupuntura, podologia, fonoaudiologia e clínicas de nutrição. Entram também os serviços do § 5º-D: desenvolvimento de programas de computador, licenciamento de software, criação e manutenção de sites, academias, administração e locação de imóveis de terceiros, laboratórios e serviços de imagem.
 
-O segundo grupo está no Anexo V, mas sobe pro III se o fator R passar de 28%. É a lista do § 5º-I: engenharia, medição, topografia, design, auditoria, economia, consultoria, gestão, jornalismo, publicidade, representação comercial, perícia, tradução, medicina veterinária e outras atividades intelectuais, técnicas ou científicas que não estejam em outro anexo.
+O segundo grupo está no Anexo V, mas sobe pro III se o fator R passar de 28%. É a lista do § 5º-I: engenharia, medição, topografia, design, auditoria, economia, consultoria, gestão, jornalismo, publicidade, representação comercial, perícia, tradução e outras atividades intelectuais, técnicas ou científicas que não estejam em outro anexo.
 
 Ficam de fora do fator R as atividades que a lei manda sempre pro Anexo III, como escolas, agências de viagem, corretagem de seguros, instalação e reparo e escritórios de contabilidade. Também ficam de fora as do Anexo IV, como advocacia, construção, vigilância e limpeza.
 
@@ -96,7 +96,7 @@ Se você é desses profissionais e ainda está decidindo como abrir a empresa, v
 
 O fator R é regra federal e vale igual em todo o país. A particularidade do Distrito Federal é que ele faz o papel de estado e de município ao mesmo tempo.
 
-Pra quem presta serviço no Simples, o ISS vem dentro da própria guia, como manda o art. 13 da LC 123. No DF, esse ISS fica com o próprio Distrito Federal, e a empresa tem um cadastro fiscal só, sem inscrição municipal separada. O passo a passo desse registro está no guia de [como abrir empresa no DF](/blog/como-abrir-empresa-no-df).
+Pra quem presta serviço no Simples, o ISS vem dentro da própria guia, como manda o art. 13 da LC 123. Como Brasília não tem prefeitura, o ISS é imposto do próprio Distrito Federal, pelo art. 147 da [Constituição](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm), e é pra ele que vai essa parte da guia. Os registros da empresa por aqui estão no guia de [como abrir empresa no DF](/blog/como-abrir-empresa-no-df).
 
 ## A reforma tributária muda o fator R em 2026?
 
@@ -115,6 +115,9 @@ A vontade de pagar menos e o medo de fazer besteira cabem na mesma pessoa, e os 
 ## Fontes
 
 - [Lei Complementar 123/2006, compilada no Planalto](https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp123.htm): art. 13 (tributos da guia, ISS incluído), art. 18, §§ 1º-A, 5º-B, 5º-C, 5º-D, 5º-I, 5º-J, 5º-K, 5º-M, 24, 25 e 26, e Anexos III e V.
+- [Lei 8.212/1991, compilada no Planalto](https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm): art. 12, V, "f" (sócio que recebe pelo trabalho é segurado do INSS) e art. 28, III (base de contribuição).
+- [Constituição Federal](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm): art. 147 (ao Distrito Federal cabem os impostos municipais).
+- [Decreto 9.580/2018, Regulamento do Imposto de Renda](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/decreto/d9580.htm): art. 698 (imposto na fonte sobre o pró-labore do sócio de empresa do Simples).
 - [Portal do Simples Nacional, Perguntas e Respostas](https://www8.receita.fazenda.gov.br/SimplesNacional/CanaisAtendimento/Perguntas.aspx): orientação sobre a opção pelo regime regular do IBS e da CBS no Simples a partir de 2027.
 
 *Conferido em 5 de outubro de 2026, no texto compilado da Lei Complementar 123/2006 publicado no Planalto e no Portal do Simples Nacional.*

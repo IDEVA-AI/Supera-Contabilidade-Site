@@ -53,16 +53,14 @@ Três exemplos que estão na lista do MEI e são profissões regulamentadas por 
 
 É um atalho que costuma sair caro. O CNPJ diz que você faz uma coisa, a nota sai com o código dessa coisa, e o trabalho que você entrega é outro.
 
-A LC 123 prevê o desenquadramento do MEI quando aparece uma situação que impede o regime, e se o próprio MEI não comunicar, a Receita faz isso de ofício (art. 18-A, §§ 6º a 9º). A partir daí, o imposto passa a ser cobrado pela regra geral do Simples Nacional. Some a isso o conselho de classe, que fiscaliza quem presta o serviço, e o barato do MEI deixa de compensar o risco.
+A LC 123 prevê o desenquadramento do MEI quando aparece uma situação que impede o regime, e se o próprio MEI não comunicar, a Receita faz isso de ofício (art. 18-A, §§ 6º a 9º). A partir daí, o imposto passa a ser cobrado pela regra geral do Simples Nacional. O barato do MEI deixa de compensar o risco.
 
 ## Então que empresa o profissional liberal abre?
 
 Pra quem trabalha sozinho, o caminho mais comum é a sociedade limitada de um sócio só, a SLU. O [art. 1.052 do Código Civil](https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm) permite a limitada com uma pessoa só desde 2019, e a responsabilidade fica restrita ao capital da empresa.
 
-A escolha que vem junto é entre sociedade empresária e sociedade simples. Quando a empresa vende basicamente o trabalho intelectual dos sócios, o Código Civil a trata como sociedade simples (arts. 966 e 982), que pode adotar a forma de limitada (art. 983) e se registra no Cartório de Registro Civil de Pessoas Jurídicas (arts. 998 e 1.150). Quando tem estrutura de empresa por trás, ela é empresária e se registra na Junta Comercial. Essa definição muda o contrato e o lugar do registro, e vale decidir com calma.
-
-O advogado tem caminho próprio. O [Estatuto da OAB](https://www.planalto.gov.br/ccivil_03/leis/l8906.htm) permite a sociedade de advogados e a sociedade unipessoal de advocacia (art. 15). As duas ganham existência com o registro no Conselho Seccional da OAB, e a lei proíbe registrar sociedade com atividade de advocacia em Junta Comercial ou cartório (art. 16, § 3º). O nome é obrigatoriamente o do titular com a expressão "Sociedade Individual de Advocacia".
-
+A escolha que vem junto é entre sociedade empresária e sociedade simples. Quando a empresa vende basicamente o trabalho intelectual dos sócios, o Código Civil a trata como sociedade simples (arts. 966 e 982), que pode adotar a forma de limitada (art. 983) e se registra no Cartório de Registro Civil de Pessoas Jurídicas (arts. 998 e 1.150). Quando tem estrutura de empresa por trás, ela é empresária e se registra na Junta Comercial.
+O advogado tem caminho próprio. O [Estatuto da OAB](https://www.planalto.gov.br/ccivil_03/leis/l8906.htm) permite a sociedade de advogados e a sociedade unipessoal de advocacia (art. 15). As duas ganham existência com o registro no Conselho Seccional da OAB, e a lei proíbe registrar sociedade com atividade de advocacia em Junta Comercial ou cartório (art. 16, § 3º).
 Quem não quer CNPJ ainda pode atender como pessoa física. Nesse caso, o imposto de renda do que você recebe de pacientes e clientes pessoas físicas sai pelo [carnê-leão](https://www.gov.br/receitafederal/pt-br/assuntos/meu-imposto-de-renda/pagamento/carne-leao), todo mês.
 
 ## Quanto de imposto o profissional liberal paga no Simples?
@@ -84,9 +82,6 @@ Em Brasília, a abertura passa pela Redesim DF, que junta os órgãos num fluxo 
 3. **Receita Federal** emite o CNPJ. É nessa etapa que se marca a opção pelo Simples Nacional, como explicamos no [passo a passo de como abrir empresa no DF](/blog/como-abrir-empresa-no-df).
 4. **Secretaria de Estado de Economia do DF** faz a inscrição tributária distrital da empresa.
 5. **Conselho regional** recebe o registro da empresa. A [Lei 6.839/1980](https://www.planalto.gov.br/ccivil_03/leis/l6839.htm) obriga esse registro na entidade que fiscaliza a atividade básica. No DF: [CRP-01](https://www.crp-01.org.br), [CRM-DF](https://crmdf.org.br), [CRO-DF](https://cro-df.org.br), [CREA-DF](https://www.creadf.org.br) e [CAU/DF](https://caudf.gov.br).
-
-O conselho costuma ser a etapa esquecida. A empresa sai com CNPJ, emite nota, e só depois alguém lembra que ela também precisa existir no conselho.
-
 ## O que levar pra primeira conversa com o contador
 
 A conversa rende mais quando você chega com algumas respostas:
