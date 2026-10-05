@@ -114,7 +114,7 @@ export function Hero() {
             {...external}
             className="mt-6 inline-block text-sm font-medium underline decoration-nevoa decoration-2 underline-offset-4 transition-colors hover:decoration-marinho"
           >
-            Nenhum desses? Conta pra gente o que é
+            Não encontrou o seu caso? Conte o que aconteceu
           </a>
         </div>
 
@@ -154,8 +154,8 @@ export function Services() {
             O que a gente faz
           </h2>
           <p className="mt-5 max-w-sm text-aco text-pretty">
-            A rotina de uma empresa pequena ou média, do CNPJ à folha. Se o seu caso
-            não está na lista, pergunta mesmo assim.
+            Conhecemos todas as rotinas de uma empresa e, se o seu caso não estiver na
+            lista, pergunte mesmo assim.
           </p>
           {/* Só no desktop, onde a coluna da esquerda ficava vazia ao lado da lista. */}
           <Foto
@@ -243,6 +243,7 @@ export function About() {
                 <li key={person.name}>
                   <p className="font-display text-xl font-semibold">{person.name}</p>
                   <p className="mt-1 text-sm text-white/75">{person.role}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-white/85 text-pretty">{person.bio}</p>
                 </li>
               ))}
             </ul>
@@ -368,7 +369,7 @@ export function BlogPreview() {
       <Container>
         <div className="flex flex-wrap items-end justify-between gap-6">
           <h2 className="font-display text-5xl font-bold tracking-tight md:text-6xl">
-            Pra ler com calma
+            Para ler com calma
           </h2>
           <Link
             href="/blog"

@@ -9,7 +9,7 @@ coverAlt: "Costureira anotando num caderno ao lado da máquina, no ateliê dela,
 ogImage: "/img/blog/quando-sair-do-mei-og.jpg"
 ---
 
-O MEI é um sapato ótimo enquanto o pé cabe nele. Um dia o cliente novo pede uma nota que estoura o mês, o trabalho pede mais uma pessoa, aparece alguém querendo entrar de sócio. E vem junto o receio: sair do MEI parece trocar uma guia de R$ 80 por uma conta que ninguém sabe dizer quanto vai dar.
+O cuidado com o MEI deve estar relacionado a três situações: um cliente novo que exige uma nota fiscal que vai estourar o faturamento, a admissão de mais de um funcionário e a entrada de um sócio. Nem sempre pagar mais significa prejuízo, muito pelo contrário.
 
 Por causa desse medo, muita gente segura o faturamento ou recusa trabalho. Quase sempre sai mais caro que fazer a passagem na hora certa. Aqui estão os números de 2026, os sinais de que chegou a hora e o caminho pra trocar sem ficar irregular.
 

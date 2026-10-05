@@ -18,7 +18,7 @@ A boa notícia é que a troca tem regra. O Conselho Federal de Contabilidade def
 - Você só fica sabendo de imposto quando a guia chega, sem conversa antes.
 - As perguntas levam dias pra ter resposta, ou não têm.
 - Apareceu multa por declaração entregue fora do prazo.
-- Ninguém nunca revisou se o regime de imposto ainda faz sentido pro tamanho da empresa.
+- Ninguém nunca revisou se o regime tributário ainda faz sentido para o tamanho da empresa.
 - Você não sabe dizer quais declarações a sua empresa entrega nem onde elas estão.
 
 Um desses sozinho pode ser um mês ruim. Quando vários se repetem, o problema é o serviço.

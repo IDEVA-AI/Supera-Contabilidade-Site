@@ -9,7 +9,7 @@ export const site = {
   tagline: "Contabilidade para empresas em Brasília",
   url: "https://www.superacontabilidade.com.br", // o domínio sem www redireciona (308) pra este
   description:
-    "Escritório de contabilidade em Brasília desde 2014. Abertura de empresa, contabilidade mensal, folha, impostos e regularização, com um sócio responsável por cada empresa da carteira.", // [VALIDAR]
+    "Escritório de contabilidade em Brasília desde 2014. Abertura de empresa, contabilidade mensal, folha, impostos e regularização, com acompanhamento próximo de cada empresa da carteira.", // [VALIDAR]
   foundedYear: 2014, // Receita: abertura em 2014-04-17
   cnpj: "20.645.761/0001-08",
 
@@ -60,20 +60,20 @@ export const site = {
   heroCard: {
     eyebrow: "Escritório contábil em Brasília",
     title: "12 anos de CNPJ ativo",
-    text: "A sua empresa fica com um sócio do escritório, que acompanha a rotina e responde pelo que assina.",
+    text: "Cada empresa tem um especialista do escritório, que acompanha a rotina e responde pelo que é entregue.",
   },
 
   // Topo da home. A pessoa escolhe o que aconteceu e cai no WhatsApp com a
   // mensagem já escrita. A urgente fica separada das outras. `short` é o nome
   // curto que aparece nos atalhos do fechamento da página. [VALIDAR]
   heroIntro:
-    "Você não precisa entender de contabilidade pra falar com a gente. Escolha o que aconteceu e o WhatsApp abre com a mensagem pronta.",
+    "Você não precisa entender de contabilidade para falar conosco. Selecione o seu problema, e o WhatsApp te direciona para a tratativa correta.",
   situations: {
     urgent: {
       icon: "multa",
       short: "Multa ou notificação",
       label: "Chegou uma multa ou notificação",
-      detail: "Manda uma foto do documento. A gente olha o que é e o que precisa ser feito.",
+      detail: "Envie uma foto do documento. Avaliamos do que se trata e o que precisa ser feito.",
       message: "Olá! Recebi uma multa ou notificação e preciso de ajuda.",
     },
     common: [
@@ -82,7 +82,7 @@ export const site = {
         short: "Abrir empresa",
         label: "Vou abrir uma empresa",
         detail:
-          "Antes do CNPJ, a gente escolhe com você o tipo de empresa e o regime de imposto, pra não começar pagando a mais.",
+          "Antes do CNPJ, definimos com você o tipo de empresa e o regime tributário, para ter o menor custo possível.",
         message: "Olá! Quero abrir uma empresa.",
       },
       {
@@ -90,15 +90,15 @@ export const site = {
         short: "Trocar de contador",
         label: "Quero trocar de contador",
         detail:
-          "Seu contador sumiu ou não resolve? A gente pede os documentos a ele e confere o que chegou.",
+          "Seu contador sumiu e não resolve seus problemas? Deixe conosco, a gente resolve para você.",
         message: "Olá! Quero trocar de contador.",
       },
       {
         icon: "imposto",
-        short: "Imposto",
-        label: "Chegou a época do imposto",
-        detail: "Declaração, guia atrasada ou dúvida sobre quanto vai pagar.",
-        message: "Olá! Preciso de ajuda com imposto.",
+        short: "Impostos",
+        label: "Chegou a época dos impostos",
+        detail: "Declarações, guias em atraso ou dúvidas sobre o valor dos tributos.",
+        message: "Olá! Preciso de ajuda com impostos.",
       },
     ],
   },
@@ -111,31 +111,31 @@ export const site = {
       icon: "empresa",
       title: "Abertura de empresa",
       description:
-        "Tipo de empresa, regime de imposto, CNPJ e inscrições. Você começa sabendo quanto vai pagar.",
+        "Tipo de empresa, regime tributário, CNPJ e inscrições. Você começa sabendo quanto vai pagar.",
     },
     {
       icon: "troca",
       title: "Troca de contador",
       description:
-        "A contabilidade continua de onde parou. Antes de assumir, a gente confere o que veio do escritório anterior.",
+        "A contabilidade continua de onde parou. Antes de assumir, conferimos tudo o que veio do escritório anterior.",
     },
     {
       icon: "regularizacao",
       title: "Regularização",
       description:
-        "Certidão negada, pendência na Receita, multa ou empresa parada. Primeiro a gente descobre o tamanho do problema.",
+        "Certidão negada, pendência na Receita, multa ou empresa parada. O primeiro passo é dimensionar o problema.",
     },
     {
       icon: "imposto",
       title: "Impostos e declarações",
       description:
-        "Guias calculadas antes do vencimento e planejamento tributário pra não pagar imposto a mais quando o negócio muda de tamanho.",
+        "Guias calculadas antes do vencimento e planejamento tributário, para não pagar mais tributo do que o necessário quando o negócio muda de tamanho.",
     },
     {
       icon: "mensal",
       title: "Contabilidade mensal",
       description:
-        "Escrituração, balancete e os demonstrativos que banco e financeira pedem, com alguém pra explicar o que os números dizem.",
+        "Escrituração, balancete e os demonstrativos que bancos e financeiras exigem, com quem explique o que os números dizem.",
     },
     {
       icon: "pessoal",
@@ -148,25 +148,36 @@ export const site = {
   steps: [
     {
       icon: "conversa",
-      title: "Você manda mensagem",
-      text: "Conta o que aconteceu do seu jeito. Pode mandar foto do documento.",
+      title: "Você envia uma mensagem",
+      text: "Descreva a situação como preferir. Pode enviar foto do documento.",
     },
     {
       icon: "caso",
-      title: "O Danilo analisa o caso",
-      text: "Tamanho da empresa, regime de imposto e o que está pegando. Pode explicar com as suas palavras.",
+      title: "Nosso especialista analisa o caso",
+      text: "Tamanho da empresa, o regime tributário e demais problemas. Pode explicar com as suas palavras.",
     },
     {
       icon: "proposta",
       title: "Você recebe a proposta",
-      text: "Com o que vai ser feito e quanto custa. A decisão fica com você.",
+      text: "Com o que será feito e quanto custa. A decisão é sua.",
     },
   ],
 
-  // Quem somos. Sócios conforme a Receita.
+  // Quem somos. Sócios conforme a Receita. Nome e bio dos sócios só aparecem aqui: no
+  // resto do site quem analisa o caso é "nosso especialista", que pode ser outra pessoa
+  // da equipe (pedido do Danilo, 2026-09-15). Começo de cada bio e o CRC vieram dele em
+  // 2026-09-22; o CRC vai só com o número, sem PDF (consulta pública no site do CRC). [VALIDAR: resto da bio]
   founders: [
-    { name: "Paulo Sérgio Romão", role: "Sócio-administrador" },
-    { name: "Danilo de Santo Romão", role: "Sócio, responde pelas empresas da carteira" },
+    {
+      name: "Paulo Sérgio Romão",
+      role: "Sócio-administrador",
+      bio: "Contador desde 2013, CRC DF 024167/O-0. Responde tecnicamente pela contabilidade das empresas da carteira.",
+    },
+    {
+      name: "Danilo de Santo Romão",
+      role: "Sócio",
+      bio: "Gestor de escritório contábil desde 2017. Acompanha a rotina das empresas da carteira e conduz a conversa com cada cliente.",
+    },
   ],
 
   // Imagens geradas no Codex em duotone da marca, que seguram o lugar até a foto real
@@ -203,7 +214,7 @@ export const site = {
       src: "", // o topo voltou pra arquitetura em 2026-09-22 (decisão do Julio); o
       // retrato do Danilo continua em /img/home/danilo.jpg, é só recolar o caminho
       alt: "Danilo de Santo Romão, sócio da Supera Contabilidade",
-      caption: "Danilo, quem responde no WhatsApp",
+      caption: "Danilo de Santo Romão, sócio da Supera",
     },
     services: {
       src: "", // Danilo trabalhando de verdade: computador, papel na mesa, WhatsApp aberto
@@ -217,8 +228,8 @@ export const site = {
     },
   },
   about: [
-    "A Supera abriu em 2014 e continua com o tamanho que permite conhecer cada cliente pelo nome.",
-    "O Danilo acompanha as empresas da carteira e conversa direto com cada cliente. A carteira foi construída por indicação: quem gosta do trabalho apresenta o próximo.",
+    "A Supera abriu em 2014 e continua conhecendo cada cliente pelo nome.",
+    "Cada empresa da carteira é acompanhada de perto, com conversa direta com o cliente. A carteira foi construída por indicação: quem gosta do trabalho apresenta o próximo.",
   ], // [VALIDAR]
 
   // Assinatura dos artigos. Quem assina hoje é o escritório, porque o Danilo ainda não
@@ -227,7 +238,7 @@ export const site = {
   author: {
     name: "Supera Contabilidade",
     role: "Escritório de contabilidade em Brasília, desde 2014",
-    text: "Quem escreve aqui é quem faz a contabilidade. Se ficou dúvida no meio do texto, pergunta direto.",
+    text: "Quem escreve aqui é quem faz a contabilidade. Se ficou alguma dúvida, pergunte diretamente.",
     photo: "", // retrato do Danilo, quadrado, quando a sessão de fotos acontecer
     photoAlt: "",
   },
@@ -241,31 +252,31 @@ export const site = {
   faq: [
     {
       q: "Quanto custa a contabilidade?",
-      a: "Depende do tipo de empresa, do regime de imposto e de quantos funcionários ela tem. Na primeira conversa a gente entende o seu caso e manda a proposta com o valor.",
+      a: "Depende do tipo de empresa, do regime tributário e do número de funcionários. Na primeira conversa entendemos o seu caso e enviamos a proposta com o valor.",
     },
     {
-      q: "Já tenho contador. Dá pra trocar no meio do ano?",
-      a: "Dá. A troca pode acontecer em qualquer mês. A gente combina a data, pede os documentos ao contador atual e confere o que chegou antes de assumir. Quem conversa com o contador atual é a gente.",
+      q: "Já tenho contador. É possível trocar no meio do ano?",
+      a: "Sim. A troca pode acontecer em qualquer mês. Combinamos a data, solicitamos os documentos ao contador atual e conferimos o que chegou antes de assumir. O contato com o contador atual fica por nossa conta.",
     },
     {
       q: "Recebi uma notificação da Receita. É grave?",
-      a: "Nem sempre. Muita notificação é declaração pendente e se resolve rápido. Manda uma foto do documento no WhatsApp e a gente te diz o que é.",
+      a: "Nem sempre. Muitas notificações são declarações pendentes e se resolvem rapidamente. Envie uma foto do documento pelo WhatsApp e informamos do que se trata.",
     },
     {
-      q: "Quanto tempo leva pra abrir uma empresa no DF?",
-      a: "Depende da atividade e das licenças que ela exige. Na conversa inicial a gente já te passa o prazo do seu caso.",
+      q: "Quanto tempo leva para abrir uma empresa no DF?",
+      a: "Depende da atividade e das licenças exigidas. Na conversa inicial já informamos o prazo do seu caso.",
     },
     {
       q: "Preciso ir até o escritório?",
-      a: "Não precisa. A conversa e o envio de documentos podem ser feitos pelo WhatsApp. Se preferir conversar pessoalmente, é só combinar.",
+      a: "Não é necessário. A conversa e o envio de documentos podem ser feitos pelo WhatsApp. Se preferir uma reunião presencial, é só agendar.",
     },
   ],
 
   cta: {
     primary: "Falar no WhatsApp",
-    headline: "Conta pra gente o que aconteceu.",
+    headline: "Conte para nós o que aconteceu.",
     support:
-      "Pode mandar do jeito que está, com a papelada bagunçada mesmo. A gente ajuda a separar o que é urgente.",
+      "Pode enviar como estiver, mesmo com a documentação desorganizada. Ajudamos a separar o que é urgente.",
   },
 } as const;
 
