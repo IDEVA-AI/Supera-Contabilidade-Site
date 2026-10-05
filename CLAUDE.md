@@ -98,7 +98,15 @@ e `interno/clientes/Supera/site-v1/`.
 - `content/blog/` · os artigos. Três publicados em 2026-09-15 (abrir empresa no DF,
   trocar de contador, sair do MEI), com números de 2026 conferidos em fonte oficial e
   data de conferência no rodapé de cada um. Número que muda todo ano (limite do MEI,
-  DAS, taxa da Junta) precisa ser revisto em janeiro.
+  DAS, taxa da Junta) precisa ser revisto em janeiro. Seis publicados em 2026-10-05, já
+  com `updated`, `answer` e `faq`: baixa de empresa sem movimento, reforma tributária
+  (IBS e CBS) e Simples Nacional híbrido (pedidos do Danilo), mais profissional liberal
+  e MEI, fator R e empresa no endereço de casa. Esses têm data que vence dentro do
+  texto: a opção do Simples pelo regime regular fecha em 2026-10-30 (cancelamento até
+  2026-12-20) e reabre em março de 2027; rever os dois artigos da reforma nessas datas.
+  Tom dos artigos novos: sóbrio, "para" em vez de "pra", sem nome de sócio (pedido do
+  Danilo em 2026-09-29). Capa e prévia saem de `interno/clientes/Supera/design/capas/`
+  e `design/og/`.
 - `app/sitemap.ts`, `app/robots.ts` · SEO técnico; o sitemap inclui só artigo publicado,
   com `lastmod` = `updated` ou `date`; home e `/blog` levam a data do artigo mais recente.
 - `app/llms.txt/route.ts` · o `/llms.txt` (formato llmstxt.org) pra IA generativa:
@@ -185,6 +193,11 @@ em `interno/clientes/Supera/design/direcao-de-imagem.md`.
 
 **Não invente avaliação nem depoimento.** A seção de avaliações só aparece com
 avaliação real do Google no config.
+
+**O auto-commit está desligado neste clone.** Existe `.git/no-auto-commit` desde
+2026-10-05: o Stop hook (`~/.claude/scripts/auto-commit.sh`) empurra pra todo remoto, e
+aqui isso mandou commit intermediário de branch pro `supera`, o remoto que a Vercel do
+cliente escuta. Não apague o marcador; commit e push aqui são sempre à mão.
 
 **Rode o pnpm 11, não o do sistema.** O `node_modules` foi montado com pnpm 11.24
 e o Homebrew instala o 10, que aborta procurando outro cache. Use
