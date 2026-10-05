@@ -21,7 +21,7 @@ faq:
     a: "Depende de você pretender voltar. A Receita permite comunicar a interrupção temporária das atividades, e o CNPJ fica suspenso. Se não há plano de retomar, a suspensão só adia a decisão, e vale conferir com o contador o que continua devido no seu regime enquanto o CNPJ existir."
 ---
 
-Você parou de atender, entregou a sala ou foi trabalhar com carteira assinada. O CNPJ ficou lá, quieto, e a decisão de fechar foi ficando para o mês seguinte. Você quer encerrar esse capítulo, mas tem receio de abrir a gaveta e encontrar uma dívida que nem sabia que existia.
+Você parou de atender, entregou a sala ou foi trabalhar com carteira assinada. O CNPJ ficou lá, quieto, e a decisão de fechar foi ficando para o mês seguinte. Você quer encerrar o assunto, mas tem receio de mexer nele e encontrar uma dívida que nem sabia que existia.
 
 Este artigo responde, com a regra de 2026, o que a empresa parada ainda deve, se dá para fechar com débito e como é a baixa em Brasília.
 
@@ -90,7 +90,7 @@ A sociedade simples, registrada em cartório, e a sociedade de advogados, regist
 
 Comece pelo que dá para ver sem custo. Consulte a [situação cadastral do CNPJ](https://solucoes.receita.fazenda.gov.br/servicos/cnpjreva/cnpjreva_solicitacao.asp) na Receita, anote desde quando a empresa está parada e separe o acesso gov.br de quem é responsável por ela. Se o contador antigo sumiu com os acessos, o artigo sobre [como trocar de contador](/blog/como-trocar-de-contador) mostra como retomar a procuração no e-CAC.
 
-Com isso em mãos, nosso especialista consegue dizer o que está pendente, quanto dessa conta é sua e qual caminho faz mais sentido. Se quiser olhar o seu caso com calma, conta pra gente no WhatsApp desde quando a empresa está parada e qual é o tipo dela.
+Com isso em mãos, nosso especialista levanta o que está pendente e quanto dessa conta é sua, e aí fica mais fácil escolher o caminho. Se quiser olhar o seu caso com calma, fale com a Supera no WhatsApp e conte desde quando a empresa está parada e qual é o tipo dela.
 
 ## Fontes
 

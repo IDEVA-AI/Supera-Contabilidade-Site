@@ -14,7 +14,7 @@ faq:
   - q: "Quem compra de empresa do Simples tem crédito de IBS e CBS?"
     a: "Tem, mas o tamanho muda. Se o IBS e a CBS forem pagos dentro do DAS, o cliente do regime regular só se credita do valor que a empresa do Simples recolheu por esse regime. Se o fornecedor optar pelo regime regular, o crédito segue as regras gerais, com base no valor destacado na nota e pago."
   - q: "A opção pelo Simples híbrido vale para o ano inteiro?"
-    a: "Não. Ela vale por semestre, começando em janeiro ou em julho, e é irretratável dentro de cada semestre. A janela é em setembro, para o semestre de janeiro, e em março, para o de julho. Depois de feita, a opção continua valendo nos semestres seguintes até a empresa renunciar."
+    a: "Não. Ela vale por semestre, começando em janeiro ou em julho, e é irretratável dentro de cada semestre. A lei prevê a opção em setembro, para o semestre de janeiro, e em março, para o de julho. Em 2026, a de setembro foi prorrogada até 30 de outubro. Feita a opção, ela segue valendo até a empresa renunciar."
   - q: "Se eu não fizer nada, o que acontece com o IBS e a CBS da minha empresa do Simples?"
     a: "Nada muda na forma de pagar. A empresa do Simples que não faz a opção continua recolhendo o IBS e a CBS dentro do DAS, como já faz com os outros tributos da guia. Só precisa agir quem quer apurar esses dois tributos por fora, pelo regime regular."
   - q: "Vale a pena sair do Simples híbrido depois?"
@@ -23,7 +23,7 @@ faq:
 
 Você entrou no Simples justamente para não ter que pensar em imposto. Uma guia por mês, um valor, e a cabeça livre para tocar a empresa. Agora um cliente grande comenta que, a partir de 2027, vai olhar quanto crédito de IBS e CBS cada fornecedor gera.
 
-A dúvida que fica é desconfortável. Mexer no regime pode trazer custo e trabalho que você não tinha. Não mexer pode custar um cliente. Este artigo mostra como a escolha funciona hoje, com a lei e os prazos conferidos, e do que ela depende.
+A dúvida que fica é desconfortável. Mexer no regime pode trazer custo e trabalho que você não tinha, e deixar como está pode custar um cliente. Este artigo mostra como a escolha funciona hoje, com a lei e os prazos conferidos, e do que ela depende.
 
 ## O que é o Simples Nacional híbrido?
 
@@ -55,7 +55,7 @@ A lei trata os dois casos de formas diferentes. Quando o fornecedor do Simples p
 
 ## Como fica o crédito num exemplo?
 
-Os números abaixo são ilustrativos, escolhidos só para mostrar o mecanismo. Não são alíquotas reais.
+No exemplo, o cliente aproveita bem mais crédito quando o fornecedor está no híbrido. Os números abaixo são ilustrativos, escolhidos só para mostrar o mecanismo, e não são alíquotas reais.
 
 Imagine uma empresa do Simples em Brasília que presta um serviço de R$ 10.000 para uma empresa do regime regular.
 
@@ -65,9 +65,9 @@ Se ela fica no híbrido, a nota destaca o IBS e a CBS pelas regras do regime reg
 
 Para o cliente, a diferença é de R$ 1.600 a favor de comprar do fornecedor híbrido. Para a sua empresa, o lado de lá da conta: no híbrido, você recolhe o IBS e a CBS cheios sobre a venda, menos os créditos das suas próprias compras. Por dentro, a empresa do Simples não aproveita crédito nenhum (LC 214, art. 47, § 9º, I). A conta certa só sai com o faturamento, os clientes e as compras reais da sua empresa.
 
-## Pra quem tende a fazer sentido cada caminho?
+## Para quem tende a fazer sentido cada caminho?
 
-A tabela resume os perfis. Ela não substitui a simulação, que é onde a escolha de fato se decide.
+Em geral, o híbrido merece estudo para quem vende a empresas do regime regular, e o Simples puro costuma servir a quem vende a consumidor final. A tabela resume os perfis. Ela não substitui a simulação, que é onde a escolha de fato se decide.
 
 | Perfil da empresa | Caminho que costuma merecer estudo | Por quê | O que pesa do outro lado |
 |---|---|---|---|
@@ -84,7 +84,7 @@ Há também uma trava para sair. A empresa que recebeu ressarcimento de crédito
 
 Quem abriu a empresa há pouco tempo ou pensa no regime pela primeira vez costuma esbarrar antes em outra conta do Simples. Para prestadores de serviço, o anexo depende do [fator R](/blog/fator-r-simples-nacional), e essa conta continua valendo.
 
-## Do que a decisão depende, no fim?
+## Do que a decisão depende?
 
 Depende de quem compra de você, de quanto você compra com imposto destacado e de quanto trabalho a mais a sua rotina aguenta. Este artigo trata da microempresa e da empresa de pequeno porte. O MEI tem regras próprias.
 
@@ -92,7 +92,7 @@ Algumas regras ainda dependem de regulamentação, como o prazo para concluir a 
 
 Se o seu contador ainda não puxou esse assunto, e a janela fecha em 30 de outubro de 2026, vale ler [como trocar de contador sem perder nada no caminho](/blog/como-trocar-de-contador).
 
-Ninguém escolhe o Simples para depois ter que estudar crédito tributário. Mas a escolha cabe numa conversa, com os seus números na mesa. Se quiser entender o seu caso, chama a Supera no WhatsApp e conta para quem você vende hoje.
+Ninguém escolhe o Simples para depois ter que estudar crédito tributário, e a escolha cabe numa conversa com os seus números na mesa. Se quiser olhar o seu caso com calma, fale com a Supera no WhatsApp e conte para quem você vende hoje.
 
 ## Fontes
 

@@ -14,7 +14,7 @@ faq:
   - q: "Quando acabam o ICMS e o ISS?"
     a: "Em 2033. Antes disso, de 2029 a 2032, as alíquotas de ICMS e ISS caem para 90%, 80%, 70% e 60% do que vale em 2028, enquanto o IBS ocupa esse espaço. A regra está no art. 128 e no art. 129 do Ato das Disposições Constitucionais Transitórias, incluídos pela Emenda 132/2023."
   - q: "A empresa do Simples Nacional precisa fazer alguma coisa agora?"
-    a: "Precisa decidir, até 30 de outubro de 2026, se recolhe IBS e CBS dentro ou fora da guia no primeiro semestre de 2027, e ficar de olho na nota fiscal. No DF, a partir de 1º de novembro de 2026, toda empresa do Simples emite a nota de serviço pelo emissor nacional, e não mais pelo sistema próprio do DF."
+    a: "Tem uma escolha com prazo: até 30 de outubro de 2026, pode optar por recolher IBS e CBS fora da guia no primeiro semestre de 2027. Quem não optar continua na guia única. E no DF, a partir de 1º de novembro de 2026, toda empresa do Simples emite a nota de serviço pelo emissor nacional."
   - q: "O que muda na reforma tributária para quem tem empresa em Brasília?"
     a: "O Distrito Federal cobra hoje ICMS e ISS, e vai fixar sozinho as duas partes do IBS, a estadual e a municipal. Na nota de serviço, o DF mantém o emissor próprio para a maioria das empresas, mas quem está no Simples passa ao emissor nacional em 1º de novembro de 2026."
   - q: "O split payment já está valendo?"
@@ -29,7 +29,7 @@ Este artigo resolve a parte que importa para quem tem empresa pequena ou presta 
 
 É a troca de cinco tributos sobre consumo por dois novos, feita aos poucos entre 2026 e 2033. A [Emenda Constitucional 132/2023](https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm) criou a mudança, e a [Lei Complementar 214/2025](https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm) detalhou as regras.
 
-A CBS (Contribuição sobre Bens e Serviços) é federal e substitui o PIS e a Cofins. O IBS (Imposto sobre Bens e Serviços) é dividido entre estados e municípios e substitui o ICMS e o ISS. O IPI é zerado para quase todos os produtos, e entra o Imposto Seletivo, que incide sobre itens como cigarro e bebida alcoólica.
+A CBS (Contribuição Social sobre Bens e Serviços) é federal e substitui o PIS e a Cofins. O IBS (Imposto sobre Bens e Serviços) é dividido entre estados e municípios e substitui o ICMS e o ISS. O IPI é zerado para quase todos os produtos, e entra o Imposto Seletivo, que incide sobre itens como cigarro e bebida alcoólica.
 
 Pense numa troca de encanamento feita com a casa funcionando. Os canos velhos continuam ligados enquanto os novos são instalados ao lado, e só são desligados quando os novos já estão aguentando a água. Por isso, durante alguns anos, você vai conviver com os dois sistemas ao mesmo tempo.
 
@@ -89,7 +89,7 @@ Neste trimestre, o trabalho é de organização. São quatro frentes.
 
 Se você ainda vai abrir a empresa, essa decisão já entra no planejamento. O passo a passo está em [como abrir empresa no DF](/blog/como-abrir-empresa-no-df). Para quem presta serviço no Simples, o [fator R](/blog/fator-r-simples-nacional) continua decidindo o anexo e o custo.
 
-A reforma vai andar por sete anos, e ninguém precisa virar especialista nela. O que pesa é não deixar a nota fiscal e o preço para a última hora. Se quiser olhar com calma o que muda na sua empresa, conta pra gente no WhatsApp o que você faz e em qual regime está hoje.
+A reforma vai andar por sete anos, e ninguém precisa virar especialista nela. O que pesa é não deixar a nota fiscal e o preço para a última hora. Se quiser olhar o seu caso com calma, fale com a Supera no WhatsApp e conte o que você faz e em qual regime está hoje.
 
 ## Fontes
 
