@@ -74,24 +74,39 @@ e `interno/clientes/Supera/site-v1/`.
   aço, prata, névoa, claro, branco) e o estilo do corpo de artigo (`.artigo`). Só
   tema claro.
 - `components/sections.tsx` · todas as seções da home. `Reviews` e `BlogPreview`
-  somem sozinhas quando não há dado. `Faq` também emite o JSON-LD `FAQPage`.
+  somem sozinhas quando não há dado. `Faq` também emite o JSON-LD `FAQPage`. A lista
+  sanfonada (`FaqList`) é a mesma no fim dos artigos.
 - `components/azulejo.tsx` · o padrão de azulejo, assinatura visual do site.
 - `components/site-header.tsx` · exporta `nav`, que o rodapé reusa (no celular o
   menu do topo some e o rodapé é o caminho pro blog).
 - `components/site-footer.tsx`,
   `components/mobile-contact-bar.tsx`, `components/container.tsx`
 - `lib/blog.ts` · lê `content/blog/*.md` (gray-matter). Artigo com
-  `status: rascunho` aparece no `dev` e nunca no build de produção.
+  `status: rascunho` aparece no `dev` e nunca no build de produção. Além de `title`,
+  `description`, `date`, `author`, `status`, `cover`, `coverAlt` e `ogImage`, o
+  frontmatter aceita três campos opcionais, pensados pra Google, AI Overview e IA
+  generativa citarem o artigo: `updated` (data da última revisão, vira "Atualizado em",
+  `dateModified` e `lastmod` do sitemap), `answer` (resposta direta de 40 a 60 palavras,
+  vira a caixa "Resposta curta" no topo) e `faq` (lista de `q`/`a`, vira "Perguntas
+  frequentes" no fim e JSON-LD `FAQPage`; item sem pergunta ou resposta é ignorado).
+  "Continue lendo" pega os dois artigos seguintes na ordem da lista, dando a volta.
 - `app/(site)/blog/page.tsx`, `app/(site)/blog/[slug]/page.tsx` · lista e artigo
-  (react-markdown + remark-gfm, JSON-LD `BlogPosting`, índice "Neste artigo" com âncora
+  (react-markdown + remark-gfm, JSON-LD `BlogPosting`, `BreadcrumbList` e `FAQPage`,
+  trilha Início / Blog visível no topo, índice "Neste artigo" com âncora
   nos `##`, tempo de leitura, bloco "Quem escreve" (`site.author`), chamada de WhatsApp
   e "Continue lendo").
 - `content/blog/` · os artigos. Três publicados em 2026-09-15 (abrir empresa no DF,
   trocar de contador, sair do MEI), com números de 2026 conferidos em fonte oficial e
   data de conferência no rodapé de cada um. Número que muda todo ano (limite do MEI,
   DAS, taxa da Junta) precisa ser revisto em janeiro.
-- `app/sitemap.ts`, `app/robots.ts` · SEO técnico; o sitemap inclui só artigo publicado.
-- `lib/schema.ts` · JSON-LD `AccountingService`; só emite campo preenchido.
+- `app/sitemap.ts`, `app/robots.ts` · SEO técnico; o sitemap inclui só artigo publicado,
+  com `lastmod` = `updated` ou `date`; home e `/blog` levam a data do artigo mais recente.
+- `app/llms.txt/route.ts` · o `/llms.txt` (formato llmstxt.org) pra IA generativa:
+  quem é a Supera, serviços e a lista de artigos com URL e descrição. Gerado no build a
+  partir do config e dos posts; nunca escrever à mão.
+- `lib/schema.ts` · JSON-LD `AccountingService` (só emite campo preenchido), `faqSchema`
+  e `jsonLd()`, que serializa escapando `<` pra um `</script>` no texto não quebrar a tag.
+  Autor do `BlogPosting` é `Organization` enquanto quem assina é o escritório.
 - `lib/utils.ts` · `cn()` para juntar classes (não resolve conflito de classe).
 - `public/img/` · `blog/{slug}.jpg` é a capa do artigo e `blog/{slug}-og.jpg` a prévia
   1200x630 com o título; `lp/abrir-empresa.jpg` é a imagem do topo da landing page;

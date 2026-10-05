@@ -40,3 +40,9 @@ export function faqSchema(items: readonly { q: string; a: string }[]) {
     })),
   };
 }
+
+// Texto pronto pra <script type="application/ld+json">. Escapa o "<" pra que um
+// "</script>" escrito no frontmatter não feche a tag no meio do JSON.
+export function jsonLd(data: object): string {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
+}

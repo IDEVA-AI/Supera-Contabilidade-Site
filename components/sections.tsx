@@ -4,7 +4,7 @@ import { instagramUrl, site, visual, whatsappUrl } from "@/site.config";
 import { Container } from "@/components/container";
 import { Foto } from "@/components/foto";
 import { formatDate, getPosts } from "@/lib/blog";
-import { faqSchema } from "@/lib/schema";
+import { faqSchema, jsonLd } from "@/lib/schema";
 import { cn } from "@/lib/utils";
 import { InstagramIcon, TopicIcon, WhatsAppIcon } from "@/components/icons";
 
@@ -332,7 +332,7 @@ export function Faq() {
     <section id="duvidas" className="scroll-mt-20 bg-claro py-20 md:py-28">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(site.faq)) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(faqSchema(site.faq)) }}
       />
       <Container className="grid gap-10 lg:grid-cols-[1fr_1.5fr]">
         <div>

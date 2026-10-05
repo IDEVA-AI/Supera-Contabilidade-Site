@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Gabarito, Hanken_Grotesk } from "next/font/google";
 import { site, siteUrl } from "@/site.config";
-import { organizationSchema } from "@/lib/schema";
+import { jsonLd, organizationSchema } from "@/lib/schema";
 import { Analytics } from "@/components/analytics";
 import "./globals.css";
 
@@ -56,7 +56,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema()),
+            __html: jsonLd(organizationSchema()),
           }}
         />
         {children}

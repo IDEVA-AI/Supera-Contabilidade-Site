@@ -7,7 +7,7 @@ import remarkGfm from "remark-gfm";
 import { Container } from "@/components/container";
 import { FaqList } from "@/components/sections";
 import { formatDate, getHeadings, getPost, getPosts, getRelated, lastModified, slugify } from "@/lib/blog";
-import { faqSchema } from "@/lib/schema";
+import { faqSchema, jsonLd } from "@/lib/schema";
 import { site, siteUrl, whatsappUrl } from "@/site.config";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -34,7 +34,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.description,
       publishedTime: post.date,
       modifiedTime: lastModified(post),
-      images: post.ogImage ? [{ url: post.ogImage, width: 1200, height: 630, alt: post.title }] : undefined,
+      // Definir openGraph aqui apaga a imagem herdada do app/opengraph-image.png, por
+      // isso o artigo sem prévia própria cai na capa e, sem capa, na imagem do site.
+      images: post.ogImage
+        ? [{ url: post.ogImage, width: 1200, height: 630, alt: post.title }]
+        : [{ url: post.cover ?? "/opengraph-image.png", alt: post.coverAlt ?? site.name }],
     },
     twitter: post.ogImage ? { card: "summary_large_image", images: [post.ogImage] } : undefined,
     robots: post.status === "rascunho" ? { index: false, follow: false } : undefined,
@@ -91,16 +95,16 @@ export default async function PostPage({ params }: Props) {
     <article className="py-16 md:py-24">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(schema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumb) }}
       />
       {post.faq && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(post.faq)) }}
+          dangerouslySetInnerHTML={{ __html: jsonLd(faqSchema(post.faq)) }}
         />
       )}
       <Container>
