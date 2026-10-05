@@ -11,7 +11,7 @@ ogImage: "/img/blog/como-abrir-empresa-no-df-og.jpg"
 
 Quem vai abrir empresa quase sempre tem pressa. O primeiro cliente quer nota, o contrato do ponto está pra assinar, o sócio pergunta quando sai o CNPJ. E ao mesmo tempo existe o medo de escolher errado logo no começo e carregar esse erro por anos.
 
-O tipo de empresa e o regime de imposto funcionam como a fundação de uma casa. Dá pra mudar depois, mas custa como quebrar o piso com a família morando dentro. Este guia mostra o caminho em Brasília, na ordem, com os números de 2026.
+O cenário ideal é que o tipo de sociedade e o regime tributário sejam pré-definidos. Este guia mostra o passo a passo em Brasília, pela ordem, e os números atualizados.
 
 ## Antes de tudo: qual empresa você vai abrir
 
@@ -25,7 +25,7 @@ A EIRELI não existe mais. Ela foi extinta em 2022, e hoje as opções são esta
 
 Pra maioria de quem abre um negócio com sócio, funcionário ou faturamento acima do MEI, a LTDA é o caminho mais comum, justamente por separar o patrimônio da empresa do patrimônio da família. Se o seu caso cabe no MEI, veja antes [quando o MEI deixa de valer a pena](/blog/quando-sair-do-mei).
 
-## Regime de imposto: a escolha que mais pesa no bolso
+## Regime tributário: a escolha que mais pesa no bolso
 
 São três regimes:
 
@@ -35,7 +35,7 @@ São três regimes:
 
 **O que mudou pra quem abre agora:** desde dezembro de 2025, a escolha do regime acontece no próprio pedido de CNPJ, num sistema novo da Receita. A intenção de entrar no Simples é marcada ali, e a opção vale desde a data do CNPJ. Quem deixa passar só consegue entrar no Simples em janeiro do ano seguinte. Essa etapa é assinada pelo responsável da empresa e pelo contador, com conta gov.br nível prata ou ouro.
 
-Na prática, a conta do regime precisa estar feita antes de pedir o CNPJ. Pra serviço, ela depende do fator R (quanto a folha de pagamento representa do faturamento). Pra comércio, depende da margem e de quem são os seus clientes.
+Na prática, o estudo do regime precisa ser feito antes do CNPJ, com base nas informações da empresa. Para os prestadores de serviços, as alíquotas são diferentes das do comércio: no serviço, o cálculo depende do fator R (quanto a folha de pagamento representa do faturamento); no comércio, da margem e de quem são os seus clientes.
 
 **E a reforma tributária?** Em 2026 ela não muda o imposto que uma empresa do Simples paga. A partir de 2027, a CBS e o IBS entram no lugar do PIS e da Cofins, e quem vende pra outras empresas vai poder escolher entre pagar esses tributos dentro da guia do Simples ou fora dela. Essa decisão mexe no crédito que o seu cliente aproveita, e vale olhar já na abertura.
 

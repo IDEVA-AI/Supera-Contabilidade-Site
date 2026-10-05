@@ -16,7 +16,7 @@ import { Logo } from "@/components/logo";
 export const metadata: Metadata = {
   title: "Abrir empresa em Brasília",
   description:
-    "Abertura de empresa no DF com o tipo de empresa e o regime de imposto escolhidos antes do CNPJ. Conversa direta no WhatsApp com a Supera Contabilidade.",
+    "Abertura de empresa no DF com o tipo de empresa e o regime tributário definidos antes do CNPJ. Conversa direta no WhatsApp com a Supera Contabilidade.",
   alternates: { canonical: lp.path },
   robots: lp.draft ? { index: false, follow: false } : undefined,
 };
@@ -206,8 +206,8 @@ export default function AbrirEmpresaPage() {
               <div>
                 <h2 className="font-display text-3xl font-bold tracking-tight md:text-5xl">Vai abrir MEI?</h2>
                 <p className="mt-4 max-w-xl text-lg text-white/90 text-pretty">
-                  O MEI se abre sozinho e de graça no Portal do Empreendedor. Se o seu caso cabe nele, comece por lá. A
-                  gente entra quando a empresa precisa de contador, ou quando o MEI fica pequeno.
+                  O MEI se abre sozinho e de graça no Portal do Empreendedor. Se o seu caso cabe nele, comece por lá.
+                  Nós entramos quando a empresa precisa de contador ou quando o MEI fica pequeno.
                 </p>
               </div>
               <div className="flex flex-wrap gap-x-8 gap-y-3 lg:justify-end">

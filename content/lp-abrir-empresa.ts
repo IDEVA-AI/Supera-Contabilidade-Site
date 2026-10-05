@@ -35,12 +35,12 @@ export const lp = {
     photo: {
       src: "/img/lp/danilo.jpg", // retrato que o Danilo mandou em 2026-09-22
       alt: "Danilo de Santo Romão, sócio da Supera Contabilidade",
-      caption: "Danilo, quem vai cuidar da sua abertura",
+      caption: "Danilo de Santo Romão, sócio da Supera",
     },
     eyebrow: "Abertura de empresa em Brasília",
     title: "Abra sua empresa já sabendo quanto vai pagar de imposto.",
     intro:
-      "O tipo de empresa e o regime de imposto são escolhidos junto com o CNPJ. A gente faz essa conta com você antes, e só depois pede o registro.",
+      "O tipo de empresa e o regime tributário são definidos junto com o CNPJ. Fazemos esse estudo com você antes e só depois solicitamos o registro.",
     cta: "Quero abrir minha empresa",
     ctaNote: "A conversa começa no WhatsApp. A proposta vem antes de qualquer compromisso.",
     // Painel do lado: o que a pessoa leva da abertura.
@@ -60,13 +60,13 @@ export const lp = {
     },
     {
       icon: "regime" as TopicKey,
-      title: "Regime de imposto",
+      title: "Regime tributário",
       text: "Desde dezembro de 2025, o Simples Nacional é pedido junto com o CNPJ. Quem deixa passar só consegue entrar em janeiro do ano seguinte.",
     },
     {
       icon: "atividade" as TopicKey,
       title: "Atividade no CNPJ",
-      text: "O código de atividade define imposto e licença. Em alguns serviços, o enquadramento leva a alíquota inicial do Simples de 6% pra 15,5%.",
+      text: "O código de atividade define imposto e licença. Em alguns serviços, o enquadramento leva a alíquota inicial do Simples de 6% para 15,5%.",
     },
     {
       icon: "endereco" as TopicKey,
@@ -80,7 +80,7 @@ export const lp = {
     {
       icon: "conversa" as TopicKey,
       title: "Conversa no WhatsApp",
-      text: "Você conta o que a empresa vai fazer, se tem sócio e quanto espera faturar. O Danilo monta a proposta com tipo de empresa e regime.",
+      text: "Você conta o que a empresa vai fazer, se tem sócio e quanto espera faturar. Nosso especialista monta a proposta com tipo de empresa e regime tributário.",
     },
     {
       icon: "endereco" as TopicKey,
@@ -113,7 +113,7 @@ export const lp = {
   faq: [
     {
       q: "Quanto custa abrir empresa no DF?",
-      a: "Tem a taxa da Junta Comercial, que em 2026 é de R$ 216,34 pra empresário individual e R$ 425,45 pra sociedade limitada, e o honorário do contador pela abertura.",
+      a: "Há a taxa da Junta Comercial, que em 2026 é de R$ 216,34 para empresário individual e R$ 425,45 para sociedade limitada, e o honorário do contador pela abertura.",
       pending: "valor do honorário e se a taxa da Junta está inclusa",
     },
     {
@@ -131,12 +131,12 @@ export const lp = {
     },
     {
       q: "Já tenho CNPJ. Vocês atendem?",
-      a: "Atendem. Aí o caso é troca de contador ou alteração da empresa, e a conversa começa pelo mesmo WhatsApp.",
+      a: "Sim. Nesse caso é troca de contador ou alteração da empresa, e a conversa começa pelo mesmo WhatsApp.",
     },
   ] as { q: string; a: string; pending?: string }[],
 
   closing: {
-    title: "Conta o que você vai abrir.",
+    title: "Conte o que você vai abrir.",
     text: "Uma mensagem basta: o que a empresa vai fazer, se tem sócio e quanto você espera faturar no primeiro ano.",
   },
 };

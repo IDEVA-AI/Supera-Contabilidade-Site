@@ -8,7 +8,7 @@ import { whatsappUrl } from "@/site.config";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Artigos da Supera Contabilidade pra quem tem empresa no Distrito Federal: abertura de empresa, troca de contador, impostos e rotina contábil.",
+    "Artigos da Supera Contabilidade para quem tem empresa no Distrito Federal: abertura de empresa, troca de contador, impostos e rotina contábil.",
   alternates: { canonical: "/blog" },
 };
 
