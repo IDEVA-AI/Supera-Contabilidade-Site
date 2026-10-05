@@ -4,6 +4,7 @@ import { instagramUrl, site, visual, whatsappUrl } from "@/site.config";
 import { Container } from "@/components/container";
 import { Foto } from "@/components/foto";
 import { formatDate, getPosts } from "@/lib/blog";
+import { faqSchema } from "@/lib/schema";
 import { cn } from "@/lib/utils";
 import { InstagramIcon, TopicIcon, WhatsAppIcon } from "@/components/icons";
 
@@ -304,22 +305,34 @@ export function Reviews() {
 }
 
 // As perguntas também saem como FAQPage no JSON-LD, que o Google pode mostrar na busca.
-export function Faq() {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: site.faq.map((item) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: { "@type": "Answer", text: item.a },
-    })),
-  };
+// A lista sanfonada de perguntas, usada nas dúvidas da home e no fim de cada artigo.
+export function FaqList({ items }: { items: readonly { q: string; a: string }[] }) {
+  return (
+    <div className="divide-y divide-ardosia/15 border-y border-ardosia/15">
+      {items.map((item) => (
+        <details key={item.q} className="group py-5">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-display text-xl font-semibold leading-snug md:text-2xl [&::-webkit-details-marker]:hidden">
+            {item.q}
+            <span
+              aria-hidden="true"
+              className="grid size-9 shrink-0 place-items-center rounded-full border border-ardosia/25 text-xl transition-transform duration-200 group-open:rotate-45"
+            >
+              +
+            </span>
+          </summary>
+          <p className="mt-3 max-w-2xl text-aco text-pretty">{item.a}</p>
+        </details>
+      ))}
+    </div>
+  );
+}
 
+export function Faq() {
   return (
     <section id="duvidas" className="scroll-mt-20 bg-claro py-20 md:py-28">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(site.faq)) }}
       />
       <Container className="grid gap-10 lg:grid-cols-[1fr_1.5fr]">
         <div>
@@ -338,22 +351,7 @@ export function Faq() {
             .
           </p>
         </div>
-        <div className="divide-y divide-ardosia/15 border-y border-ardosia/15">
-          {site.faq.map((item) => (
-            <details key={item.q} className="group py-5">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-display text-xl font-semibold leading-snug md:text-2xl [&::-webkit-details-marker]:hidden">
-                {item.q}
-                <span
-                  aria-hidden="true"
-                  className="grid size-9 shrink-0 place-items-center rounded-full border border-ardosia/25 text-xl transition-transform duration-200 group-open:rotate-45"
-                >
-                  +
-                </span>
-              </summary>
-              <p className="mt-3 max-w-2xl text-aco text-pretty">{item.a}</p>
-            </details>
-          ))}
-        </div>
+        <FaqList items={site.faq} />
       </Container>
     </section>
   );

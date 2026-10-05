@@ -2,6 +2,7 @@
 title: "MEI ou microempresa: quando vale a pena sair do MEI"
 description: "O limite de R$ 81 mil em 2026, o que acontece quando você passa dele e o que muda de imposto quando o negócio vira microempresa."
 date: 2026-09-15
+updated: 2026-10-05
 author: "Supera Contabilidade"
 status: publicado
 cover: "/img/blog/quando-sair-do-mei.jpg"
@@ -15,7 +16,7 @@ Por causa desse medo, muita gente segura o faturamento ou recusa trabalho. Quase
 
 ## O que o MEI permite em 2026
 
-O MEI pode faturar até **R$ 81.000 por ano**. Esse limite não mudou em 2026. O projeto que sobe o teto pra R$ 130 mil (PLP 108/2021) passou no Senado em 2021 e, em setembro de 2026, ainda espera parecer numa comissão especial da Câmara. Enquanto não for votado e sancionado, vale R$ 81 mil.
+O MEI pode faturar até **R$ 81.000 por ano**. Esse limite não mudou em 2026. O projeto que sobe o teto hoje é o PLP 186/2026, ainda em tramitação no Congresso: ele prevê R$ 110 mil em 2027 e R$ 140 mil em 2028. Nada disso está valendo. Enquanto o projeto não for aprovado e sancionado, o limite segue em R$ 81 mil, como confirma a [página do teto do MEI no gov.br](https://www.gov.br/memp/pt-br/teto-do-mei).
 
 No ano em que a empresa abre, o limite é proporcional: R$ 6.750 por mês de atividade, e o mês da abertura conta inteiro. Quem abriu em julho tem R$ 40.500 até dezembro. O MEI caminhoneiro tem regra própria, com limite de R$ 251.600 por ano.
 
@@ -86,4 +87,4 @@ A reforma tributária entra na conta, mas sem pressa. Em 2026, as alíquotas de 
 
 Sair do MEI assusta porque parece o fim de uma conta simples. O que costuma sair caro é passar do limite sem perceber e descobrir em janeiro. Se o seu faturamento já anda perto dos R$ 6.750 por mês, a hora de olhar os números é agora.
 
-*Valores conferidos em 15 de setembro de 2026. Base legal: Lei Complementar 123/2006 (arts. 18-A, 18-B e 36-A), Resolução CGSN 140/2018, Lei Complementar 214/2025 e Decreto 12.797/2025 (salário mínimo de 2026).*
+*Valores conferidos em 15 de setembro de 2026. Projeto do teto do MEI revisto em 5 de outubro de 2026. Base legal: Lei Complementar 123/2006 (arts. 18-A, 18-B e 36-A), Resolução CGSN 140/2018, Lei Complementar 214/2025 e Decreto 12.797/2025 (salário mínimo de 2026).*

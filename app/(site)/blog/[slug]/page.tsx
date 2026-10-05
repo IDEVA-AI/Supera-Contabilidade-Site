@@ -5,7 +5,9 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Container } from "@/components/container";
-import { formatDate, getHeadings, getPost, getPosts, getRelated, slugify } from "@/lib/blog";
+import { FaqList } from "@/components/sections";
+import { formatDate, getHeadings, getPost, getPosts, getRelated, lastModified, slugify } from "@/lib/blog";
+import { faqSchema } from "@/lib/schema";
 import { site, siteUrl, whatsappUrl } from "@/site.config";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -23,9 +25,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post.title,
     description: post.description,
     alternates: { canonical: `/blog/${slug}` },
-    openGraph: post.ogImage
-      ? { type: "article", title: post.title, description: post.description, images: [{ url: post.ogImage, width: 1200, height: 630, alt: post.title }] }
-      : undefined,
+    openGraph: {
+      type: "article",
+      locale: "pt_BR",
+      siteName: site.name,
+      url: `/blog/${slug}`,
+      title: post.title,
+      description: post.description,
+      publishedTime: post.date,
+      modifiedTime: lastModified(post),
+      images: post.ogImage ? [{ url: post.ogImage, width: 1200, height: 630, alt: post.title }] : undefined,
+    },
     twitter: post.ogImage ? { card: "summary_large_image", images: [post.ogImage] } : undefined,
     robots: post.status === "rascunho" ? { index: false, follow: false } : undefined,
   };
@@ -36,18 +46,44 @@ export default async function PostPage({ params }: Props) {
   const post = getPost(slug);
   if (!post) notFound();
 
+  const url = `${siteUrl}/blog/${slug}`;
+  const organization = {
+    "@type": "Organization",
+    name: site.name,
+    url: siteUrl,
+    logo: { "@type": "ImageObject", url: `${siteUrl}/img/logo/supera-horizontal.png` },
+  };
+  // Enquanto quem assina é o escritório, o autor é a organização. Quando o artigo
+  // trouxer o nome de uma pessoa no `author`, ele vira Person.
+  const author =
+    post.author === site.name
+      ? { "@type": "Organization", name: site.name, url: siteUrl }
+      : { "@type": "Person", name: post.author };
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    author: { "@type": "Person", name: post.author },
-    publisher: { "@type": "Organization", name: site.name },
-    mainEntityOfPage: `${siteUrl}/blog/${slug}`,
+    dateModified: lastModified(post),
+    author,
+    publisher: organization,
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
     inLanguage: "pt-BR",
     image: post.cover ? `${siteUrl}${post.cover}` : undefined,
   };
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Início", item: siteUrl },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${siteUrl}/blog` },
+      { "@type": "ListItem", position: 3, name: post.title, item: url },
+    ],
+  };
+  // Só mostra a revisão quando ela é de outro dia que a publicação.
+  const updated = post.updated !== post.date ? post.updated : undefined;
   const headings = getHeadings(post.body);
   const related = getRelated(slug);
 
@@ -57,11 +93,37 @@ export default async function PostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      {post.faq && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(post.faq)) }}
+        />
+      )}
       <Container>
         <div className="mx-auto max-w-3xl">
-          <Link href="/blog" className="text-sm text-aco underline-offset-4 hover:text-marinho hover:underline">
-            Todos os artigos
-          </Link>
+          <nav aria-label="Você está em" className="text-sm text-aco">
+            <ol className="flex min-w-0 items-center gap-2">
+              <li className="shrink-0">
+                <Link href="/" className="underline-offset-4 hover:text-marinho hover:underline">
+                  Início
+                </Link>
+              </li>
+              <li aria-hidden="true" className="shrink-0 text-prata">/</li>
+              <li className="shrink-0">
+                <Link href="/blog" className="underline-offset-4 hover:text-marinho hover:underline">
+                  Blog
+                </Link>
+              </li>
+              <li aria-hidden="true" className="shrink-0 text-prata">/</li>
+              <li aria-current="page" className="min-w-0 truncate">
+                {post.title}
+              </li>
+            </ol>
+          </nav>
           {post.status === "rascunho" && (
             <p className="mt-6 w-fit rounded-full bg-prata px-3 py-1 text-xs font-semibold">
               Rascunho, não vai ao ar
@@ -73,8 +135,27 @@ export default async function PostPage({ params }: Props) {
           <p className="mt-5 text-lg text-aco text-pretty">{post.description}</p>
           <p className="mt-6 text-sm text-aco">
             {post.author}, <time dateTime={post.date}>{formatDate(post.date)}</time>.{" "}
+            {updated && (
+              <>
+                Atualizado em <time dateTime={updated}>{formatDate(updated)}</time>.{" "}
+              </>
+            )}
             {post.readingMinutes} min de leitura.
           </p>
+
+          {/* Resposta curta: a pergunta do título respondida antes de tudo, em texto
+              corrido. É o trecho que o Google e as IAs citam quando citam o artigo. */}
+          {post.answer && (
+            <section
+              aria-label="Resposta curta"
+              className="mt-10 rounded-2xl border-l-4 border-marinho bg-claro p-6 md:p-8"
+            >
+              <p className="text-xs font-semibold uppercase tracking-wider text-aco">
+                Resposta curta
+              </p>
+              <p className="mt-2 text-lg leading-relaxed text-ardosia text-pretty">{post.answer}</p>
+            </section>
+          )}
 
           {post.cover && (
             <Image
@@ -118,6 +199,17 @@ export default async function PostPage({ params }: Props) {
               {post.body}
             </ReactMarkdown>
           </div>
+
+          {post.faq && (
+            <section className="mt-16">
+              <h2 className="font-display text-3xl font-bold tracking-tight text-marinho">
+                Perguntas frequentes
+              </h2>
+              <div className="mt-6">
+                <FaqList items={post.faq} />
+              </div>
+            </section>
+          )}
 
           {/* Assinatura. Artigo de contabilidade sem gente por trás lê como texto de
               robô, e é quem assina que responde pelo número publicado. */}

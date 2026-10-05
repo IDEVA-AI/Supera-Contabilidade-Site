@@ -26,3 +26,17 @@ export function organizationSchema() {
       : undefined,
   };
 }
+
+// JSON-LD FAQPage. Mesmas perguntas que aparecem na tela, nunca outras: o Google
+// só aceita marcação de conteúdo visível.
+export function faqSchema(items: readonly { q: string; a: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+}

@@ -19,6 +19,14 @@ export interface Post {
   cover?: string; // caminho em /public, ex: /img/blog/slug.jpg
   coverAlt?: string;
   ogImage?: string; // 1200x630 com o título, pra prévia do link
+  updated?: string; // YYYY-MM-DD da última revisão
+  answer?: string; // resposta direta de 40 a 60 palavras, pro topo do artigo
+  faq?: FaqItem[]; // perguntas do fim do artigo, viram também JSON-LD FAQPage
+}
+
+export interface FaqItem {
+  q: string;
+  a: string;
 }
 
 // Rascunho aparece no `pnpm dev` pra revisar e nunca entra no build de produção.
@@ -27,6 +35,17 @@ const showDrafts = process.env.NODE_ENV !== "production";
 function toDateStr(value: unknown): string {
   if (value instanceof Date) return value.toISOString().slice(0, 10);
   return String(value);
+}
+
+// Lista de perguntas do frontmatter. Item sem pergunta ou sem resposta é ignorado
+// em vez de quebrar o build: frontmatter é escrito à mão.
+function toFaq(value: unknown): FaqItem[] | undefined {
+  if (!Array.isArray(value)) return undefined;
+  const items = value
+    .filter((item): item is { q: unknown; a: unknown } => typeof item === "object" && item !== null)
+    .map((item) => ({ q: String(item.q ?? "").trim(), a: String(item.a ?? "").trim() }))
+    .filter((item) => item.q && item.a);
+  return items.length ? items : undefined;
 }
 
 function loadAll(): Post[] {
@@ -50,6 +69,9 @@ function loadAll(): Post[] {
         cover: data.cover ? String(data.cover) : undefined,
         coverAlt: data.coverAlt ? String(data.coverAlt) : undefined,
         ogImage: data.ogImage ? String(data.ogImage) : undefined,
+        updated: data.updated ? toDateStr(data.updated) : undefined,
+        answer: data.answer ? String(data.answer).trim() : undefined,
+        faq: toFaq(data.faq),
       } satisfies Post;
     });
 }
@@ -57,17 +79,28 @@ function loadAll(): Post[] {
 export function getPosts(): Post[] {
   return loadAll()
     .filter((post) => showDrafts || post.status === "publicado")
-    .sort((a, b) => b.date.localeCompare(a.date));
+    // Mesma data desempata pelo slug, pra ordem não depender do sistema de arquivos.
+    .sort((a, b) => b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug));
+}
+
+// Data da última mudança do artigo: a revisão, se houver, senão a publicação.
+export function lastModified(post: Post): string {
+  return post.updated ?? post.date;
 }
 
 export function getPost(slug: string): Post | undefined {
   return getPosts().find((post) => post.slug === slug);
 }
 
-// Os outros artigos, do mais novo pro mais velho, pro "Continue lendo".
+// "Continue lendo": os artigos que vêm logo depois deste na lista (mais velhos),
+// voltando ao começo quando acaba. Assim cada artigo aponta pra vizinhos diferentes
+// e nenhum fica sem link de entrada, mesmo com todos na mesma data.
 export function getRelated(slug: string, limit = 2): Post[] {
-  return getPosts()
-    .filter((post) => post.slug !== slug)
+  const posts = getPosts();
+  const index = posts.findIndex((post) => post.slug === slug);
+  return posts
+    .slice(index + 1)
+    .concat(posts.slice(0, Math.max(index, 0)))
     .slice(0, limit);
 }
 
