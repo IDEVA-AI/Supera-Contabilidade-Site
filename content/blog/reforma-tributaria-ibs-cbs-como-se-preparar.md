@@ -5,6 +5,9 @@ date: 2026-10-05
 updated: 2026-10-05
 author: "Supera Contabilidade"
 status: publicado
+cover: "/img/blog/reforma-tributaria-ibs-cbs-como-se-preparar.jpg"
+coverAlt: "Prédio modernista de concreto erguido sobre pilotis, visto do gramado, em tons de azul"
+ogImage: "/img/blog/reforma-tributaria-ibs-cbs-como-se-preparar-og.jpg"
 answer: "Em 2026, a CBS (0,9%) e o IBS (0,1%) são um teste: aparecem na nota fiscal, mas quem cumpre as obrigações acessórias fica dispensado de recolher. Em 2027, a CBS é cobrada e substitui PIS e Cofins. ICMS e ISS diminuem de 2029 a 2032 e acabam em 2033. Agora, o trabalho é ajustar nota fiscal, cadastro e preço."
 faq:
   - q: "Vou pagar CBS e IBS em 2026?"

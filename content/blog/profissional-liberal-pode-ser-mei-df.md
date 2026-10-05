@@ -5,6 +5,9 @@ date: 2026-10-05
 updated: 2026-10-05
 author: "Supera Contabilidade"
 status: publicado
+cover: "/img/blog/profissional-liberal-pode-ser-mei-df.jpg"
+coverAlt: "Fisioterapeuta de perfil esticando o lençol sobre a maca no consultório dela, com bola de pilates e pôster de anatomia ao fundo, em tons de azul"
+ogImage: "/img/blog/profissional-liberal-pode-ser-mei-df-og.jpg"
 answer: "Em 2026, psicólogo, advogado, engenheiro, médico, dentista e arquiteto não podem ser MEI, porque nenhuma dessas profissões está na lista oficial de ocupações do MEI (Anexo XI da Resolução CGSN 140/2018). No Distrito Federal, o caminho costuma ser uma sociedade limitada ou sociedade simples no Simples Nacional, ou uma sociedade de advocacia registrada na OAB/DF."
 faq:
   - q: "Psicólogo pode ser MEI em 2026?"

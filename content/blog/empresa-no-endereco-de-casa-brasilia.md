@@ -5,6 +5,9 @@ date: 2026-10-05
 updated: 2026-10-05
 author: "Supera Contabilidade"
 status: publicado
+cover: "/img/blog/empresa-no-endereco-de-casa-brasilia.jpg"
+coverAlt: "Mulher na mesa de casa com o celular numa mão e a outra sobre uma caixa de encomenda, ao lado do notebook e de uma caneca, em tons de azul"
+ogImage: "/img/blog/empresa-no-endereco-de-casa-brasilia-og.jpg"
 answer: "Na maioria dos casos, sim. Em 2026, no Distrito Federal, quem decide se a casa pode ser sede da empresa é a Administração Regional, na consulta de viabilidade da Redesim DF, com base na lei de uso do solo. Passa com mais facilidade quem trabalha online ou na casa do cliente e não recebe ninguém em casa."
 faq:
   - q: "Preciso pagar uma sala só para ter endereço de empresa no DF?"

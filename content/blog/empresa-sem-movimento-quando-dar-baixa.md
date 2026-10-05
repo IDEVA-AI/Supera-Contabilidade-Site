@@ -5,6 +5,9 @@ date: 2026-10-05
 updated: 2026-10-05
 author: "Supera Contabilidade"
 status: publicado
+cover: "/img/blog/empresa-sem-movimento-quando-dar-baixa.jpg"
+coverAlt: "Sala de atendimento vazia, com os móveis cobertos por lençol e uma caixa de mudança em cima da mesa, em tons de azul"
+ogImage: "/img/blog/empresa-sem-movimento-quando-dar-baixa-og.jpg"
 answer: "Em 2026, a empresa parada continua com declarações a entregar, e o MEI segue pagando o DAS mensal mesmo sem faturar. Se ela não vai voltar a operar, a baixa encerra essas obrigações. A lei permite fechar com débito, mas a dívida não desaparece: sócios e administradores respondem por ela. No Distrito Federal, o distrato é registrado na JUCIS-DF."
 faq:
   - q: "Empresa sem movimento precisa entregar declaração?"

@@ -5,6 +5,9 @@ date: 2026-10-05
 updated: 2026-10-05
 author: "Supera Contabilidade"
 status: publicado
+cover: "/img/blog/fator-r-simples-nacional.jpg"
+coverAlt: "Designer de perfil diante do monitor, com a caneta no queixo e uma prova impressa na mão, conferindo o trabalho, em tons de azul"
+ogImage: "/img/blog/fator-r-simples-nacional-og.jpg"
 answer: "Fator R é a conta que, em 2026, define o anexo do Simples Nacional de muitos prestadores de serviço: folha de salários dos últimos 12 meses, pró-labore incluído, dividida pela receita bruta do mesmo período. Com 28% ou mais, vai para o Anexo III, que começa em 6%. Abaixo disso, vai para o Anexo V, que começa em 15,5%."
 faq:
   - q: "Quanto tenho que tirar de pró-labore para cair no Anexo III?"

@@ -5,6 +5,9 @@ date: 2026-10-05
 updated: 2026-10-05
 author: "Supera Contabilidade"
 status: publicado
+cover: "/img/blog/simples-nacional-hibrido-ibs-cbs.jpg"
+coverAlt: "Marquise curva de concreto sobre colunas finas, com o sol baixo refletido no piso, em tons de azul"
+ogImage: "/img/blog/simples-nacional-hibrido-ibs-cbs-og.jpg"
 answer: "Simples Nacional híbrido é o apelido da opção, criada pela Lei Complementar 214/2025, de a empresa do Simples apurar o IBS e a CBS pelo regime regular, mantendo o resto no DAS. Para o primeiro semestre de 2027, a opção vai até 30 de outubro de 2026. Tende a valer para quem vende a empresas que usam crédito."
 faq:
   - q: "O que é o Simples Nacional híbrido?"
